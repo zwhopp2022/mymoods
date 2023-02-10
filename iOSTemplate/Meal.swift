@@ -4,11 +4,9 @@
 //
 //  Created by John Hampton on 3/5/19.
 //
-<<<<<<< HEAD
 // This is a test command Rudra
-=======
 // This is a test push - Zach
->>>>>>> ee09d68c2db68d283a632fa16eb424e923a55476
+//This is a test push - John Richard McLean
 import UIKit
 import os.log
 
