@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class FacesViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -15,7 +15,6 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-
 
 
 }

@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "3775360F22234238005EE5FE"
-               BuildableName = "iOSTemplate.app"
+               BuildableName = "Mood-Tracker.app"
                BlueprintName = "Mood-Tracker"
                ReferencedContainer = "container:Mood-Tracker.xcodeproj">
             </BuildableReference>
@@ -33,7 +33,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "3775362322234238005EE5FE"
-               BuildableName = "iOSTemplateTests.xctest"
+               BuildableName = "Mood-TrackerTests.xctest"
                BlueprintName = "Mood-TrackerTests"
                ReferencedContainer = "container:Mood-Tracker.xcodeproj">
             </BuildableReference>
@@ -43,7 +43,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "3775362E22234239005EE5FE"
-               BuildableName = "iOSTemplateUITests.xctest"
+               BuildableName = "Mood-TrackerUITests.xctest"
                BlueprintName = "Mood-TrackerUITests"
                ReferencedContainer = "container:Mood-Tracker.xcodeproj">
             </BuildableReference>
@@ -65,7 +65,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "3775360F22234238005EE5FE"
-            BuildableName = "iOSTemplate.app"
+            BuildableName = "Mood-Tracker.app"
             BlueprintName = "Mood-Tracker"
             ReferencedContainer = "container:Mood-Tracker.xcodeproj">
          </BuildableReference>
@@ -82,7 +82,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "3775360F22234238005EE5FE"
-            BuildableName = "iOSTemplate.app"
+            BuildableName = "Mood-Tracker.app"
             BlueprintName = "Mood-Tracker"
             ReferencedContainer = "container:Mood-Tracker.xcodeproj">
          </BuildableReference>
