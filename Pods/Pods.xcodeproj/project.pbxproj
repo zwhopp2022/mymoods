@@ -122,7 +122,7 @@
 		9158C3CBD63B33BD8905AA292939ED72 /* Pods-Mood-Tracker-Mood-TrackerUITests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Mood-Tracker-Mood-TrackerUITests-umbrella.h"; sourceTree = "<group>"; };
 		93D86A59949C83553DF995BB74B5B8AC /* Errors.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Errors.swift; path = Sources/SQLite/Core/Errors.swift; sourceTree = "<group>"; };
 		9AE62BCAE245EE1E8E4543ED82E0E903 /* CustomFunctions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CustomFunctions.swift; path = Sources/SQLite/Typed/CustomFunctions.swift; sourceTree = "<group>"; };
-		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		A0248489EE82E603810264CC02CB44A7 /* Pods-Mood-Tracker-Mood-TrackerUITests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Mood-Tracker-Mood-TrackerUITests-frameworks.sh"; sourceTree = "<group>"; };
 		AAE312F7E20E54D8218F881169A3FC8A /* Pods-Mood-Tracker.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Mood-Tracker.release.xcconfig"; sourceTree = "<group>"; };
 		B16F1BB6E2EA4FDCBBD98807FF36119D /* FTS5.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FTS5.swift; path = Sources/SQLite/Extensions/FTS5.swift; sourceTree = "<group>"; };
@@ -299,6 +299,7 @@
 				21B1476D42BA901B2A10800DDD6EEA58 /* standard */,
 				24331A5FD45B26000B8645DD0743204F /* Support Files */,
 			);
+			name = SQLite.swift;
 			path = SQLite.swift;
 			sourceTree = "<group>";
 		};
