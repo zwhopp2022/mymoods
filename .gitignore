@@ -4,7 +4,8 @@
 
 ## User settings
 xcuserdata/
-
+## stop .DS_Store files from being considered in git
+.DS_Store
 ## compatibility with Xcode 8 and earlier (ignoring not required starting Xcode 9)
 *.xcscmblueprint
 *.xccheckout
