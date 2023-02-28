@@ -50,6 +50,13 @@ class MoodTrackerDB: UIResponder, UIApplicationDelegate{
             print("File path is not available.")
         }
         
+        let createTableQuery = "CREATE TABLE IF NOT EXISTS Saddest (Date TEXT, Mood TEXT, Reason TEXT)"
+        
+        if sqlite3_exec(db, createTableQuery, nil, nil, nil) != SQLITE_OK{
+            print("Error creating table")
+        }
+        
         return db
+        
     }
 }
