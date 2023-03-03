@@ -7,13 +7,15 @@
 
 import Foundation
 
-import SQLite3
+import SQLite
 
 class DataBase_Manager {
+    private let moodDBInstance: MoodTrackerDB = MoodTrackerDB()
+    let moodDB: OpaquePointer?
+    init () {
+        self.moodDB = moodDBInstance.createAndOpenDatabase()
+    }
     
-    private var db: Connection!
     
-    private var table: Table!
     
-    private var mood: Expression<String>!
 }
