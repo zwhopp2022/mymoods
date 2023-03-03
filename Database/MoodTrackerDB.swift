@@ -8,7 +8,7 @@
 import UIKit
 import SQLite3
 
-//Varaible to store the location of the DB.
+//Variable to store the location of the DB.
 var dbURL = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)[0] as String
 
 
@@ -49,89 +49,94 @@ class MoodTrackerDB: UIResponder, UIApplicationDelegate{
         {
             print("File path is not available.")
         }
-        
-        let createTableString = """
-        CREATE TABLE Mood(Date TEXT, Mood TEXT, Reason TEXT)
-        """
-        
-        func createTable() {
-            var createTableStatement: OpaquePointer?
+        if !UserDefaultsChecker.databaseCreated() {
+            let createTableString = """
+            CREATE TABLE Mood(Date TEXT, Mood TEXT, Reason TEXT)
+            """
             
-            if sqlite3_prepare(db, createTableString, -1, &createTableStatement, nil) ==
-                SQLITE_OK {
-                if sqlite3_step(createTableStatement) == SQLITE_DONE {
-                    print("\nMood table created.")
-                } else{
-                    print("\nMood table is not created")
+            func createTable() {
+                var createTableStatement: OpaquePointer?
+                
+                if sqlite3_prepare(db, createTableString, -1, &createTableStatement, nil) == SQLITE_OK {
+                    if sqlite3_step(createTableStatement) == SQLITE_DONE {
+                        print("\nMood table created.")
+                    }
+                    else{
+                        print("\nMood table is not created")
+                    }
                 }
-            } else{
-                print("\nCREATE TABLE statement is not prepared.")
+                else {
+                    print("\nCREATE TABLE statement is not prepared.")
+                }
+                sqlite3_finalize(createTableStatement)
+                
             }
-            sqlite3_finalize(createTableStatement)
+            
+            if sqlite3_open("MoodTrackerDB", &db) == SQLITE_OK {
+                print("Successfully opened connection to database.")
+            }
+            
+            else {
+                print("Unable to open database.")
+            }
+            UserDefaultsChecker.setDatabaseCreatedVal()
         }
-        
-        if sqlite3_open("MoodTrackerDB", &db) == SQLITE_OK {
-            print("Successfully opened connection to database.")
-        } else {
-            print("Unable to open database.")
-        }
-        
-        let createTable1 = """
-            CREATE TABLE IF NOT EXISTS Saddest (
-                Date TEXT,
-                Mood Text,
-                Reason Text
-            );
-        """
+            let createTable1 = """
+                CREATE TABLE IF NOT EXISTS Saddest (
+                    Date TEXT,
+                    Mood Text,
+                    Reason Text
+                );
+            """
         
         
-        let createTable2 = """
-            CREATE TABLE IF NOT EXISTS Sad (
-                Date TEXT,
-                Mood Text,
-                Reason Text
-            );
-        """
+            let createTable2 = """
+                CREATE TABLE IF NOT EXISTS Sad (
+                    Date TEXT,
+                    Mood Text,
+                    Reason Text
+                );
+            """
         
-        let createTable3 = """
-            CREATE TABLE IF NOT EXISTS Neutral (
-                Date TEXT,
-                Mood Text,
-                Reason Text
-            );
-        """
+            let createTable3 = """
+                CREATE TABLE IF NOT EXISTS Neutral (
+                    Date TEXT,
+                    Mood Text,
+                    Reason Text
+                );
+            """
         
-        let createTable4 = """
-            CREATE TABLE IF NOT EXISTS Happy (
-                Date TEXT,
-                Mood Text,
-                Reason Text
-            );
-        """
+            let createTable4 = """
+                CREATE TABLE IF NOT EXISTS Happy (
+                    Date TEXT,
+                    Mood Text,
+                    Reason Text
+                );
+            """
         
-        let createTable5 = """
-            CREATE TABLE IF NOT EXISTS Happiest (
-                Date TEXT,
-                Mood Text,
-                Reason Text
-            );
-        """
+            let createTable5 = """
+                CREATE TABLE IF NOT EXISTS Happiest (
+                    Date TEXT,
+                    Mood Text,
+                    Reason Text
+                );
+            """
         
-        let createTable6 = """
-            CREATE TABLE IF NOT EXISTS Angriest (
-                Date TEXT,
-                Mood Text,
-                Reason Text
-            );
-        """
+            let createTable6 = """
+                CREATE TABLE IF NOT EXISTS Angriest (
+                    Date TEXT,
+                    Mood Text,
+                    Reason Text
+                );
+            """
         
-        let createTable7 = """
-            CREATE TABLE IF NOT EXISTS ALLMOODS (
-                Date TEXT,
-                Mood Text,
-                Reason Text
-            );
-        """
+            let createTable7 = """
+                CREATE TABLE IF NOT EXISTS ALLMOODS (
+                    Date TEXT,
+                    Mood Text,
+                    Reason Text
+                );
+            """
         
         var errorMessage: UnsafeMutablePointer<Int8>?
         if sqlite3_exec(db, createTable1, nil, nil, &errorMessage) == SQLITE_OK {
