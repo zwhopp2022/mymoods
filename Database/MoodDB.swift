@@ -7,9 +7,6 @@
 
 import SQLite
 // create database in documents directory
-let path = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true).first!
-
-let moodDB = try! Connection("\(path)/moodDB.sqlite3")
 
 class MoodDatabase {
     
