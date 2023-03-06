@@ -200,6 +200,19 @@ class MoodDatabase {
             // return the array of feelingsInputs
             return feelingInputs
         }
+    
+    public func displayMoodTableData(moodTable: Table!) {
+        do {
+            for inputs in try moodDB.prepare(moodTable) {
+                let moodValue = inputs[mood]
+                let reasonValue = inputs[reason]
+                print("\(moodValue): \(reasonValue)")
+            }
+        } catch {
+            print(error.localizedDescription)
+        }
+    }
+
 }
 
 
