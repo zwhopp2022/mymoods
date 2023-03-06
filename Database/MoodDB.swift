@@ -13,7 +13,7 @@ class MoodDatabase {
     // initialize variables needed for an instance of MoodDatabase
     var moodDB: Connection!
     var happiest: Table!
-    var saddest: Table!
+    public var saddest: Table!
     var sad: Table!
     var neutral: Table!
     var angriest: Table!
@@ -85,6 +85,21 @@ class MoodDatabase {
         }
     }
     
+    public func everythingInput(moodValue: String, inputValue: String){
+            do {
+                try self.moodDB.run(everything.insert(mood <- moodValue, reason <- inputValue))
+            } catch {
+                print(error.localizedDescription)
+            }
+        }
+    
+    public func addInput(moodValue: String, inputValue: String, moodTable: Table!){
+            do {
+                try self.moodDB.run(moodTable.insert(mood <- moodValue, reason <- inputValue))
+            } catch {
+                print(error.localizedDescription)
+            }
+        }
 }
 
 

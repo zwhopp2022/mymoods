@@ -25,7 +25,7 @@
 		830A118F29A4713B00E6FDE7 /* SadLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 830A118E29A4713B00E6FDE7 /* SadLog.swift */; };
 		830A119129A471A600E6FDE7 /* NeutralLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 830A119029A471A600E6FDE7 /* NeutralLog.swift */; };
 		830A119329A471FB00E6FDE7 /* AngriestLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 830A119229A471FB00E6FDE7 /* AngriestLog.swift */; };
-		8326A39529B2778000684D67 /* DataBase_Manager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8326A39429B2778000684D67 /* DataBase_Manager.swift */; };
+		8332530D29B5659100B2AD00 /* FeelingInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8332530C29B5659100B2AD00 /* FeelingInput.swift */; };
 		BA9F603029AD7853007E346A /* MoodTrackerDB.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA9F602F29AD7853007E346A /* MoodTrackerDB.swift */; };
 		D4FC5CEB25BC358D7740C9D9 /* Pods_Mood_Tracker_Mood_TrackerUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C776E45C4B7B15D0E054B425 /* Pods_Mood_Tracker_Mood_TrackerUITests.framework */; };
 /* End PBXBuildFile section */
@@ -73,7 +73,7 @@
 		830A118E29A4713B00E6FDE7 /* SadLog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SadLog.swift; sourceTree = "<group>"; };
 		830A119029A471A600E6FDE7 /* NeutralLog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NeutralLog.swift; sourceTree = "<group>"; };
 		830A119229A471FB00E6FDE7 /* AngriestLog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AngriestLog.swift; sourceTree = "<group>"; };
-		8326A39429B2778000684D67 /* DataBase_Manager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataBase_Manager.swift; sourceTree = "<group>"; };
+		8332530C29B5659100B2AD00 /* FeelingInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeelingInput.swift; sourceTree = "<group>"; };
 		8F46C47A580A6CAE24B25EE5 /* Pods-Mood-Tracker-Mood-TrackerUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mood-Tracker-Mood-TrackerUITests.release.xcconfig"; path = "Target Support Files/Pods-Mood-Tracker-Mood-TrackerUITests/Pods-Mood-Tracker-Mood-TrackerUITests.release.xcconfig"; sourceTree = "<group>"; };
 		91BB21799F118671CB395975 /* Pods-Mood-TrackerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mood-TrackerTests.release.xcconfig"; path = "Target Support Files/Pods-Mood-TrackerTests/Pods-Mood-TrackerTests.release.xcconfig"; sourceTree = "<group>"; };
 		9B653AFB5B2DDF4BA8FD6437 /* Pods-Mood-TrackerTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mood-TrackerTests.debug.xcconfig"; path = "Target Support Files/Pods-Mood-TrackerTests/Pods-Mood-TrackerTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -160,7 +160,6 @@
 				830A118C29A4704E00E6FDE7 /* HappiestLog.swift */,
 				830A119229A471FB00E6FDE7 /* AngriestLog.swift */,
 				5DBF7B8429A1B32300DFAAB5 /* FacesView.swift */,
-				8326A39429B2778000684D67 /* DataBase_Manager.swift */,
 				3775361A22234238005EE5FE /* Assets.xcassets */,
 				3775361C22234238005EE5FE /* LaunchScreen.storyboard */,
 				3775361F22234238005EE5FE /* Info.plist */,
@@ -202,6 +201,7 @@
 				BA9F602F29AD7853007E346A /* MoodTrackerDB.swift */,
 				5D480A1529B1496600CD077D /* UserDefaultsChecker.swift */,
 				5D480A1929B52AB900CD077D /* MoodDB.swift */,
+				8332530C29B5659100B2AD00 /* FeelingInput.swift */,
 			);
 			path = Database;
 			sourceTree = "<group>";
@@ -446,13 +446,13 @@
 				BA9F603029AD7853007E346A /* MoodTrackerDB.swift in Sources */,
 				5D41D4FD299F085400667275 /* FaceButton.swift in Sources */,
 				830A118B29A46C0200E6FDE7 /* HappyLog.swift in Sources */,
+				8332530D29B5659100B2AD00 /* FeelingInput.swift in Sources */,
 				5D480A1A29B52AB900CD077D /* MoodDB.swift in Sources */,
 				5DC09876299EB97D007D38A3 /* FacesViewController.swift in Sources */,
 				5D480A1629B1496600CD077D /* UserDefaultsChecker.swift in Sources */,
 				830A119129A471A600E6FDE7 /* NeutralLog.swift in Sources */,
 				830A118F29A4713B00E6FDE7 /* SadLog.swift in Sources */,
 				830A118929A4610500E6FDE7 /* SaddestLog.swift in Sources */,
-				8326A39529B2778000684D67 /* DataBase_Manager.swift in Sources */,
 				3775361422234238005EE5FE /* AppDelegate.swift in Sources */,
 				830A119329A471FB00E6FDE7 /* AngriestLog.swift in Sources */,
 				5DBF7B8529A1B32300DFAAB5 /* FacesView.swift in Sources */,
