@@ -12,6 +12,8 @@ let backgroundGradient1 = LinearGradient(colors: [Color.cyan, Color.gray, Color.
 struct NeutralLog: View {
     @State private var userInput = ""
     
+    @Environment(\.presentationMode) var mode: Binding<PresentationMode>
+    
     var body: some View {
         NavigationView {
             ZStack {
@@ -36,14 +38,19 @@ struct NeutralLog: View {
                         .multilineTextAlignment(.center)
                         .background(Color.white)
                         .cornerRadius(10)
-                    Button("Store") {
-                    }
-                    .foregroundColor(.white)
-                    .frame(width: 300, height: 50)
-                    .background(Color.yellow.opacity(0.6))
-                    
+                    Button(action: {
+                        MoodDatabase().addInput(moodValue: "Neutral", inputValue: self.userInput, moodTable: MoodDatabase().neutral)
+                                       
+                    self.mode.wrappedValue.dismiss()
+                    }, label: {
+                            Text("Store")
+                    })
+                        .foregroundColor(.white)
+                        .frame(width: 300, height: 50)
+                        .background(Color.black.opacity(0.5))
+                                   
                     Spacer()
-                        .frame(height: 125)
+                            .frame(height: 125)
                 }
             }
         }

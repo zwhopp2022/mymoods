@@ -12,12 +12,12 @@ class MoodDatabase {
     
     // initialize variables needed for an instance of MoodDatabase
     var moodDB: Connection!
-    var happiest: Table!
+    public var happiest: Table!
     public var saddest: Table!
-    var sad: Table!
-    var neutral: Table!
-    var angriest: Table!
-    var happy: Table!
+    public var sad: Table!
+    public var neutral: Table!
+    public var angriest: Table!
+    public var happy: Table!
     var everything: Table!
     var mood: Expression<String>!
     var reason: Expression<String>!
