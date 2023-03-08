@@ -7,14 +7,18 @@
 
 import SwiftUI
 
+
+
 struct EverythingView: View {
     
     @State private var isScrollExpanded = false
     @State private var selectedScrollNum = 1
     //private var listOfInputs: [FeelingInput]  = moodDB.retrieveReasons(moodTable: "saddest")
+    var feelingInputs = moodDB.retrieveReasons(moodTable: "saddest")
+    var lengthofInputs: Int = 0
     
     let backgroundGradient1 = LinearGradient(colors: [Color.green, Color.yellow, Color.gray, Color.cyan, Color.blue, Color.red, Color.red], startPoint: .top, endPoint: .bottom)
-    
+        
     var body: some View {
         ZStack{
             backgroundGradient.ignoresSafeArea()
@@ -35,16 +39,16 @@ struct EverythingView: View {
                 DisclosureGroup("\(selectedScrollNum)", isExpanded: $isScrollExpanded) {
                     ScrollView{
                         VStack{
-                            ForEach(1...500, id: \.self) { num in Text("\(num)")
-                                    .frame(maxWidth: .infinity)
-                                    .font(.title3)
-                                    .padding(.all).onTapGesture {
-                                        self.selectedScrollNum = num
-                                        withAnimation {
-                                            self.isScrollExpanded.toggle()
-                                        }
-                                    }
-                            }
+//                            ForEach(1...500, id: \.self) { num in Text("\(num)")
+//                                    .frame(maxWidth: .infinity)
+//                                    .font(.title3)
+//                                    .padding(.all).onTapGesture {
+//                                        self.selectedScrollNum = num
+//                                        withAnimation {
+//                                            self.isScrollExpanded.toggle()
+//                                        }
+//                                    }
+//                            }
                         }
                     }.frame(height:150)
                 }.accentColor(.white)
