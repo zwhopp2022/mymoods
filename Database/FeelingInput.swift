@@ -8,6 +8,11 @@
 import Foundation
 
 class FeelingInput: Identifiable {
-    public var reason: String = ""
-    public var mood: String = ""
+    var reason: String = ""
+    var mood: String = ""
+    
+    public init (initreason: String, initmood: String){
+        self.reason = initreason
+        self.mood = initmood
+    }
 }
