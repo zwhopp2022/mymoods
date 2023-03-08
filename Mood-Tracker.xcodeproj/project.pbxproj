@@ -13,6 +13,7 @@
 		3775362922234238005EE5FE /* MoodTrackerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3775362822234238005EE5FE /* MoodTrackerTests.swift */; };
 		3775363422234239005EE5FE /* MoodTrackerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3775363322234239005EE5FE /* MoodTrackerUITests.swift */; };
 		3FBAB9CE23A011B8BBCC41E5 /* Pods_Mood_TrackerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAFBE0DA96D2EF94BFABF3C7 /* Pods_Mood_TrackerTests.framework */; };
+		5D14EE9B29B8448500CC42BC /* EverythingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D14EE9A29B8448500CC42BC /* EverythingView.swift */; };
 		5D41D4FD299F085400667275 /* FaceButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D41D4FC299F085400667275 /* FaceButton.swift */; };
 		5D480A1629B1496600CD077D /* UserDefaultsChecker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D480A1529B1496600CD077D /* UserDefaultsChecker.swift */; };
 		5D480A1A29B52AB900CD077D /* MoodDB.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D480A1929B52AB900CD077D /* MoodDB.swift */; };
@@ -61,6 +62,7 @@
 		3775362F22234239005EE5FE /* Mood-TrackerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Mood-TrackerUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3775363322234239005EE5FE /* MoodTrackerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodTrackerUITests.swift; sourceTree = "<group>"; };
 		3775363522234239005EE5FE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5D14EE9A29B8448500CC42BC /* EverythingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EverythingView.swift; sourceTree = "<group>"; };
 		5D41D4FC299F085400667275 /* FaceButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaceButton.swift; sourceTree = "<group>"; };
 		5D480A1529B1496600CD077D /* UserDefaultsChecker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsChecker.swift; sourceTree = "<group>"; };
 		5D480A1929B52AB900CD077D /* MoodDB.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodDB.swift; sourceTree = "<group>"; };
@@ -163,6 +165,7 @@
 				3775361A22234238005EE5FE /* Assets.xcassets */,
 				3775361C22234238005EE5FE /* LaunchScreen.storyboard */,
 				3775361F22234238005EE5FE /* Info.plist */,
+				5D14EE9A29B8448500CC42BC /* EverythingView.swift */,
 			);
 			path = "Mood-Tracker";
 			sourceTree = "<group>";
@@ -452,6 +455,7 @@
 				5D480A1629B1496600CD077D /* UserDefaultsChecker.swift in Sources */,
 				830A119129A471A600E6FDE7 /* NeutralLog.swift in Sources */,
 				830A118F29A4713B00E6FDE7 /* SadLog.swift in Sources */,
+				5D14EE9B29B8448500CC42BC /* EverythingView.swift in Sources */,
 				830A118929A4610500E6FDE7 /* SaddestLog.swift in Sources */,
 				3775361422234238005EE5FE /* AppDelegate.swift in Sources */,
 				830A119329A471FB00E6FDE7 /* AngriestLog.swift in Sources */,

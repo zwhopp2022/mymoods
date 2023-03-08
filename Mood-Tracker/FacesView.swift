@@ -10,7 +10,6 @@ import SwiftUI
 // background color gradient
 let backgroundGradient = LinearGradient(colors: [Color.blue, Color.green, Color.yellow, Color.red], startPoint: .top, endPoint: .bottom)
 
-
 struct FacesView: View {
     @State private var moveToSaddest = false
     @State private var moveToHappiest = false
