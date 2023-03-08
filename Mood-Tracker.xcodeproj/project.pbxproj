@@ -27,6 +27,12 @@
 		830A119129A471A600E6FDE7 /* NeutralLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 830A119029A471A600E6FDE7 /* NeutralLog.swift */; };
 		830A119329A471FB00E6FDE7 /* AngriestLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 830A119229A471FB00E6FDE7 /* AngriestLog.swift */; };
 		8332530F29B56D8900B2AD00 /* FeelingInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8332530E29B56D8900B2AD00 /* FeelingInput.swift */; };
+		83B1798129B8502300A2F651 /* SaddestDisplay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83B1798029B8502300A2F651 /* SaddestDisplay.swift */; };
+		83B1798329B8502E00A2F651 /* HappiestDisplay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83B1798229B8502E00A2F651 /* HappiestDisplay.swift */; };
+		83B1798529B8503800A2F651 /* HappyDisplay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83B1798429B8503800A2F651 /* HappyDisplay.swift */; };
+		83B1798729B8504200A2F651 /* SadDisplay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83B1798629B8504200A2F651 /* SadDisplay.swift */; };
+		83B1798929B8504A00A2F651 /* AngryDisplay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83B1798829B8504A00A2F651 /* AngryDisplay.swift */; };
+		83B1798B29B8505600A2F651 /* NeutralDisplay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83B1798A29B8505600A2F651 /* NeutralDisplay.swift */; };
 		BA9F603029AD7853007E346A /* MoodTrackerDB.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA9F602F29AD7853007E346A /* MoodTrackerDB.swift */; };
 		D4FC5CEB25BC358D7740C9D9 /* Pods_Mood_Tracker_Mood_TrackerUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C776E45C4B7B15D0E054B425 /* Pods_Mood_Tracker_Mood_TrackerUITests.framework */; };
 /* End PBXBuildFile section */
@@ -76,6 +82,12 @@
 		830A119029A471A600E6FDE7 /* NeutralLog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NeutralLog.swift; sourceTree = "<group>"; };
 		830A119229A471FB00E6FDE7 /* AngriestLog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AngriestLog.swift; sourceTree = "<group>"; };
 		8332530E29B56D8900B2AD00 /* FeelingInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeelingInput.swift; sourceTree = "<group>"; };
+		83B1798029B8502300A2F651 /* SaddestDisplay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaddestDisplay.swift; sourceTree = "<group>"; };
+		83B1798229B8502E00A2F651 /* HappiestDisplay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HappiestDisplay.swift; sourceTree = "<group>"; };
+		83B1798429B8503800A2F651 /* HappyDisplay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HappyDisplay.swift; sourceTree = "<group>"; };
+		83B1798629B8504200A2F651 /* SadDisplay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SadDisplay.swift; sourceTree = "<group>"; };
+		83B1798829B8504A00A2F651 /* AngryDisplay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AngryDisplay.swift; sourceTree = "<group>"; };
+		83B1798A29B8505600A2F651 /* NeutralDisplay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NeutralDisplay.swift; sourceTree = "<group>"; };
 		8F46C47A580A6CAE24B25EE5 /* Pods-Mood-Tracker-Mood-TrackerUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mood-Tracker-Mood-TrackerUITests.release.xcconfig"; path = "Target Support Files/Pods-Mood-Tracker-Mood-TrackerUITests/Pods-Mood-Tracker-Mood-TrackerUITests.release.xcconfig"; sourceTree = "<group>"; };
 		91BB21799F118671CB395975 /* Pods-Mood-TrackerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mood-TrackerTests.release.xcconfig"; path = "Target Support Files/Pods-Mood-TrackerTests/Pods-Mood-TrackerTests.release.xcconfig"; sourceTree = "<group>"; };
 		9B653AFB5B2DDF4BA8FD6437 /* Pods-Mood-TrackerTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mood-TrackerTests.debug.xcconfig"; path = "Target Support Files/Pods-Mood-TrackerTests/Pods-Mood-TrackerTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -156,6 +168,12 @@
 				5D41D4FC299F085400667275 /* FaceButton.swift */,
 				5DC09875299EB97D007D38A3 /* FacesViewController.swift */,
 				830A118829A4610500E6FDE7 /* SaddestLog.swift */,
+				83B1798029B8502300A2F651 /* SaddestDisplay.swift */,
+				83B1798229B8502E00A2F651 /* HappiestDisplay.swift */,
+				83B1798429B8503800A2F651 /* HappyDisplay.swift */,
+				83B1798629B8504200A2F651 /* SadDisplay.swift */,
+				83B1798829B8504A00A2F651 /* AngryDisplay.swift */,
+				83B1798A29B8505600A2F651 /* NeutralDisplay.swift */,
 				830A118E29A4713B00E6FDE7 /* SadLog.swift */,
 				830A119029A471A600E6FDE7 /* NeutralLog.swift */,
 				830A118A29A46C0200E6FDE7 /* HappyLog.swift */,
@@ -450,13 +468,19 @@
 				5D41D4FD299F085400667275 /* FaceButton.swift in Sources */,
 				830A118B29A46C0200E6FDE7 /* HappyLog.swift in Sources */,
 				8332530F29B56D8900B2AD00 /* FeelingInput.swift in Sources */,
+				83B1798329B8502E00A2F651 /* HappiestDisplay.swift in Sources */,
+				83B1798729B8504200A2F651 /* SadDisplay.swift in Sources */,
 				5D480A1A29B52AB900CD077D /* MoodDB.swift in Sources */,
 				5DC09876299EB97D007D38A3 /* FacesViewController.swift in Sources */,
+				83B1798B29B8505600A2F651 /* NeutralDisplay.swift in Sources */,
 				5D480A1629B1496600CD077D /* UserDefaultsChecker.swift in Sources */,
+				83B1798129B8502300A2F651 /* SaddestDisplay.swift in Sources */,
 				830A119129A471A600E6FDE7 /* NeutralLog.swift in Sources */,
+				83B1798529B8503800A2F651 /* HappyDisplay.swift in Sources */,
 				830A118F29A4713B00E6FDE7 /* SadLog.swift in Sources */,
 				5D14EE9B29B8448500CC42BC /* EverythingView.swift in Sources */,
 				830A118929A4610500E6FDE7 /* SaddestLog.swift in Sources */,
+				83B1798929B8504A00A2F651 /* AngryDisplay.swift in Sources */,
 				3775361422234238005EE5FE /* AppDelegate.swift in Sources */,
 				830A119329A471FB00E6FDE7 /* AngriestLog.swift in Sources */,
 				5DBF7B8529A1B32300DFAAB5 /* FacesView.swift in Sources */,
