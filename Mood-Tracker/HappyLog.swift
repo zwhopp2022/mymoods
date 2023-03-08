@@ -37,7 +37,8 @@ struct HappyLog: View {
                         .background(Color.white)
                         .cornerRadius(10)
                     Button(action: {
-                        MoodDatabase().addInput(moodValue: "Happy", inputValue: self.userInput, moodTable: MoodDatabase().happy)
+                        moodDB.addInput(moodValue: "Happy", inputValue: self.userInput, moodTable: moodDB.happy)
+                        moodDB.everythingInput(moodValue: "Happy", inputValue: self.userInput)
                                        
                     self.mode.wrappedValue.dismiss()
                     }, label: {

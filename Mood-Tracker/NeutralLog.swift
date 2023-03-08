@@ -39,7 +39,8 @@ struct NeutralLog: View {
                         .background(Color.white)
                         .cornerRadius(10)
                     Button(action: {
-                        MoodDatabase().addInput(moodValue: "Neutral", inputValue: self.userInput, moodTable: MoodDatabase().neutral)
+                        moodDB.addInput(moodValue: "Neutral", inputValue: self.userInput, moodTable: moodDB.neutral)
+                        moodDB.everythingInput(moodValue: "Neutral", inputValue: self.userInput)
                                        
                     self.mode.wrappedValue.dismiss()
                     }, label: {

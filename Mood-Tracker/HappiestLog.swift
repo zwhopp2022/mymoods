@@ -38,7 +38,8 @@ struct HappiestLog: View {
                         .cornerRadius(10)
 
                         Button(action: {
-                            MoodDatabase().addInput(moodValue: "Happiest", inputValue: self.userInput, moodTable: MoodDatabase().happiest)
+                            moodDB.addInput(moodValue: "Happiest", inputValue: self.userInput, moodTable: moodDB.happiest)
+                            moodDB.everythingInput(moodValue: "Happiest", inputValue: self.userInput)
                                            
                         self.mode.wrappedValue.dismiss()
                         }, label: {
