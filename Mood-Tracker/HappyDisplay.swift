@@ -23,12 +23,11 @@ struct HappyDisplay: View {
                 $isScrollExpanded) {
                 ScrollView {
                 VStack {
-                    ForEach(1...500, id: \.self) { num in
-                        Text("\(num)")
+                    ForEach(moodDB.retrieveReasons(moodTable: "happy"), id: \.self) { input in
+                        Text("\(input.reason)")
                             .frame(maxWidth: .infinity)
                             .font(.title3)
                             .padding(.all).onTapGesture {
-                                self.selectedScrollNum = num
                                 withAnimation {
                                     self.isScrollExpanded.toggle()
                 
