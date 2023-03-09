@@ -39,7 +39,7 @@ struct HappiestLog: View {
 
                         Button(action: {
                             moodDB.addInput(moodValue: "Happiest", inputValue: self.userInput, moodTable: moodDB.happiest)
-                            moodDB.everythingInput(moodValue: "Happiest", inputValue: self.userInput)
+                            //moodDB.everythingInput(moodValue: "Happiest", inputValue: self.userInput)
                                            
                         self.mode.wrappedValue.dismiss()
                         }, label: {

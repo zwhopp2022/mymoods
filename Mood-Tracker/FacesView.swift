@@ -63,7 +63,7 @@ struct FacesView: View {
                         }
                         // Angriest button
                         NavigationLink {
-                            AngriestLog()
+                            EverythingView()
                         } label: {
                             Image("Angriest")
                         }

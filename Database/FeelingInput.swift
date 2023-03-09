@@ -7,7 +7,7 @@
 
 import Foundation
 
-class FeelingInput: Identifiable {
+struct FeelingInput: Hashable {
     var reason: String = ""
     var mood: String = ""
     

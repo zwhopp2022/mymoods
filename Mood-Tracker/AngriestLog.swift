@@ -38,7 +38,7 @@ struct AngriestLog: View {
                         .cornerRadius(10)
                     Button(action: {
                         moodDB.addInput(moodValue: "Angriest", inputValue: self.userInput, moodTable: moodDB.angriest)
-                        moodDB.everythingInput(moodValue: "Angriest", inputValue: self.userInput)
+                        //moodDB.everythingInput(moodValue: "Angriest", inputValue: self.userInput)
                                        
                     self.mode.wrappedValue.dismiss()
                     }, label: {

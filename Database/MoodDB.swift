@@ -85,17 +85,19 @@ class MoodDatabase {
         }
     }
     
-    public func everythingInput(moodValue: String, inputValue: String){
-            do {
-                try self.moodDB.run(everything.insert(mood <- moodValue, reason <- inputValue))
-            } catch {
-                print(error.localizedDescription)
-            }
-        }
+//    public func everythingInput(moodValue: String, inputValue: String){
+//            do {
+//                try self.moodDB.run(everything.insert(mood <- moodValue, reason <- inputValue))
+//            } catch {
+//                print(error.localizedDescription)
+//            }
+//        }
     
     public func addInput(moodValue: String, inputValue: String, moodTable: Table!){
             do {
                 try self.moodDB.run(moodTable.insert(mood <- moodValue, reason <- inputValue))
+                try self.moodDB.run(self.everything.insert(mood <- moodValue, reason <- inputValue))
+
             } catch {
                 print(error.localizedDescription)
             }
