@@ -51,6 +51,13 @@ struct SadLog: View {
                     Spacer()
                             .frame(height: 125)
                 }
+                HStack() {
+                    NavigationLink {
+                        SadDisplay()
+                    } label: {
+                        "Entries"
+                    }
+                }
             }
         }
         .navigationBarHidden(true)

@@ -68,6 +68,13 @@ struct FacesView: View {
                             Image("Angriest")
                         }
                     }
+                    HStack() {
+                        NavigationLink {
+                            EverythingView()
+                        } label: {
+                            "History"
+                        }
+                    }
                     Spacer()
                         .frame(height:140)
                 }.padding()

@@ -51,6 +51,13 @@ struct HappyLog: View {
                     Spacer()
                             .frame(height: 125)
                 }
+                HStack() {
+                    NavigationLink {
+                        HappyDisplay()
+                    } label: {
+                        "Entries"
+                    }
+                }
             }
         }
         .navigationBarHidden(true)

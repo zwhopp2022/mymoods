@@ -52,6 +52,13 @@ struct HappiestLog: View {
                         Spacer()
                                 .frame(height: 125)
                 }
+                HStack() {
+                    NavigationLink {
+                        HappiestDisplay()
+                    } label: {
+                        "Entries"
+                    }
+                }
             }
         }
         .navigationBarHidden(true)

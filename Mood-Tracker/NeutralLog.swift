@@ -53,6 +53,13 @@ struct NeutralLog: View {
                     Spacer()
                             .frame(height: 125)
                 }
+                HStack() {
+                    NavigationLink {
+                        NeutralDisplay()
+                    } label: {
+                        "Entries"
+                    }
+                }
             }
         }
         .navigationBarHidden(true)

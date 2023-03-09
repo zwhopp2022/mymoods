@@ -56,6 +56,13 @@ struct EverythingView: View {
                     .cornerRadius(20)
                 Spacer()
             }.padding(.all)
+            HStack() {
+                NavigationLink {
+                    EverythingView()
+                } label: {
+                    "Back"
+                }
+            }
         }
         
         
