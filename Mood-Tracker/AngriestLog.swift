@@ -52,15 +52,11 @@ struct AngriestLog: View {
                             .frame(height: 125)
                 }
                 HStack() {
-                    NavigationLink {
+                    NavigationLink ("Entries"){
                         AngryDisplay()
-                    } label: {
-                        "Entries"
                     }
-                    NavigationLink {
+                    NavigationLink ("Back"){
                         FacesView()
-                    } label: {
-                        "Back"
                     }
                 }
             }

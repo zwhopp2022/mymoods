@@ -52,15 +52,11 @@ struct SadLog: View {
                             .frame(height: 125)
                 }
                 HStack() {
-                    NavigationLink {
+                    NavigationLink ("Entries"){
                         SadDisplay()
-                    } label: {
-                        "Entries"
                     }
-                    NavigationLink {
+                    NavigationLink ("Back"){
                         FacesView()
-                    } label: {
-                        "Back"
                     }
                 }
             }

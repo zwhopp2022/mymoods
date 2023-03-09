@@ -57,10 +57,8 @@ struct EverythingView: View {
                 Spacer()
             }.padding(.all)
             HStack() {
-                NavigationLink {
+                NavigationLink ("Back"){
                     EverythingView()
-                } label: {
-                    "Back"
                 }
             }
         }

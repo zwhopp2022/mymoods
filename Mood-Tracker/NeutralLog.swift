@@ -54,15 +54,11 @@ struct NeutralLog: View {
                             .frame(height: 125)
                 }
                 HStack() {
-                    NavigationLink {
+                    NavigationLink ("Entries"){
                         NeutralDisplay()
-                    } label: {
-                        "Entries"
                     }
-                    NavigationLink {
+                    NavigationLink ("Back"){
                         FacesView()
-                    } label: {
-                        "Back"
                     }
                 }
             }

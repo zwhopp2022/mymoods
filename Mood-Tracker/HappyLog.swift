@@ -52,15 +52,11 @@ struct HappyLog: View {
                             .frame(height: 125)
                 }
                 HStack() {
-                    NavigationLink {
+                    NavigationLink ("Entries"){
                         HappyDisplay()
-                    } label: {
-                        "Entries"
                     }
-                    NavigationLink {
+                    NavigationLink ("Back"){
                         FacesView()
-                    } label: {
-                        "Back"
                     }
                 }
             }

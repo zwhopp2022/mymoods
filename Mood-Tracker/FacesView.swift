@@ -69,10 +69,8 @@ struct FacesView: View {
                         }
                     }
                     HStack() {
-                        NavigationLink {
+                        NavigationLink ("History"){
                             EverythingView()
-                        } label: {
-                            "History"
                         }
                     }
                     Spacer()
