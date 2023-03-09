@@ -57,6 +57,11 @@ struct SaddestLog: View {
                     } label: {
                         "Entries"
                     }
+                    NavigationLink {
+                        FacesView()
+                    } label: {
+                        "Back"
+                    }
                 }
             }
         }

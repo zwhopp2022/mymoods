@@ -51,6 +51,18 @@ struct AngriestLog: View {
                     Spacer()
                             .frame(height: 125)
                 }
+                HStack() {
+                    NavigationLink {
+                        AngryDisplay()
+                    } label: {
+                        "Entries"
+                    }
+                    NavigationLink {
+                        FacesView()
+                    } label: {
+                        "Back"
+                    }
+                }
             }
         }
         .navigationBarHidden(true)

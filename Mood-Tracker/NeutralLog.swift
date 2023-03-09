@@ -59,6 +59,11 @@ struct NeutralLog: View {
                     } label: {
                         "Entries"
                     }
+                    NavigationLink {
+                        FacesView()
+                    } label: {
+                        "Back"
+                    }
                 }
             }
         }

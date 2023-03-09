@@ -58,6 +58,11 @@ struct HappiestLog: View {
                     } label: {
                         "Entries"
                     }
+                    NavigationLink {
+                        FacesView()
+                    } label: {
+                        "Back"
+                    }
                 }
             }
         }

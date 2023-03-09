@@ -57,6 +57,11 @@ struct HappyLog: View {
                     } label: {
                         "Entries"
                     }
+                    NavigationLink {
+                        FacesView()
+                    } label: {
+                        "Back"
+                    }
                 }
             }
         }

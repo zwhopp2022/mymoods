@@ -25,7 +25,7 @@ struct AngryDisplay: View {
                                     $isScrollExpanded) {
                     ScrollView {
                         VStack {
-                            ForEach(moodDB.retrieveReasons(moodTable: "angry"), id: \.self) { input in
+                            ForEach(moodDB.retrieveReasons(moodTable: "angriest"), id: \.self) { input in
                                 Text("\(input.reason)")
                                     .frame(maxWidth: .infinity)
                                     .font(.title3)
@@ -47,6 +47,13 @@ struct AngryDisplay: View {
                 
                 Spacer()
             }.padding(.all)
+            HStack() {
+                NavigationLink {
+                    AngriestLog()
+                } label: {
+                    "Back"
+                }
+            }
         }
     }
 }
