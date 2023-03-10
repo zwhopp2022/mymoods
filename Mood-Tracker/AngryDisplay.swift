@@ -56,9 +56,13 @@ struct AngryDisplay: View {
                     
                     Spacer()
                 }.padding(.all)
-                HStack() {
-                    NavigationLink ("Back"){
-                        AngriestLog()
+                VStack {
+                    Spacer()
+                        .frame(height: 675)
+                    HStack() {
+                        NavigationLink ("Back"){
+                            AngriestLog()
+                        }
                     }
                 }
             }

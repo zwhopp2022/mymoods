@@ -55,9 +55,13 @@ struct HappiestDisplay: View {
                     
                     Spacer()
                 }.padding(.all)
-                HStack() {
-                    NavigationLink ("Back"){
-                        HappiestLog()
+                VStack {
+                    Spacer()
+                        .frame(height: 675)
+                    HStack() {
+                        NavigationLink ("Back"){
+                            HappiestLog()
+                        }
                     }
                 }
             }

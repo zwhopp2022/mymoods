@@ -56,9 +56,13 @@ struct HappyDisplay: View {
                     
                     Spacer()
                 }.padding(.all)
-                HStack() {
-                    NavigationLink ("Back"){
-                        HappyLog()
+                VStack {
+                    Spacer()
+                        .frame(height: 675)
+                    HStack() {
+                        NavigationLink ("Back"){
+                            HappyLog()
+                        }
                     }
                 }
             }

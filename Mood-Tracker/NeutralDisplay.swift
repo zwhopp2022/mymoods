@@ -55,9 +55,13 @@ struct NeutralDisplay: View {
                     
                     Spacer()
                 }.padding(.all)
-                HStack() {
-                    NavigationLink ("Back"){
-                        NeutralLog()
+                VStack {
+                    Spacer()
+                        .frame(height: 675)
+                    HStack() {
+                        NavigationLink ("Back"){
+                            NeutralLog()
+                        }
                     }
                 }
             }
