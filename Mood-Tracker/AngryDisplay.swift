@@ -15,8 +15,16 @@ struct AngryDisplay: View {
     var body: some View {
         NavigationView {
             ZStack{
-                backgroundGradient.ignoresSafeArea()
-                    .blur(radius: 85)
+                Color.red
+                VStack{
+                    Image("Angriest")
+                        .padding()
+                        .frame(width: 350)
+                        .frame(height: 110)
+                    
+                    Spacer()
+                        .frame(height: 565)
+                }
                 VStack(alignment: .leading, spacing: 20){
                     Text("When you were Angry")
                         .font(.largeTitle)

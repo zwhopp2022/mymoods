@@ -14,8 +14,16 @@ struct HappiestDisplay: View {
     var body: some View {
         NavigationView {
             ZStack{
-                backgroundGradient.ignoresSafeArea()
-                    .blur(radius: 85)
+                Color.green
+                VStack{
+                    Image("Happiest")
+                        .padding()
+                        .frame(width: 350)
+                        .frame(height: 110)
+                    
+                    Spacer()
+                        .frame(height: 565)
+                }
                 VStack(alignment: .leading, spacing: 20){
                     Text("When you were the Happiest")
                         .font(.system(size:28))
@@ -37,7 +45,7 @@ struct HappiestDisplay: View {
                                         }
                                 }
                             }
-                        }.frame(height:200)
+                        }.frame(height:400)
                     }.accentColor(.white)
                         .font(.title2)
                         .foregroundColor(.white)

@@ -58,7 +58,7 @@ struct EverythingView: View {
             }.padding(.all)
             HStack() {
                 NavigationLink ("Back"){
-                    EverythingView()
+                    FacesView()
                 }
             }
         }

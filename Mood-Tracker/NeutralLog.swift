@@ -17,8 +17,7 @@ struct NeutralLog: View {
     var body: some View {
         NavigationView {
             ZStack {
-                backgroundGradient1
-                    .ignoresSafeArea()
+                backgroundGradient1.ignoresSafeArea()
                 Circle()
                     .scale(1.8)
                     .foregroundColor(.white.opacity(0.15))

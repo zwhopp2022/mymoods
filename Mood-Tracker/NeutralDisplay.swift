@@ -14,8 +14,16 @@ struct NeutralDisplay: View {
     var body: some View {
         NavigationView {
             ZStack{
-                backgroundGradient.ignoresSafeArea()
-                    .blur(radius: 85)
+                backgroundGradient1.ignoresSafeArea()
+                VStack{
+                    Image("neutral")
+                        .padding()
+                        .frame(width: 350)
+                        .frame(height: 110)
+                    
+                    Spacer()
+                        .frame(height: 565)
+                }
                 VStack(alignment: .leading, spacing: 20){
                     Text("When you felt Neutral")
                         .font(.largeTitle)
@@ -37,7 +45,7 @@ struct NeutralDisplay: View {
                                         }
                                 }
                             }
-                        }.frame(height:200)
+                        }.frame(height:400)
                     }.accentColor(.white)
                         .font(.title2)
                         .foregroundColor(.white)

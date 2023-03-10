@@ -15,8 +15,16 @@ struct SadDisplay: View {
     var body: some View {
         NavigationView {
             ZStack{
-                backgroundGradient.ignoresSafeArea()
-                    .blur(radius: 85)
+                Color.cyan
+                VStack{
+                    Image("Sad")
+                        .padding()
+                        .frame(width: 350)
+                        .frame(height: 110)
+                    
+                    Spacer()
+                        .frame(height: 565)
+                }
                 VStack(alignment: .leading, spacing: 20){
                     Text("When you were Sad")
                         .font(.largeTitle)
@@ -38,7 +46,7 @@ struct SadDisplay: View {
                                         }
                                 }
                             }
-                        }.frame(height:200)
+                        }.frame(height:400)
                     }.accentColor(.white)
                         .font(.title2)
                         .foregroundColor(.white)
