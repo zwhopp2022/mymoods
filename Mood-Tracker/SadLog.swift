@@ -10,6 +10,8 @@ import SwiftUI
 struct SadLog: View {
     @State private var userInput = ""
     
+    @Environment(\.presentationMode) var mode: Binding<PresentationMode>
+    
     var body: some View {
         NavigationView {
             ZStack {
@@ -34,14 +36,32 @@ struct SadLog: View {
                         .multilineTextAlignment(.center)
                         .background(Color.white)
                         .cornerRadius(10)
-                    Button("Store") {
-                    }
-                    .foregroundColor(.white)
-                    .frame(width: 300, height: 50)
-                    .background(Color.black.opacity(0.30))
-                    
+                    Button(action: {
+                        moodDB.addInput(moodValue: "Sad", inputValue: self.userInput, moodTable: moodDB.sad)
+                       // moodDB.everythingInput(moodValue: "Sad", inputValue: self.userInput)
+                                       
+                    self.mode.wrappedValue.dismiss()
+                    }, label: {
+                            Text("Store")
+                    })
+                        .foregroundColor(.white)
+                        .frame(width: 300, height: 50)
+                        .background(Color.black.opacity(0.5))
+                                   
                     Spacer()
-                        .frame(height: 125)
+                            .frame(height: 125)
+                }
+                VStack {
+                    Spacer()
+                        .frame(height: 500)
+                    HStack() {
+                        NavigationLink ("Entries"){
+                            SadDisplay()
+                        }
+                        Button ("Back"){
+                            self.mode.wrappedValue.dismiss()
+                        }
+                    }
                 }
             }
         }

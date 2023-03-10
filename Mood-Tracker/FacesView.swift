@@ -10,6 +10,7 @@ import SwiftUI
 // background color gradient
 let backgroundGradient = LinearGradient(colors: [Color.blue, Color.green, Color.yellow, Color.red], startPoint: .top, endPoint: .bottom)
 
+let moodDB = MoodDatabase()
 
 struct FacesView: View {
     @State private var moveToSaddest = false
@@ -19,6 +20,7 @@ struct FacesView: View {
             ZStack {
                 backgroundGradient.ignoresSafeArea()
                     .blur(radius: 100)
+                    .navigationBarHidden(true)
                 VStack{
                     Text("How are you doing?")
                         .bold()
@@ -65,6 +67,11 @@ struct FacesView: View {
                             AngriestLog()
                         } label: {
                             Image("Angriest")
+                        }
+                    }
+                    HStack() {
+                        NavigationLink ("History"){
+                            EverythingView()
                         }
                     }
                     Spacer()

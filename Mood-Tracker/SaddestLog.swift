@@ -10,10 +10,12 @@ import SwiftUI
 struct SaddestLog: View {
     @State private var userInput = ""
     
+    @Environment(\.presentationMode) var mode: Binding<PresentationMode>
+    
     var body: some View {
         NavigationView {
             ZStack {
-                Color.blue
+                Color.indigo
                     .ignoresSafeArea()
                 Circle()
                     .scale(1.8)
@@ -34,14 +36,32 @@ struct SaddestLog: View {
                         .multilineTextAlignment(.center)
                         .background(Color.white)
                         .cornerRadius(10)
-                    Button("Store") {
-                    }
-                    .foregroundColor(.white)
-                    .frame(width: 300, height: 50)
-                    .background(Color.black.opacity(0.5))
-                    
+                    Button(action: {
+                        moodDB.addInput(moodValue: "Saddest", inputValue: self.userInput, moodTable: moodDB.saddest)
+                        //moodDB.everythingInput(moodValue: "Saddest", inputValue: self.userInput)
+                                       
+                    self.mode.wrappedValue.dismiss()
+                    }, label: {
+                            Text("Store")
+                    })
+                        .foregroundColor(.white)
+                        .frame(width: 300, height: 50)
+                        .background(Color.black.opacity(0.5))
+                                   
                     Spacer()
-                        .frame(height: 125)
+                            .frame(height: 125)
+                }
+                VStack {
+                    Spacer()
+                        .frame(height: 500)
+                    HStack() {
+                        NavigationLink ("Entries"){
+                            SaddestDisplay()
+                        }
+                        Button ("Back"){
+                            self.mode.wrappedValue.dismiss()
+                        }
+                    }
                 }
             }
         }
