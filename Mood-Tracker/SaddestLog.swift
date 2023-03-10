@@ -51,12 +51,16 @@ struct SaddestLog: View {
                     Spacer()
                             .frame(height: 125)
                 }
-                HStack() {
-                    NavigationLink ("Entries"){
-                        SaddestDisplay()
-                    }
-                    NavigationLink ("Back"){
-                        FacesView()
+                VStack {
+                    Spacer()
+                        .frame(height: 500)
+                    HStack() {
+                        NavigationLink ("Entries"){
+                            SaddestDisplay()
+                        }
+                        NavigationLink ("Back"){
+                            FacesView()
+                        }
                     }
                 }
             }
