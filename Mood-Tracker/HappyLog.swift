@@ -58,8 +58,8 @@ struct HappyLog: View {
                         NavigationLink ("Entries"){
                             HappyDisplay()
                         }
-                        NavigationLink ("Back"){
-                            FacesView()
+                        Button ("Back"){
+                            self.mode.wrappedValue.dismiss()
                         }
                     }
                 }

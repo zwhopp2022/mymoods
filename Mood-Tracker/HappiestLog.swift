@@ -59,8 +59,8 @@ struct HappiestLog: View {
                         NavigationLink ("Entries"){
                             HappiestDisplay()
                         }
-                        NavigationLink ("Back"){
-                            FacesView()
+                        Button ("Back"){
+                            self.mode.wrappedValue.dismiss()
                         }
                     }
                 }

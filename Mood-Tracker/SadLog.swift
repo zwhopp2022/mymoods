@@ -58,8 +58,8 @@ struct SadLog: View {
                         NavigationLink ("Entries"){
                             SadDisplay()
                         }
-                        NavigationLink ("Back"){
-                            FacesView()
+                        Button ("Back"){
+                            self.mode.wrappedValue.dismiss()
                         }
                     }
                 }

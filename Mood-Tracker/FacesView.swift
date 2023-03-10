@@ -20,6 +20,7 @@ struct FacesView: View {
             ZStack {
                 backgroundGradient.ignoresSafeArea()
                     .blur(radius: 100)
+                    .navigationBarHidden(true)
                 VStack{
                     Text("How are you doing?")
                         .bold()

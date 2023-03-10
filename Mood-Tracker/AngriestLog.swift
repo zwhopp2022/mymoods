@@ -58,8 +58,8 @@ struct AngriestLog: View {
                         NavigationLink ("Entries"){
                             AngryDisplay()
                         }
-                        NavigationLink ("Back"){
-                            FacesView()
+                        Button ("Back"){
+                            self.mode.wrappedValue.dismiss()
                         }
                     }
                 }

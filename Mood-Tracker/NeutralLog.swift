@@ -59,8 +59,8 @@ struct NeutralLog: View {
                         NavigationLink ("Entries"){
                             NeutralDisplay()
                         }
-                        NavigationLink ("Back"){
-                            FacesView()
+                        Button ("Back"){
+                            self.mode.wrappedValue.dismiss()
                         }
                     }
                 }

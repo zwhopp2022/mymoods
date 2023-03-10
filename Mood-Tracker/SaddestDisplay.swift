@@ -60,8 +60,8 @@ struct SaddestDisplay: View {
                     Spacer()
                         .frame(height: 675)
                     HStack() {
-                        NavigationLink ("Back"){
-                            SaddestLog()
+                        NavigationLink ("Home Page"){
+                            FacesView()
                         }
                     }
                 }

@@ -21,6 +21,7 @@ struct EverythingView: View {
         ZStack{
             backgroundGradient.ignoresSafeArea()
                 .blur(radius: 85)
+                .navigationBarHidden(true)
             VStack{
                 Image("EveryFace")
                     .padding()

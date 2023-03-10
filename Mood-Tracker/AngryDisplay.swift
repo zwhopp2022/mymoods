@@ -60,8 +60,8 @@ struct AngryDisplay: View {
                     Spacer()
                         .frame(height: 675)
                     HStack() {
-                        NavigationLink ("Back"){
-                            AngriestLog()
+                        NavigationLink ("Home Page"){
+                            FacesView()
                         }
                     }
                 }

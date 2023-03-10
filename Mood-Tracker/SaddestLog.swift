@@ -58,8 +58,8 @@ struct SaddestLog: View {
                         NavigationLink ("Entries"){
                             SaddestDisplay()
                         }
-                        NavigationLink ("Back"){
-                            FacesView()
+                        Button ("Back"){
+                            self.mode.wrappedValue.dismiss()
                         }
                     }
                 }

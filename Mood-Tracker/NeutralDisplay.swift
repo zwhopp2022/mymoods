@@ -59,8 +59,8 @@ struct NeutralDisplay: View {
                     Spacer()
                         .frame(height: 675)
                     HStack() {
-                        NavigationLink ("Back"){
-                            NeutralLog()
+                        NavigationLink ("Home Page"){
+                            FacesView()
                         }
                     }
                 }
