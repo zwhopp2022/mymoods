@@ -15,7 +15,7 @@ struct SaddestDisplay: View {
     var body: some View {
         NavigationView {
             ZStack{
-                Color.blue.ignoresSafeArea()
+                Color.indigo.ignoresSafeArea()
                 VStack{
                     Image("Saddest")
                         .padding()

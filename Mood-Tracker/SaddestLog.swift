@@ -15,7 +15,7 @@ struct SaddestLog: View {
     var body: some View {
         NavigationView {
             ZStack {
-                Color.blue
+                Color.indigo
                     .ignoresSafeArea()
                 Circle()
                     .scale(1.8)

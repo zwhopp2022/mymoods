@@ -46,7 +46,7 @@ struct AngryDisplay: View {
                                         }
                                 }
                             }
-                        }.frame(height:200)
+                        }.frame(height:400)
                     }.accentColor(.white)
                         .font(.title2)
                         .foregroundColor(.white)
