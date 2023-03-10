@@ -15,7 +15,7 @@ struct AngryDisplay: View {
     var body: some View {
         NavigationView {
             ZStack{
-                Color.red
+                Color.red.ignoresSafeArea()
                 VStack{
                     Image("Angriest")
                         .padding()
@@ -25,7 +25,9 @@ struct AngryDisplay: View {
                     Spacer()
                         .frame(height: 565)
                 }
-                VStack(alignment: .leading, spacing: 20){
+                VStack {
+                    Spacer()
+                        .frame(height: 175)
                     Text("When you were Angry")
                         .font(.largeTitle)
                     Text("Your Activities")

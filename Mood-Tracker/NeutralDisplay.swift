@@ -24,7 +24,9 @@ struct NeutralDisplay: View {
                     Spacer()
                         .frame(height: 565)
                 }
-                VStack(alignment: .leading, spacing: 20){
+                VStack {
+                    Spacer()
+                        .frame(height: 175)
                     Text("When you felt Neutral")
                         .font(.largeTitle)
                     Text("Your Activities")
