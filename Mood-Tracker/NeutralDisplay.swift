@@ -27,11 +27,9 @@ struct NeutralDisplay: View {
                 VStack {
                     Spacer()
                         .frame(height: 175)
-                    Text("When you felt Neutral")
                         .font(.largeTitle)
-                    Text("Your Activities")
                         .font(.title3)
-                    DisclosureGroup("\(selectedScrollNum)", isExpanded:
+                    DisclosureGroup("Your entries", isExpanded:
                                         $isScrollExpanded) {
                         ScrollView {
                             VStack {

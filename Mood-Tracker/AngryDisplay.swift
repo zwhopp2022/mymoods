@@ -28,11 +28,9 @@ struct AngryDisplay: View {
                 VStack {
                     Spacer()
                         .frame(height: 175)
-                    Text("When you were Angry")
                         .font(.largeTitle)
-                    Text("Your Activities")
                         .font(.title3)
-                    DisclosureGroup("\(selectedScrollNum)", isExpanded:
+                    DisclosureGroup("Your entries", isExpanded:
                                         $isScrollExpanded) {
                         ScrollView {
                             VStack {

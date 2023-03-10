@@ -27,11 +27,9 @@ struct HappiestDisplay: View {
                 VStack {
                     Spacer()
                         .frame(height: 175)
-                    Text("When you were the Happiest")
                         .font(.system(size:28))
-                    Text("Your Activities")
                         .font(.title3)
-                    DisclosureGroup("\(selectedScrollNum)", isExpanded:
+                    DisclosureGroup("Your entries", isExpanded:
                                         $isScrollExpanded) {
                         ScrollView {
                             VStack {
