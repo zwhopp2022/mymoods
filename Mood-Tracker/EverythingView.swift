@@ -56,9 +56,13 @@ struct EverythingView: View {
                     .cornerRadius(20)
                 Spacer()
             }.padding(.all)
-            HStack() {
-                NavigationLink ("Back"){
-                    FacesView()
+            VStack {
+                Spacer()
+                    .frame(height: 675)
+                HStack() {
+                    NavigationLink ("Back"){
+                        FacesView()
+                    }
                 }
             }
         }
