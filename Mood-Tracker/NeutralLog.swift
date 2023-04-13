@@ -13,6 +13,29 @@ struct NeutralLog: View {
     @State private var userInput = ""
     
     @Environment(\.presentationMode) var mode: Binding<PresentationMode>
+    func getTodaysDate() -> String?
+    {
+        let now = Date()
+        let calender = Calendar.current
+        let compenents = calender.dateComponents([.day], from: now)
+        return compenents.day != nil ? String(compenents.day!) : ""
+    }
+    
+    func getHour() -> String?
+    {
+        let now = Date()
+        let calender = Calendar.current
+        let hour = calender.component(.hour, from: now)
+        return hour != nil ? String(hour) : ""
+    }
+    
+    func getMinute() -> String?
+    {
+        let now = Date()
+        let calender = Calendar.current
+        let minute = calender.component(.minute, from: now)
+        return minute != nil ? String(minute) : ""
+    }
     
     var body: some View {
         NavigationView {
@@ -40,7 +63,7 @@ struct NeutralLog: View {
                         .background(Color("Background"))
                         .cornerRadius(10)
                     Button(action: {
-                        moodDB.addInput(moodValue: "Neutral", inputValue: self.userInput, moodTable: moodDB.neutral)
+                        moodDB.addInput(moodValue: "Neutral", inputValue: self.userInput, moodTable: moodDB.neutral, date: getTodaysDate() ?? "<no date>", hour: getHour() ?? "<no hour>", minute: getMinute() ?? "<no minutes>")
                        // moodDB.everythingInput(moodValue: "Neutral", inputValue: self.userInput)
                                        
                     self.mode.wrappedValue.dismiss()

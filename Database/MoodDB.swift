@@ -104,7 +104,7 @@ class MoodDatabase {
 //            }
 //        }
     
-    public func addInput(moodValue: String, inputValue: String, moodTable: Table!){
+    public func addInput(moodValue: String, inputValue: String, moodTable: Table!, date: String, hour: String, minute: String){
             do {
                 try self.moodDB.run(moodTable.insert(mood <- moodValue, reason <- inputValue))
                 try self.moodDB.run(self.everything.insert(mood <- moodValue, reason <- inputValue))
