@@ -15,6 +15,12 @@ let moodDB = MoodDatabase()
 struct FacesView: View {
     @State private var moveToSaddest = false
     @State private var moveToHappiest = false
+    @State private var selectedTab: Tab = .house
+    
+    init() {
+        UITabBar.appearance().isHidden = true
+    }
+    
     var body: some View {
         NavigationStack{
             ZStack {
@@ -73,9 +79,10 @@ struct FacesView: View {
                         }
                     }
                     Spacer()
-                        .frame(height:140)
+                        .frame(height:10)
                 }.padding()
             }
+            Navbar(selectedTab: $selectedTab)
         }
     }
     }

@@ -34,6 +34,7 @@
 		83B1798929B8504A00A2F651 /* AngryDisplay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83B1798829B8504A00A2F651 /* AngryDisplay.swift */; };
 		83B1798B29B8505600A2F651 /* NeutralDisplay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83B1798A29B8505600A2F651 /* NeutralDisplay.swift */; };
 		BA9F603029AD7853007E346A /* MoodTrackerDB.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA9F602F29AD7853007E346A /* MoodTrackerDB.swift */; };
+		BAACD51629E4E8F0002E2912 /* Navbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAACD51529E4E8F0002E2912 /* Navbar.swift */; };
 		D4FC5CEB25BC358D7740C9D9 /* Pods_Mood_Tracker_Mood_TrackerUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C776E45C4B7B15D0E054B425 /* Pods_Mood_Tracker_Mood_TrackerUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -92,6 +93,7 @@
 		91BB21799F118671CB395975 /* Pods-Mood-TrackerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mood-TrackerTests.release.xcconfig"; path = "Target Support Files/Pods-Mood-TrackerTests/Pods-Mood-TrackerTests.release.xcconfig"; sourceTree = "<group>"; };
 		9B653AFB5B2DDF4BA8FD6437 /* Pods-Mood-TrackerTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mood-TrackerTests.debug.xcconfig"; path = "Target Support Files/Pods-Mood-TrackerTests/Pods-Mood-TrackerTests.debug.xcconfig"; sourceTree = "<group>"; };
 		BA9F602F29AD7853007E346A /* MoodTrackerDB.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodTrackerDB.swift; sourceTree = "<group>"; };
+		BAACD51529E4E8F0002E2912 /* Navbar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Navbar.swift; sourceTree = "<group>"; };
 		C776E45C4B7B15D0E054B425 /* Pods_Mood_Tracker_Mood_TrackerUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Mood_Tracker_Mood_TrackerUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EAFBE0DA96D2EF94BFABF3C7 /* Pods_Mood_TrackerTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Mood_TrackerTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F01763AD3ED25B26B477BB77 /* Pods-Mood-Tracker.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mood-Tracker.release.xcconfig"; path = "Target Support Files/Pods-Mood-Tracker/Pods-Mood-Tracker.release.xcconfig"; sourceTree = "<group>"; };
@@ -178,6 +180,7 @@
 				830A119029A471A600E6FDE7 /* NeutralLog.swift */,
 				830A118A29A46C0200E6FDE7 /* HappyLog.swift */,
 				830A118C29A4704E00E6FDE7 /* HappiestLog.swift */,
+				BAACD51529E4E8F0002E2912 /* Navbar.swift */,
 				830A119229A471FB00E6FDE7 /* AngriestLog.swift */,
 				5DBF7B8429A1B32300DFAAB5 /* FacesView.swift */,
 				3775361A22234238005EE5FE /* Assets.xcassets */,
@@ -469,6 +472,7 @@
 				830A118B29A46C0200E6FDE7 /* HappyLog.swift in Sources */,
 				8332530F29B56D8900B2AD00 /* FeelingInput.swift in Sources */,
 				83B1798329B8502E00A2F651 /* HappiestDisplay.swift in Sources */,
+				BAACD51629E4E8F0002E2912 /* Navbar.swift in Sources */,
 				83B1798729B8504200A2F651 /* SadDisplay.swift in Sources */,
 				5D480A1A29B52AB900CD077D /* MoodDB.swift in Sources */,
 				5DC09876299EB97D007D38A3 /* FacesViewController.swift in Sources */,

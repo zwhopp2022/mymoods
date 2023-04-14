@@ -13,6 +13,12 @@ struct EverythingView: View {
     
     @State private var isScrollExpanded = false
     @State private var selectedScrollNum = 1
+    @State private var selectedTab: Tab = .theatermasks
+    
+    init() {
+        UITabBar.appearance().isHidden = true
+    }
+    
     var feelingInputs = moodDB.retrieveReasons(moodTable: "everything")
     var count: Int = 1
     let backgroundGradient1 = LinearGradient(colors: [Color.green, Color.yellow, Color.gray, Color.cyan, Color.blue, Color.red, Color.red], startPoint: .top, endPoint: .bottom)
@@ -66,8 +72,17 @@ struct EverythingView: View {
                     }
                 }
             }
+                ZStack {
+                    VStack {
+                        Spacer()
+                        Navbar(selectedTab: $selectedTab)
+                    }
+                    
+                
+            }
+            Spacer()
+                .frame(height:100)
         }
-        
         
     }
 }
