@@ -37,6 +37,17 @@ struct NeutralLog: View {
         return minute != nil ? String(minute) : ""
     }
     
+    func timeString() -> String?
+    {
+        let currentDate = getTodaysDate()
+        let currentHour = getHour()
+        let currentMinute = getMinute()
+        
+        let total = "\(String(describing: currentDate)), \(String(describing: currentHour)): \(String(describing: currentMinute))"
+        
+        return total != nil ? String(total) : ""
+    }
+    
     var body: some View {
         NavigationView {
             ZStack {
@@ -63,7 +74,7 @@ struct NeutralLog: View {
                         .background(Color("Background"))
                         .cornerRadius(10)
                     Button(action: {
-                        moodDB.addInput(moodValue: "Neutral", inputValue: self.userInput, moodTable: moodDB.neutral, date: getTodaysDate() ?? "<no date>", hour: getHour() ?? "<no hour>", minute: getMinute() ?? "<no minutes>")
+                        moodDB.addInput(moodValue: "Neutral", inputValue: self.userInput, moodTable: moodDB.neutral, time: timeString() ?? "<no time>")
                        // moodDB.everythingInput(moodValue: "Neutral", inputValue: self.userInput)
                                        
                     self.mode.wrappedValue.dismiss()

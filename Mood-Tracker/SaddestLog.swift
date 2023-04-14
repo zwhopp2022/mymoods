@@ -12,6 +12,41 @@ struct SaddestLog: View {
     
     @Environment(\.presentationMode) var mode: Binding<PresentationMode>
     
+    func getTodaysDate() -> String?
+    {
+        let now = Date()
+        let calender = Calendar.current
+        let compenents = calender.dateComponents([.day], from: now)
+        return compenents.day != nil ? String(compenents.day!) : ""
+    }
+    
+    func getHour() -> String?
+    {
+        let now = Date()
+        let calender = Calendar.current
+        let hour = calender.component(.hour, from: now)
+        return hour != nil ? String(hour) : ""
+    }
+    
+    func getMinute() -> String?
+    {
+        let now = Date()
+        let calender = Calendar.current
+        let minute = calender.component(.minute, from: now)
+        return minute != nil ? String(minute) : ""
+    }
+    
+    func timeString() -> String?
+    {
+        let currentDate = getTodaysDate()
+        let currentHour = getHour()
+        let currentMinute = getMinute()
+        
+        let total = "\(String(describing: currentDate)), \(String(describing: currentHour)): \(String(describing: currentMinute))"
+        
+        return total != nil ? String(total) : ""
+    }
+    
     var body: some View {
         NavigationView {
             ZStack {
@@ -39,7 +74,7 @@ struct SaddestLog: View {
                         .background(Color("Background"))
                         .cornerRadius(10)
                     Button(action: {
-                        moodDB.addInput(moodValue: "Saddest", inputValue: self.userInput, moodTable: moodDB.saddest)
+                        moodDB.addInput(moodValue: "Saddest", inputValue: self.userInput, moodTable: moodDB.saddest, time: timeString() ?? "<no name>")
                         //moodDB.everythingInput(moodValue: "Saddest", inputValue: self.userInput)
                                        
                     self.mode.wrappedValue.dismiss()
