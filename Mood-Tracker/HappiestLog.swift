@@ -30,11 +30,12 @@ struct HappiestLog: View {
                         .font(.largeTitle)
                         .bold()
                         .padding()
+                        .foregroundColor(Color.black)
                     TextField("Yippee! What's happening?", text: $userInput)
                         .padding()
                         .frame(width: 300, height: 100)
                         .multilineTextAlignment(.center)
-                        .background(Color.white)
+                        .background(Color("Background"))
                         .cornerRadius(10)
 
                         Button(action: {
