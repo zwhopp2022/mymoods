@@ -30,11 +30,13 @@ struct SaddestLog: View {
                         .font(.largeTitle)
                         .bold()
                         .padding()
+                        .foregroundColor(Color.black)
+
                     TextField("Sorry, feel free jot anything down :(", text: $userInput)
                         .padding()
                         .frame(width: 300, height: 100)
                         .multilineTextAlignment(.center)
-                        .background(Color.white)
+                        .background(Color("Background"))
                         .cornerRadius(10)
                     Button(action: {
                         moodDB.addInput(moodValue: "Saddest", inputValue: self.userInput, moodTable: moodDB.saddest)

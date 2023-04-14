@@ -18,13 +18,11 @@ struct FacesView: View {
     var body: some View {
         NavigationStack{
             ZStack {
-                backgroundGradient.ignoresSafeArea()
-                    .blur(radius: 100)
-                    .navigationBarHidden(true)
+                Color("Background")
+                    .ignoresSafeArea()
                 VStack{
                     Text("How are you doing?")
                         .bold()
-                        .foregroundColor(.black)
                         .font(.system(size: 38))
                     Spacer()
                     HStack(spacing: -80){
