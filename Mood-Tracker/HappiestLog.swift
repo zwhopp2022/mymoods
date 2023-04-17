@@ -12,41 +12,6 @@ struct HappiestLog: View {
 
     @Environment(\.presentationMode) var mode: Binding<PresentationMode>
     
-    func getTodaysDate() -> String?
-    {
-        let now = Date()
-        let calender = Calendar.current
-        let compenents = calender.dateComponents([.day], from: now)
-        return compenents.day != nil ? String(compenents.day!) : ""
-    }
-    
-    func getHour() -> String?
-    {
-        let now = Date()
-        let calender = Calendar.current
-        let hour = calender.component(.hour, from: now)
-        return hour != nil ? String(hour) : ""
-    }
-    
-    func getMinute() -> String?
-    {
-        let now = Date()
-        let calender = Calendar.current
-        let minute = calender.component(.minute, from: now)
-        return minute != nil ? String(minute) : ""
-    }
-    
-    func timeString() -> String?
-    {
-        let currentDate = getTodaysDate()
-        let currentHour = getHour()
-        let currentMinute = getMinute()
-        
-        let total = "\(String(describing: currentDate)), \(String(describing: currentHour)): \(String(describing: currentMinute))"
-        
-        return total != nil ? String(total) : ""
-    }
-    
     var body: some View {
         NavigationView {
             ZStack {
@@ -74,7 +39,8 @@ struct HappiestLog: View {
                         .cornerRadius(10)
 
                         Button(action: {
-                            moodDB.addInput(moodValue: "Happiest", inputValue: self.userInput, moodTable: moodDB.happiest, time: timeString() ?? "<no time>")
+                            let Time = TimeAndDate()
+                            moodDB.addInput(moodValue: "Happiest", inputValue: self.userInput, moodTable: moodDB.happiest, time: Time.hourAndDate)
                             //moodDB.everythingInput(moodValue: "Happiest", inputValue: self.userInput)
                                            
                         self.mode.wrappedValue.dismiss()

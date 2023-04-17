@@ -10,9 +10,11 @@ import Foundation
 struct FeelingInput: Hashable {
     var reason: String = ""
     var mood: String = ""
+    var timeDate: String = ""
     
-    public init (initreason: String, initmood: String){
+    public init (inittimeDate: String, initreason: String, initmood: String){
         self.reason = initreason
         self.mood = initmood
+        self.timeDate = inittimeDate
     }
 }

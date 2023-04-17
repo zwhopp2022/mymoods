@@ -23,7 +23,7 @@ class MoodDatabase {
     var mood: Expression<String>!
     var reason: Expression<String>!
     var totalXP: Expression<Int>!
-    
+    var timeDate: Expression<String>!
     
     init () {
         do {
@@ -35,6 +35,7 @@ class MoodDatabase {
             mood = Expression<String>("mood")
             reason = Expression<String>("reason")
             totalXP = Expression<Int>("totalXP")
+            timeDate = Expression<String>("timeDate")
             
             
             // create 6 mood tables and one everything table and experience table
@@ -57,36 +58,43 @@ class MoodDatabase {
                 try moodDB.run(happiest.create { t in
                     t.column(mood)
                     t.column(reason)
+                    t.column(timeDate)
                 })
                 
                 try moodDB.run(saddest.create { t in
                     t.column(mood)
                     t.column(reason)
+                    t.column(timeDate)
                 })
                 
                 try moodDB.run(sad.create { t in
                     t.column(mood)
                     t.column(reason)
+                    t.column(timeDate)
                 })
                 
                 try moodDB.run(neutral.create { t in
                     t.column(mood)
                     t.column(reason)
+                    t.column(timeDate)
                 })
                 
                 try moodDB.run(angriest.create { t in
                     t.column(mood)
                     t.column(reason)
+                    t.column(timeDate)
                 })
                 
                 try moodDB.run(happy.create { t in
                     t.column(mood)
                     t.column(reason)
+                    t.column(timeDate)
                 })
                 
                 try moodDB.run(everything.create { t in
                     t.column(mood)
                     t.column(reason)
+                    t.column(timeDate)
                 })
                 UserDefaults.standard.set(true, forKey: "databaseCreated")
             }
@@ -109,6 +117,8 @@ class MoodDatabase {
                 try self.moodDB.run(moodTable.insert(mood <- moodValue, reason <- inputValue))
                 try self.moodDB.run(self.everything.insert(mood <- moodValue, reason <- inputValue))
                 userLevel.addExperience()
+                try self.moodDB.run(moodTable.insert(mood <- moodValue, reason <- inputValue, timeDate <- time))
+                try self.moodDB.run(self.everything.insert(mood <- moodValue, reason <- inputValue, timeDate <- time))
             } catch {
                 print(error.localizedDescription)
             }
@@ -119,7 +129,7 @@ class MoodDatabase {
                 if moodTable == "everything" {
                     for inputs in try moodDB.prepare(everything) {
                         // create feeling input object
-                        var feelingInput: FeelingInput = FeelingInput(initreason: inputs[reason], initmood: inputs[mood])
+                        var feelingInput: FeelingInput = FeelingInput(inittimeDate: inputs[timeDate], initreason: inputs[reason], initmood: inputs[mood])
                         // if in the everything table, add the mood to accurately show the user what mood they had
                         // if not in the everything table, retrieving the mood is not necessary
                         // regardless of the table, retrieve the reason
@@ -129,7 +139,7 @@ class MoodDatabase {
                 else if moodTable == "happy" {
                     for inputs in try moodDB.prepare(happy) {
                         // create feeling input object
-                        var feelingInput: FeelingInput = FeelingInput(initreason: inputs[reason], initmood: "")
+                        var feelingInput: FeelingInput = FeelingInput(inittimeDate: inputs[timeDate], initreason: inputs[reason], initmood: "")
                         // if not in the everything table, retrieving the mood is not necessary
                         // retrieve the reason
                         feelingInputs.append(feelingInput)
@@ -139,7 +149,7 @@ class MoodDatabase {
                 else if moodTable == "happiest" {
                     for inputs in try moodDB.prepare(happiest) {
                         // create feeling input object
-                        var feelingInput: FeelingInput = FeelingInput(initreason: inputs[reason], initmood: "")                        // if not in the everything table, retrieving the mood is not necessary
+                        var feelingInput: FeelingInput = FeelingInput(inittimeDate: inputs[timeDate], initreason: inputs[reason], initmood: "")                        // if not in the everything table, retrieving the mood is not necessary
                         // retrieve the reason
                         feelingInputs.append(feelingInput)
                     }
@@ -148,7 +158,7 @@ class MoodDatabase {
                 else if moodTable == "neutral" {
                     for inputs in try moodDB.prepare(neutral) {
                         // create feeling input object
-                        var feelingInput: FeelingInput = FeelingInput(initreason: inputs[reason], initmood: "")                             // if not in the everything table, retrieving the mood is not necessary
+                        var feelingInput: FeelingInput = FeelingInput(inittimeDate: inputs[timeDate], initreason: inputs[reason], initmood: "")                             // if not in the everything table, retrieving the mood is not necessary
                         // retrieve the reason
                         feelingInputs.append(feelingInput)
                     }
@@ -157,7 +167,7 @@ class MoodDatabase {
                 else if moodTable == "sad" {
                     for inputs in try moodDB.prepare(sad) {
                         // create feeling input object
-                        var feelingInput: FeelingInput = FeelingInput(initreason: inputs[reason], initmood: "")                             // if not in the everything table, retrieving the mood is not necessary
+                        var feelingInput: FeelingInput = FeelingInput(inittimeDate: inputs[timeDate], initreason: inputs[reason], initmood: "")                             // if not in the everything table, retrieving the mood is not necessary
                         // retrieve the reason
                         feelingInputs.append(feelingInput)
                     }
@@ -166,7 +176,7 @@ class MoodDatabase {
                 else if moodTable == "saddest" {
                     for inputs in try moodDB.prepare(saddest) {
                         // create feeling input object
-                        var feelingInput: FeelingInput = FeelingInput(initreason: inputs[reason], initmood: "")                             // if not in the everything table, retrieving the mood is not necessary
+                        var feelingInput: FeelingInput = FeelingInput(inittimeDate: inputs[timeDate], initreason: inputs[reason], initmood: "")                             // if not in the everything table, retrieving the mood is not necessary
                         // retrieve the reason
                         feelingInputs.append(feelingInput)
                     }
@@ -175,7 +185,7 @@ class MoodDatabase {
                 else if moodTable == "angriest" {
                     for inputs in try moodDB.prepare(angriest) {
                         // create feeling input object
-                        var feelingInput: FeelingInput = FeelingInput(initreason: inputs[reason], initmood: "")                             // if not in the everything table, retrieving the mood is not necessary
+                        var feelingInput: FeelingInput = FeelingInput(inittimeDate: inputs[timeDate], initreason: inputs[reason], initmood: "")                             // if not in the everything table, retrieving the mood is not necessary
                         // retrieve the reason
                         feelingInputs.append(feelingInput)
                     }
