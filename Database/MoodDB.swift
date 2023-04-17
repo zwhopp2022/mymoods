@@ -18,9 +18,11 @@ class MoodDatabase {
     public var neutral: Table!
     public var angriest: Table!
     public var happy: Table!
+    public var experience: Table!
     var everything: Table!
     var mood: Expression<String>!
     var reason: Expression<String>!
+    var totalXP: Expression<Int>!
     
     
     init () {
@@ -32,9 +34,11 @@ class MoodDatabase {
             // create column names and their associated attribute type
             mood = Expression<String>("mood")
             reason = Expression<String>("reason")
+            totalXP = Expression<Int>("totalXP")
             
             
-            // create 6 mood tables and one everything table
+            // create 6 mood tables and one everything table and experience table
+            
             happiest = Table("happiest")
             saddest = Table("saddest")
             sad = Table("sad")
@@ -42,7 +46,13 @@ class MoodDatabase {
             angriest = Table("angriest")
             happy = Table("happy")
             everything = Table("everything")
+            experience = Table("experience")
+            
             if (!UserDefaults.standard.bool(forKey: "databaseCreated")) {
+                
+                try moodDB.run(experience.create { t in
+                    t.column(totalXP)
+                })
                 
                 try moodDB.run(happiest.create { t in
                     t.column(mood)
@@ -98,7 +108,7 @@ class MoodDatabase {
             do {
                 try self.moodDB.run(moodTable.insert(mood <- moodValue, reason <- inputValue))
                 try self.moodDB.run(self.everything.insert(mood <- moodValue, reason <- inputValue))
-
+                userLevel.addExperience()
             } catch {
                 print(error.localizedDescription)
             }
@@ -192,6 +202,14 @@ class MoodDatabase {
                 let reasonValue = inputs[reason]
                 print("\(moodValue): \(reasonValue)")
             }
+        } catch {
+            print(error.localizedDescription)
+        }
+    }
+    
+    public func addExperienceForInput(newXpLevel: Int) {
+        do {
+            try self.moodDB.run(experience.update(totalXP <- newXpLevel))
         } catch {
             print(error.localizedDescription)
         }

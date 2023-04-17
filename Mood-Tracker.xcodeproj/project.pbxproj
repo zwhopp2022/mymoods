@@ -17,6 +17,7 @@
 		5D41D4FD299F085400667275 /* FaceButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D41D4FC299F085400667275 /* FaceButton.swift */; };
 		5D480A1629B1496600CD077D /* UserDefaultsChecker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D480A1529B1496600CD077D /* UserDefaultsChecker.swift */; };
 		5D480A1A29B52AB900CD077D /* MoodDB.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D480A1929B52AB900CD077D /* MoodDB.swift */; };
+		5D91191029ECEDB200682435 /* TestXP.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D91190F29ECEDB200682435 /* TestXP.swift */; };
 		5DAC6FB929E9D5C20017A18D /* Level.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DAC6FB829E9D5C10017A18D /* Level.swift */; };
 		5DBF7B8529A1B32300DFAAB5 /* FacesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DBF7B8429A1B32300DFAAB5 /* FacesView.swift */; };
 		5DC09876299EB97D007D38A3 /* FacesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DC09875299EB97D007D38A3 /* FacesViewController.swift */; };
@@ -72,6 +73,7 @@
 		5D41D4FC299F085400667275 /* FaceButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaceButton.swift; sourceTree = "<group>"; };
 		5D480A1529B1496600CD077D /* UserDefaultsChecker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsChecker.swift; sourceTree = "<group>"; };
 		5D480A1929B52AB900CD077D /* MoodDB.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodDB.swift; sourceTree = "<group>"; };
+		5D91190F29ECEDB200682435 /* TestXP.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestXP.swift; sourceTree = "<group>"; };
 		5DAC6FB829E9D5C10017A18D /* Level.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Level.swift; sourceTree = "<group>"; };
 		5DBF7B8429A1B32300DFAAB5 /* FacesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FacesView.swift; sourceTree = "<group>"; };
 		5DC09875299EB97D007D38A3 /* FacesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FacesViewController.swift; sourceTree = "<group>"; };
@@ -180,6 +182,7 @@
 				830A118C29A4704E00E6FDE7 /* HappiestLog.swift */,
 				830A119229A471FB00E6FDE7 /* AngriestLog.swift */,
 				5DBF7B8429A1B32300DFAAB5 /* FacesView.swift */,
+				5D91190F29ECEDB200682435 /* TestXP.swift */,
 				3775361A22234238005EE5FE /* Assets.xcassets */,
 				3775361C22234238005EE5FE /* LaunchScreen.storyboard */,
 				3775361F22234238005EE5FE /* Info.plist */,
@@ -471,6 +474,7 @@
 				83B1798329B8502E00A2F651 /* HappiestDisplay.swift in Sources */,
 				83B1798729B8504200A2F651 /* SadDisplay.swift in Sources */,
 				5D480A1A29B52AB900CD077D /* MoodDB.swift in Sources */,
+				5D91191029ECEDB200682435 /* TestXP.swift in Sources */,
 				5DC09876299EB97D007D38A3 /* FacesViewController.swift in Sources */,
 				83B1798B29B8505600A2F651 /* NeutralDisplay.swift in Sources */,
 				5D480A1629B1496600CD077D /* UserDefaultsChecker.swift in Sources */,

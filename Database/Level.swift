@@ -7,16 +7,28 @@
 
 import Foundation
 
-struct Level : Hashable {
-    let defaultXp = 0
-    let currentXp: Int
-    public init () {
-        if (!UserDefaults.standard.bool(forKey: "appHasBeenLaunchedBefore")) {
-            this.currentXp = defaultXp
+public struct Level : Hashable {
+    private let defaultXp: Int
+    private var currentXp: Int
+    
+    private var noStreakXpIncrement: Int = 10
+    
+    init () {
+        self.defaultXp = 0
+        self.noStreakXpIncrement = 10
+        self.currentXp = 0
+        if (!UserDefaults.standard.bool(forKey: "databaseCreated")) {
+            self.currentXp = self.defaultXp
         }
+
     }
     
-    public func addExperienceForInput () {
-        
+    public func getCurrentXp() -> Int {
+        return self.currentXp
+    }
+    
+    public mutating func addExperience() {
+        self.currentXp += noStreakXpIncrement
+        moodDB.addExperienceForInput(newXpLevel: self.currentXp)
     }
 }
