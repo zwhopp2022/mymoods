@@ -32,7 +32,7 @@ struct HappyLog: View {
                         .padding()
                         .foregroundColor(Color.black)
 
-                    TextField("Yay! Want to write it down?", text: $userInput)
+                    TextField("Yay! Want to write it down?", text: $userInput, axis: .vertical)
                         .padding()
                         .frame(width: 300, height: 100)
                         .multilineTextAlignment(.center)

@@ -31,7 +31,7 @@ struct HappiestLog: View {
                         .bold()
                         .padding()
                         .foregroundColor(Color.black)
-                    TextField("Yippee! What's happening?", text: $userInput)
+                    TextField("Yippee! What's happening?", text: $userInput, axis: .vertical)
                         .padding()
                         .frame(width: 300, height: 100)
                         .multilineTextAlignment(.center)

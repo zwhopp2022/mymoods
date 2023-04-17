@@ -37,7 +37,7 @@ struct EverythingView: View {
                 DisclosureGroup("All of your Entries", isExpanded: $isScrollExpanded) {
                     ScrollView{
                         VStack{
-                            ForEach(moodDB.retrieveReasons(moodTable: "everything"), id: \.self) { input in Text("\(input.mood): \(input.reason)")
+                            ForEach(moodDB.retrieveReasons(moodTable: "everything"), id: \.self) { input in Text("\(input.timeDate) \n\(input.mood): \(input.reason)")
                                     .frame(maxWidth: .infinity)
                                     .font(.title3)
                                     .padding(.all).onTapGesture {

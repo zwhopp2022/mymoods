@@ -35,7 +35,7 @@ struct SadDisplay: View {
                         ScrollView {
                             VStack {
                                 ForEach(moodDB.retrieveReasons(moodTable: "sad"), id: \.self) { input in
-                                    Text("\(input.timeDate): \(input.reason)")
+                                    Text("\(input.timeDate) \n\(input.reason)")
                                         .frame(maxWidth: .infinity)
                                         .font(.title3)
                                         .padding(.all).onTapGesture {

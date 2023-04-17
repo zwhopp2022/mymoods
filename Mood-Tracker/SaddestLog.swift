@@ -32,7 +32,7 @@ struct SaddestLog: View {
                         .padding()
                         .foregroundColor(Color.black)
 
-                    TextField("Sorry, feel free jot anything down :(", text: $userInput)
+                    TextField("Sorry, feel free jot anything down :(", text: $userInput, axis: .vertical)
                         .padding()
                         .frame(width: 300, height: 100)
                         .multilineTextAlignment(.center)

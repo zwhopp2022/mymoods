@@ -32,7 +32,7 @@ struct AngriestLog: View {
                         .padding()
                         .foregroundColor(Color.black)
 
-                    TextField("Want to rant about it?", text: $userInput)
+                    TextField("Want to rant about it?", text: $userInput, axis: .vertical)
                         .padding()
                         .frame(width: 300, height: 100)
                         .multilineTextAlignment(.center)

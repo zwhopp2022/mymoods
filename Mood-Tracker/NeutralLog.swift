@@ -33,7 +33,7 @@ struct NeutralLog: View {
                         .padding()
                         .foregroundColor(Color.black)
 
-                    TextField("How are you feeling?", text: $userInput)
+                    TextField("How are you feeling?", text: $userInput, axis: .vertical)
                         .padding()
                         .frame(width: 300, height: 100)
                         .multilineTextAlignment(.center)
