@@ -43,6 +43,7 @@ class MoodDatabase {
             happy = Table("happy")
             everything = Table("everything")
             if (!UserDefaults.standard.bool(forKey: "databaseCreated")) {
+                
                 try moodDB.run(happiest.create { t in
                     t.column(mood)
                     t.column(reason)
