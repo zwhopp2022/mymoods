@@ -59,11 +59,6 @@ struct HappyDisplay: View {
                 VStack {
                     Spacer()
                         .frame(height: 675)
-                    HStack() {
-                        NavigationLink ("Home Page"){
-                            FacesView()
-                        }
-                    }
                 }
             }
         }

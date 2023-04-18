@@ -59,16 +59,11 @@ struct SaddestDisplay: View {
                 VStack {
                     Spacer()
                         .frame(height: 675)
-                    HStack() {
-                        NavigationLink ("Home Page"){
-                            FacesView()
-                        }
                     }
                 }
             }
         }
     }
-}
 
 struct SaddestDisplay_Previews: PreviewProvider {
     static var previews: some View {

@@ -15,11 +15,6 @@ let moodDB = MoodDatabase()
 struct FacesView: View {
     @State private var moveToSaddest = false
     @State private var moveToHappiest = false
-    @State private var selectedTab: Tab = .house
-    
-    init() {
-        UITabBar.appearance().isHidden = true
-    }
     
     var body: some View {
         NavigationStack{
@@ -80,12 +75,20 @@ struct FacesView: View {
                     }
                     Spacer()
                         .frame(height:10)
+                    TabView {
+                        FacesView()
+                            .tabItem(){
+                                Image(systemName: "house.fill")
+                                
+                            }
+                    
+                        
+                    }
                 }.padding()
             }
-            Navbar(selectedTab: $selectedTab)
         }
     }
-    }
+}
 
 struct FacesView_Previews: PreviewProvider {
     static var previews: some View {

@@ -13,11 +13,6 @@ struct EverythingView: View {
     
     @State private var isScrollExpanded = false
     @State private var selectedScrollNum = 1
-    @State private var selectedTab: Tab = .theatermasks
-    
-    init() {
-        UITabBar.appearance().isHidden = true
-    }
     
     var feelingInputs = moodDB.retrieveReasons(moodTable: "everything")
     var count: Int = 1
@@ -66,16 +61,10 @@ struct EverythingView: View {
             VStack {
                 Spacer()
                     .frame(height: 675)
-                HStack() {
-                    NavigationLink ("Back"){
-                        FacesView()
-                    }
-                }
             }
                 ZStack {
                     VStack {
                         Spacer()
-                        Navbar(selectedTab: $selectedTab)
                     }
                     
                 
