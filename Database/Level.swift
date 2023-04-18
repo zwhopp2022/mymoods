@@ -13,6 +13,8 @@ public struct Level : Hashable {
     
     private var noStreakXpIncrement: Int = 10
     
+    // have levels become longer to reach sequentially
+    
     init () {
         self.defaultXp = 0
         self.noStreakXpIncrement = 10
