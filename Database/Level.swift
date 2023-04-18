@@ -33,4 +33,24 @@ public struct Level : Hashable {
         self.currentXp += noStreakXpIncrement
         moodDB.addExperienceForInput(newXpLevel: self.currentXp)
     }
+    
+    public func calculateLevel() {
+        return self.currentXp /
+    }
+    
+
+    var xp = 90
+
+    func determineLevel() -> Int {
+        var level: Int
+        var threshold: Int
+        if (xp < 10) {
+            level = 0
+        }
+        
+        threshold = 2 * xp + 30 + xp
+        
+        
+        return threshold
+    }
 }
