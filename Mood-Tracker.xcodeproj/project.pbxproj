@@ -37,6 +37,7 @@
 		83B1798B29B8505600A2F651 /* NeutralDisplay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83B1798A29B8505600A2F651 /* NeutralDisplay.swift */; };
 		83B7B6DC29F036820003A506 /* StreaksView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83B7B6DB29F036820003A506 /* StreaksView.swift */; };
 		83B7B6DE29F03B000003A506 /* Streaks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83B7B6DD29F03B000003A506 /* Streaks.swift */; };
+		83B7B6E029F03D700003A506 /* TimeAndDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83B7B6DF29F03D700003A506 /* TimeAndDate.swift */; };
 		D4FC5CEB25BC358D7740C9D9 /* Pods_Mood_Tracker_Mood_TrackerUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C776E45C4B7B15D0E054B425 /* Pods_Mood_Tracker_Mood_TrackerUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -95,6 +96,7 @@
 		83B1798A29B8505600A2F651 /* NeutralDisplay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NeutralDisplay.swift; sourceTree = "<group>"; };
 		83B7B6DB29F036820003A506 /* StreaksView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StreaksView.swift; sourceTree = "<group>"; };
 		83B7B6DD29F03B000003A506 /* Streaks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Streaks.swift; sourceTree = "<group>"; };
+		83B7B6DF29F03D700003A506 /* TimeAndDate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeAndDate.swift; sourceTree = "<group>"; };
 		8F46C47A580A6CAE24B25EE5 /* Pods-Mood-Tracker-Mood-TrackerUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mood-Tracker-Mood-TrackerUITests.release.xcconfig"; path = "Target Support Files/Pods-Mood-Tracker-Mood-TrackerUITests/Pods-Mood-Tracker-Mood-TrackerUITests.release.xcconfig"; sourceTree = "<group>"; };
 		91BB21799F118671CB395975 /* Pods-Mood-TrackerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mood-TrackerTests.release.xcconfig"; path = "Target Support Files/Pods-Mood-TrackerTests/Pods-Mood-TrackerTests.release.xcconfig"; sourceTree = "<group>"; };
 		9B653AFB5B2DDF4BA8FD6437 /* Pods-Mood-TrackerTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mood-TrackerTests.debug.xcconfig"; path = "Target Support Files/Pods-Mood-TrackerTests/Pods-Mood-TrackerTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -231,6 +233,7 @@
 				5D480A1929B52AB900CD077D /* MoodDB.swift */,
 				8332530E29B56D8900B2AD00 /* FeelingInput.swift */,
 				5DAC6FB829E9D5C10017A18D /* Level.swift */,
+				83B7B6DF29F03D700003A506 /* TimeAndDate.swift */,
 				83B7B6DD29F03B000003A506 /* Streaks.swift */,
 			);
 			path = Database;
@@ -478,6 +481,7 @@
 				830A118B29A46C0200E6FDE7 /* HappyLog.swift in Sources */,
 				8332530F29B56D8900B2AD00 /* FeelingInput.swift in Sources */,
 				83B1798329B8502E00A2F651 /* HappiestDisplay.swift in Sources */,
+				83B7B6E029F03D700003A506 /* TimeAndDate.swift in Sources */,
 				83B7B6DE29F03B000003A506 /* Streaks.swift in Sources */,
 				83B1798729B8504200A2F651 /* SadDisplay.swift in Sources */,
 				5D480A1A29B52AB900CD077D /* MoodDB.swift in Sources */,
