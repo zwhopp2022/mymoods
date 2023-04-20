@@ -14,12 +14,14 @@ struct TimeAndDate: Hashable {
     var combinedDate: String = ""
     var combinedHour: String = ""
     var hourAndDate: String = ""
+    var numDay: Int = 0
 
     
     public init(){
         let now = Date()
         let dateFormatter = DateFormatter()
         let calender = Calendar.current
+        self.numDay = calender.component(.day, from: now)
         self.userDay = String(calender.component(.day, from: now))
         let month = calender.component(.month, from: now)
         self.userMonth = String(DateFormatter().monthSymbols[month - 1])

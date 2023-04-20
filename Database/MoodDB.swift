@@ -114,8 +114,8 @@ class MoodDatabase {
     
     public func addInput(moodValue: String, inputValue: String, moodTable: Table!, time: String){
             do {
-                try self.moodDB.run(moodTable.insert(mood <- moodValue, reason <- inputValue))
-                try self.moodDB.run(self.everything.insert(mood <- moodValue, reason <- inputValue))
+                //try self.moodDB.run(moodTable.insert(mood <- moodValue, reason <- inputValue))
+                //try self.moodDB.run(self.everything.insert(mood <- moodValue, reason <- inputValue))
                 userLevel.addExperience()
                 try self.moodDB.run(moodTable.insert(mood <- moodValue, reason <- inputValue, timeDate <- time))
                 try self.moodDB.run(self.everything.insert(mood <- moodValue, reason <- inputValue, timeDate <- time))
