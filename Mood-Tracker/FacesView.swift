@@ -76,6 +76,7 @@ struct FacesView: View {
                         .frame(height:140)
                 }.padding()
             }
+            .navigationBarHidden(true)
         }
     }
     }
