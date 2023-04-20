@@ -15,6 +15,8 @@ struct TimeAndDate: Hashable {
     var combinedHour: String = ""
     var hourAndDate: String = ""
     var numDay: Int = 0
+    var numMonth: Int = 0
+    var numHour: Int = 0
 
     
     public init(){
@@ -24,6 +26,7 @@ struct TimeAndDate: Hashable {
         self.numDay = calender.component(.day, from: now)
         self.userDay = String(calender.component(.day, from: now))
         let month = calender.component(.month, from: now)
+        self.numMonth = month
         self.userMonth = String(DateFormatter().monthSymbols[month - 1])
         self.userYear = String(calender.component(.year, from:now))
         self.combinedDate = "\(userMonth) \(userDay) \(userYear)"
