@@ -224,14 +224,6 @@ class MoodDatabase {
             print(error.localizedDescription)
         }
     }
-    
-    public func retrieveDate(userDate: Int) {
-        var lastLog = []
-        do {
-            
-        }
-    }
-
 }
 
 
