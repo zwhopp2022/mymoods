@@ -40,7 +40,7 @@ struct HappyLog: View {
                         .cornerRadius(10)
                     Button(action: {
                         let Time = TimeAndDate()
-                        moodDB.addInput(moodValue: "Happy", inputValue: self.userInput, moodTable: moodDB.happy, time: Time.hourAndDate)
+                        moodDB.addInput(moodValue: "Happy", inputValue: self.userInput, moodTable: moodDB.happy, time: Time.hourAndDate, month: Time.numMonth, calendarDay: Time.numDay)
                         //moodDB.everythingInput(moodValue: "Happy", inputValue: self.userInput)
                                        
                     self.mode.wrappedValue.dismiss()
