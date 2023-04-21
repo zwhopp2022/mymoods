@@ -68,12 +68,12 @@ struct FacesView: View {
                             Image("Angriest")
                         }
                     }
-                    ZStack(){
+                    VStack(){
                         NavigationLink ("History"){
                             EverythingView()
                         }
                         NavigationLink ("XP") {
-                            TestXP()
+                            StreaksView()
                         }
                         
                         

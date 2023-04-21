@@ -8,8 +8,8 @@
 import Foundation
 
 struct Streaks: Hashable {
-    private var defaultStreak: Int = 0
-    private var streak: Int = 0
+    private var defaultStreak: Int
+    private var streak: Int
     
     private var streakIncrement = 1
     private var incrementTest = 20
@@ -35,8 +35,6 @@ struct Streaks: Hashable {
         let recentMonth = recentLog?.numMonth
         let lastDay = lastLog?.numDay
         let recentDay = recentLog?.numDay
-        print(lastDay)
-        print(lastLog)
         
         if lastMonth == recentMonth {
             if lastDay == recentDay {
