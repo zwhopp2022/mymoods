@@ -71,6 +71,13 @@ struct FacesView: View {
                         NavigationLink ("History"){
                             EverythingView()
                         }
+                        
+                        
+                        
+                        NavigationLink ("Analytics") {
+                            AnalyticsView()
+                        }
+                        
                     }
                     Spacer()
                         .frame(height:140)

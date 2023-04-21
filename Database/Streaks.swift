@@ -18,6 +18,6 @@ public func streaks() -> String{
     var lastDay = lastLog?.numDay
     var recentDay = recentLog?.numDay
     
-    
+    return "hello"
 }
 

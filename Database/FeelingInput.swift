@@ -21,4 +21,5 @@ struct FeelingInput: Hashable {
         self.numMonth = initnumMonth
         self.numDay = initnumDay
     }
+
 }

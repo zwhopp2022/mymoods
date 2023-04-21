@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 51;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -17,6 +17,9 @@
 		5D41D4FD299F085400667275 /* FaceButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D41D4FC299F085400667275 /* FaceButton.swift */; };
 		5D480A1629B1496600CD077D /* UserDefaultsChecker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D480A1529B1496600CD077D /* UserDefaultsChecker.swift */; };
 		5D480A1A29B52AB900CD077D /* MoodDB.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D480A1929B52AB900CD077D /* MoodDB.swift */; };
+		5D7147E829F2005B0085976F /* SwiftUICharts in Frameworks */ = {isa = PBXBuildFile; productRef = 5D7147E729F2005B0085976F /* SwiftUICharts */; };
+		5D7147EA29F20FE10085976F /* PieCharts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D7147E929F20FE10085976F /* PieCharts.swift */; };
+		5D7147EE29F226EC0085976F /* AnalyticsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D7147ED29F226EC0085976F /* AnalyticsView.swift */; };
 		5D91191029ECEDB200682435 /* TestXP.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D91190F29ECEDB200682435 /* TestXP.swift */; };
 		5DAC6FB929E9D5C20017A18D /* Level.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DAC6FB829E9D5C10017A18D /* Level.swift */; };
 		5DBF7B8529A1B32300DFAAB5 /* FacesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DBF7B8429A1B32300DFAAB5 /* FacesView.swift */; };
@@ -76,6 +79,8 @@
 		5D41D4FC299F085400667275 /* FaceButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaceButton.swift; sourceTree = "<group>"; };
 		5D480A1529B1496600CD077D /* UserDefaultsChecker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsChecker.swift; sourceTree = "<group>"; };
 		5D480A1929B52AB900CD077D /* MoodDB.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodDB.swift; sourceTree = "<group>"; };
+		5D7147E929F20FE10085976F /* PieCharts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PieCharts.swift; sourceTree = "<group>"; };
+		5D7147ED29F226EC0085976F /* AnalyticsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalyticsView.swift; sourceTree = "<group>"; };
 		5D91190F29ECEDB200682435 /* TestXP.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestXP.swift; sourceTree = "<group>"; };
 		5DAC6FB829E9D5C10017A18D /* Level.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Level.swift; sourceTree = "<group>"; };
 		5DBF7B8429A1B32300DFAAB5 /* FacesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FacesView.swift; sourceTree = "<group>"; };
@@ -100,8 +105,6 @@
 		8F46C47A580A6CAE24B25EE5 /* Pods-Mood-Tracker-Mood-TrackerUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mood-Tracker-Mood-TrackerUITests.release.xcconfig"; path = "Target Support Files/Pods-Mood-Tracker-Mood-TrackerUITests/Pods-Mood-Tracker-Mood-TrackerUITests.release.xcconfig"; sourceTree = "<group>"; };
 		91BB21799F118671CB395975 /* Pods-Mood-TrackerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mood-TrackerTests.release.xcconfig"; path = "Target Support Files/Pods-Mood-TrackerTests/Pods-Mood-TrackerTests.release.xcconfig"; sourceTree = "<group>"; };
 		9B653AFB5B2DDF4BA8FD6437 /* Pods-Mood-TrackerTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mood-TrackerTests.debug.xcconfig"; path = "Target Support Files/Pods-Mood-TrackerTests/Pods-Mood-TrackerTests.debug.xcconfig"; sourceTree = "<group>"; };
-		BA9F602F29AD7853007E346A /* MoodTrackerDB.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodTrackerDB.swift; sourceTree = "<group>"; };
-		BB1B3C4A29EE12F800D14F2C /* ChartView-master */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = "ChartView-master"; sourceTree = "<group>"; };
 		C776E45C4B7B15D0E054B425 /* Pods_Mood_Tracker_Mood_TrackerUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Mood_Tracker_Mood_TrackerUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EAFBE0DA96D2EF94BFABF3C7 /* Pods_Mood_TrackerTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Mood_TrackerTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F01763AD3ED25B26B477BB77 /* Pods-Mood-Tracker.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mood-Tracker.release.xcconfig"; path = "Target Support Files/Pods-Mood-Tracker/Pods-Mood-Tracker.release.xcconfig"; sourceTree = "<group>"; };
@@ -113,6 +116,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				67825E3D93B37BF636AE5A78 /* Pods_Mood_Tracker.framework in Frameworks */,
+				5D7147E829F2005B0085976F /* SwiftUICharts in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -175,7 +179,6 @@
 			isa = PBXGroup;
 			children = (
 				3775361322234238005EE5FE /* AppDelegate.swift */,
-				BB1B3C4A29EE12F800D14F2C /* ChartView-master */,
 				5D41D4FC299F085400667275 /* FaceButton.swift */,
 				5DC09875299EB97D007D38A3 /* FacesViewController.swift */,
 				830A118829A4610500E6FDE7 /* SaddestLog.swift */,
@@ -197,6 +200,8 @@
 				3775361C22234238005EE5FE /* LaunchScreen.storyboard */,
 				3775361F22234238005EE5FE /* Info.plist */,
 				5D14EE9A29B8448500CC42BC /* EverythingView.swift */,
+				5D7147E929F20FE10085976F /* PieCharts.swift */,
+				5D7147ED29F226EC0085976F /* AnalyticsView.swift */,
 			);
 			path = "Mood-Tracker";
 			sourceTree = "<group>";
@@ -260,6 +265,9 @@
 			dependencies = (
 			);
 			name = "Mood-Tracker";
+			packageProductDependencies = (
+				5D7147E729F2005B0085976F /* SwiftUICharts */,
+			);
 			productName = iOSTemplate;
 			productReference = 3775361022234238005EE5FE /* Mood-Tracker.app */;
 			productType = "com.apple.product-type.application";
@@ -334,6 +342,9 @@
 				Base,
 			);
 			mainGroup = 3775360722234238005EE5FE;
+			packageReferences = (
+				5D7147E629F2005B0085976F /* XCRemoteSwiftPackageReference "ChartView" */,
+			);
 			productRefGroup = 3775361122234238005EE5FE /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -482,11 +493,13 @@
 				5D41D4FD299F085400667275 /* FaceButton.swift in Sources */,
 				5DAC6FB929E9D5C20017A18D /* Level.swift in Sources */,
 				830A118B29A46C0200E6FDE7 /* HappyLog.swift in Sources */,
+				5D7147EA29F20FE10085976F /* PieCharts.swift in Sources */,
 				8332530F29B56D8900B2AD00 /* FeelingInput.swift in Sources */,
 				83B1798329B8502E00A2F651 /* HappiestDisplay.swift in Sources */,
 				83B7B6E029F03D700003A506 /* TimeAndDate.swift in Sources */,
 				83B7B6DE29F03B000003A506 /* Streaks.swift in Sources */,
 				83B1798729B8504200A2F651 /* SadDisplay.swift in Sources */,
+				5D7147EE29F226EC0085976F /* AnalyticsView.swift in Sources */,
 				5D480A1A29B52AB900CD077D /* MoodDB.swift in Sources */,
 				5D91191029ECEDB200682435 /* TestXP.swift in Sources */,
 				5DC09876299EB97D007D38A3 /* FacesViewController.swift in Sources */,
@@ -828,6 +841,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		5D7147E629F2005B0085976F /* XCRemoteSwiftPackageReference "ChartView" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/AppPear/ChartView";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		5D7147E729F2005B0085976F /* SwiftUICharts */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5D7147E629F2005B0085976F /* XCRemoteSwiftPackageReference "ChartView" */;
+			productName = SwiftUICharts;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 3775360822234238005EE5FE /* Project object */;
 }
