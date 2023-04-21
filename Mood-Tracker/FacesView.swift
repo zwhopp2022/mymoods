@@ -69,7 +69,7 @@ struct FacesView: View {
                     }
                     HStack() {
                         NavigationLink ("History"){
-                            EverythingView()
+                            StreaksView()
                         }
                     }
                     Spacer()

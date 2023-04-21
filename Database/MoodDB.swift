@@ -39,7 +39,7 @@ class MoodDatabase {
             totalXP = Expression<Int>("totalXP")
             timeDate = Expression<String>("timeDate")
             numMonth = Expression<Int>("numMonth")
-            numDay = Expression<Int>("calendarDay")
+            numDay = Expression<Int>("numDay")
             
             
             // create 6 mood tables and one everything table and experience table
@@ -63,36 +63,48 @@ class MoodDatabase {
                     t.column(mood)
                     t.column(reason)
                     t.column(timeDate)
+                    t.column(numMonth)
+                    t.column(numDay)
                 })
                 
                 try moodDB.run(saddest.create { t in
                     t.column(mood)
                     t.column(reason)
                     t.column(timeDate)
+                    t.column(numMonth)
+                    t.column(numDay)
                 })
                 
                 try moodDB.run(sad.create { t in
                     t.column(mood)
                     t.column(reason)
                     t.column(timeDate)
+                    t.column(numMonth)
+                    t.column(numDay)
                 })
                 
                 try moodDB.run(neutral.create { t in
                     t.column(mood)
                     t.column(reason)
                     t.column(timeDate)
+                    t.column(numMonth)
+                    t.column(numDay)
                 })
                 
                 try moodDB.run(angriest.create { t in
                     t.column(mood)
                     t.column(reason)
                     t.column(timeDate)
+                    t.column(numMonth)
+                    t.column(numDay)
                 })
                 
                 try moodDB.run(happy.create { t in
                     t.column(mood)
                     t.column(reason)
                     t.column(timeDate)
+                    t.column(numMonth)
+                    t.column(numDay)
                 })
                 
                 try moodDB.run(everything.create { t in
@@ -123,7 +135,7 @@ class MoodDatabase {
                 //try self.moodDB.run(moodTable.insert(mood <- moodValue, reason <- inputValue))
                 //try self.moodDB.run(self.everything.insert(mood <- moodValue, reason <- inputValue))
                 userLevel.addExperience()
-                try self.moodDB.run(moodTable.insert(mood <- moodValue, reason <- inputValue, timeDate <- time))
+                try self.moodDB.run(moodTable.insert(mood <- moodValue, reason <- inputValue, timeDate <- time, numMonth <- month, numDay <- calendarDay))
                 try self.moodDB.run(self.everything.insert(mood <- moodValue, reason <- inputValue, timeDate <- time, numMonth <- month, numDay <- calendarDay))
             } catch {
                 print(error.localizedDescription)
