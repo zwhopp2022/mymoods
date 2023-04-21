@@ -7,14 +7,24 @@
 
 import SwiftUI
 
-struct StreaksView: View {
+//struct ContentView: View {
+  //  @State var progress: Float = 0.0
     
+   // var body: some View {
+     //   VStack {
+       //     StreaksView(value: $progress).frame(height: 10)
+//        }
+  //  }
+//}
+
+struct StreaksView: View {
+  //  @Binding var value: Float
     @Environment(\.presentationMode) var mode: Binding<PresentationMode>
     
     var body: some View {
         NavigationView {
             ZStack {
-                if Streaks().streak < 3 {
+                if userStreak.getStreak() < 3 {
                     Color.blue
                         .ignoresSafeArea()
                     Circle()
@@ -24,7 +34,7 @@ struct StreaksView: View {
                         .scale(1.4)
                         .foregroundColor(.white.opacity(0.15))
                 }
-                if Streaks().streak >= 3 {
+                if userStreak.getStreak() >= 3 {
                     Color.orange
                         .ignoresSafeArea()
                     Circle()
@@ -35,30 +45,36 @@ struct StreaksView: View {
                         .foregroundColor(.white.opacity(0.15))
                 }
                 VStack {
-                    if Streaks().streak < 3 {
+                    if userStreak.getStreak() < 3 {
                         Image("Ice")
                             .frame(height: 200)
                     }
-                    if Streaks().streak >= 3 {
+                    if userStreak.getStreak() >= 3 {
                         Image("Fire")
                             .frame(height: 125)
+                            .padding()
                         Text("Current Streak:")
                             .font(.largeTitle)
                             .bold()
                             .padding()
                             .foregroundColor(Color.white)
-                        Text("\(Streaks().streak)")
+                        Text("\(userStreak.getStreak())")
                             .font(.largeTitle)
                             .padding()
                             .foregroundColor(Color.white)
-                        Spacer()
-                                .frame(height: 125)
                     }
                     Text("XP")
                         .font(.largeTitle)
                         .bold()
                         .padding()
                         .foregroundColor(Color.white)
+         //           GeometryReader { _ in
+         //               ZStack {
+         //                   Rectangle().frame(width: 400, height: 40)
+         //                       .opacity(0.3)
+         //                       .foregroundColor(Color.white)
+         //               }.cornerRadius(45.0)
+         //           }
                     Text("\(userLevel.getCurrentXp())")
                         .font(.largeTitle)
                         .padding()
@@ -68,12 +84,12 @@ struct StreaksView: View {
                         .bold()
                         .foregroundColor(Color.white)
                     Spacer()
-                            .frame(height: 0)
+                        .frame(height: 0)
                     
                 }
                 VStack {
                     Spacer()
-                        .frame(height: 500)
+                        .frame(height: 570)
                     HStack() {
                         Button ("Back"){
                             self.mode.wrappedValue.dismiss()
@@ -81,8 +97,9 @@ struct StreaksView: View {
                     }
                 }
             }
+            .navigationBarHidden(true)
         }
-        .navigationBarHidden(true)
+        
     }
 }
 

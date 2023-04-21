@@ -31,7 +31,6 @@ struct SadLog: View {
                         .bold()
                         .padding()
                         .foregroundColor(Color.black)
-
                     TextField("Want to talk about?", text: $userInput, axis: .vertical)
                         .padding()
                         .frame(width: 300, height: 100)

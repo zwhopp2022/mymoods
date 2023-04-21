@@ -19,6 +19,7 @@ class MoodDatabase {
     public var angriest: Table!
     public var happy: Table!
     public var experience: Table!
+    public var streak: Table!
     var everything: Table!
     var mood: Expression<String>!
     var reason: Expression<String>!
@@ -26,6 +27,8 @@ class MoodDatabase {
     var timeDate: Expression<String>!
     var numMonth: Expression<Int>!
     var numDay: Expression<Int>!
+    var totalStreak: Expression<Int>!
+    
     
     init () {
         do {
@@ -40,6 +43,7 @@ class MoodDatabase {
             timeDate = Expression<String>("timeDate")
             numMonth = Expression<Int>("numMonth")
             numDay = Expression<Int>("numDay")
+            totalStreak = Expression<Int>("totalStreak")
             
             
             // create 6 mood tables and one everything table and experience table
@@ -52,13 +56,16 @@ class MoodDatabase {
             happy = Table("happy")
             everything = Table("everything")
             experience = Table("experience")
+            streak = Table("streak")
             
             if (!UserDefaults.standard.bool(forKey: "databaseCreated")) {
                 
                 try moodDB.run(experience.create { t in
                     t.column(totalXP)
                 })
-                
+                try moodDB.run(streak.create { t in
+                    t.column(totalStreak)
+                })
                 try moodDB.run(happiest.create { t in
                     t.column(mood)
                     t.column(reason)
@@ -135,6 +142,7 @@ class MoodDatabase {
                 //try self.moodDB.run(moodTable.insert(mood <- moodValue, reason <- inputValue))
                 //try self.moodDB.run(self.everything.insert(mood <- moodValue, reason <- inputValue))
                 userLevel.addExperience()
+                userStreak.streaks()
                 try self.moodDB.run(moodTable.insert(mood <- moodValue, reason <- inputValue, timeDate <- time, numMonth <- month, numDay <- calendarDay))
                 try self.moodDB.run(self.everything.insert(mood <- moodValue, reason <- inputValue, timeDate <- time, numMonth <- month, numDay <- calendarDay))
             } catch {
@@ -238,6 +246,14 @@ class MoodDatabase {
     public func addExperienceForInput(newXpLevel: Int) {
         do {
             try self.moodDB.run(experience.update(totalXP <- newXpLevel))
+        } catch {
+            print(error.localizedDescription)
+        }
+    }
+    
+    public func addStreak(newStreak: Int) {
+        do {
+            try self.moodDB.run(streak.update(totalStreak <- newStreak))
         } catch {
             print(error.localizedDescription)
         }
