@@ -84,7 +84,7 @@ struct FacesView: View {
                         
                     }
                     Spacer()
-                        .frame(height:140)
+                        .frame(height:60)
                 }.padding()
             }
             .navigationBarHidden(true)
