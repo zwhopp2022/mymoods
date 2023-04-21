@@ -14,14 +14,26 @@ struct StreaksView: View {
     var body: some View {
         NavigationView {
             ZStack {
-                Color.orange
-                    .ignoresSafeArea()
-                Circle()
-                    .scale(1.8)
-                    .foregroundColor(.white.opacity(0.15))
-                Circle()
-                    .scale(1.4)
-                    .foregroundColor(.white.opacity(0.15))
+                if Streaks().streak < 3 {
+                    Color.blue
+                        .ignoresSafeArea()
+                    Circle()
+                        .scale(1.8)
+                        .foregroundColor(.white.opacity(0.15))
+                    Circle()
+                        .scale(1.4)
+                        .foregroundColor(.white.opacity(0.15))
+                }
+                if Streaks().streak >= 3 {
+                    Color.orange
+                        .ignoresSafeArea()
+                    Circle()
+                        .scale(1.8)
+                        .foregroundColor(.white.opacity(0.15))
+                    Circle()
+                        .scale(1.4)
+                        .foregroundColor(.white.opacity(0.15))
+                }
                 VStack {
                     if Streaks().streak < 3 {
                         Image("Sad")
@@ -30,8 +42,19 @@ struct StreaksView: View {
                     if Streaks().streak >= 3 {
                         Image("Happy")
                             .frame(height: 125)
+                        Text("Current Streak:")
+                            .font(.largeTitle)
+                            .bold()
+                            .padding()
+                            .foregroundColor(Color.white)
+                        Text("\(Streaks().streak)")
+                            .font(.largeTitle)
+                            .padding()
+                            .foregroundColor(Color.white)
+                        Spacer()
+                                .frame(height: 125)
                     }
-                    Text("Current Streak:")
+                    Text("XP")
                         .font(.largeTitle)
                         .bold()
                         .padding()
@@ -42,6 +65,7 @@ struct StreaksView: View {
                         .foregroundColor(Color.white)
                     Spacer()
                             .frame(height: 125)
+                    
                 }
                 VStack {
                     Spacer()

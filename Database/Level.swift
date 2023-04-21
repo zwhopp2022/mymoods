@@ -12,6 +12,9 @@ public struct Level : Hashable {
     private var currentXp: Int
     
     private var noStreakXpIncrement: Int = 10
+    private var threeStreakXp: Int = 15
+    private var sevenStreakXp: Int = 25
+    private var twentyStreakXp: Int = 30
     
     // have levels become longer to reach sequentially
     
@@ -30,8 +33,22 @@ public struct Level : Hashable {
     }
     
     public mutating func addExperience() {
-        self.currentXp += noStreakXpIncrement
-        moodDB.addExperienceForInput(newXpLevel: self.currentXp)
+        if Streaks().streak < 3 {
+            self.currentXp += noStreakXpIncrement
+            moodDB.addExperienceForInput(newXpLevel: self.currentXp)
+        }
+        if Streaks().streak >= 3 {
+            self.currentXp += threeStreakXp
+            moodDB.addExperienceForInput(newXpLevel: self.currentXp)
+        }
+        if Streaks().streak >= 7 {
+            self.currentXp += sevenStreakXp
+            moodDB.addExperienceForInput(newXpLevel: self.currentXp)
+        }
+        if Streaks().streak >= 28 {
+            self.currentXp += twentyStreakXp
+            moodDB.addExperienceForInput(newXpLevel: self.currentXp)
+        }
     }
     
 
