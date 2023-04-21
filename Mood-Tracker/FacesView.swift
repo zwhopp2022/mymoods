@@ -68,18 +68,18 @@ struct FacesView: View {
                             Image("Angriest")
                         }
                     }
-                    VStack(){
+                    ZStack(){
                         NavigationLink ("History"){
                             EverythingView()
                         }
                         NavigationLink ("XP") {
                             TestXP()
                         }
+                        
+                        
+                        
+                        
                     }
-                    
-                    
-                    
-                    
                     Spacer()
                         .frame(height:140)
                 }.padding()
