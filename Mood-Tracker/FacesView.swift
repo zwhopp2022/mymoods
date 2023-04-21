@@ -10,6 +10,7 @@ import SwiftUI
 // background color gradient
 let backgroundGradient = LinearGradient(colors: [Color.blue, Color.green, Color.yellow, Color.red], startPoint: .top, endPoint: .bottom)
 var userLevel = Level()
+var userStreak = Streaks()
 let moodDB = MoodDatabase()
 
 struct FacesView: View {
@@ -67,16 +68,19 @@ struct FacesView: View {
                             Image("Angriest")
                         }
                     }
-                    HStack() {
+                    VStack(){
                         NavigationLink ("History"){
                             EverythingView()
                         }
-                        
-                        
-                        
+                        NavigationLink ("XP") {
+                            StreaksView()
+                        }
                         NavigationLink ("Analytics") {
                             AnalyticsView()
                         }
+                        
+                        
+                        
                         
                     }
                     Spacer()

@@ -105,6 +105,8 @@
 		8F46C47A580A6CAE24B25EE5 /* Pods-Mood-Tracker-Mood-TrackerUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mood-Tracker-Mood-TrackerUITests.release.xcconfig"; path = "Target Support Files/Pods-Mood-Tracker-Mood-TrackerUITests/Pods-Mood-Tracker-Mood-TrackerUITests.release.xcconfig"; sourceTree = "<group>"; };
 		91BB21799F118671CB395975 /* Pods-Mood-TrackerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mood-TrackerTests.release.xcconfig"; path = "Target Support Files/Pods-Mood-TrackerTests/Pods-Mood-TrackerTests.release.xcconfig"; sourceTree = "<group>"; };
 		9B653AFB5B2DDF4BA8FD6437 /* Pods-Mood-TrackerTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mood-TrackerTests.debug.xcconfig"; path = "Target Support Files/Pods-Mood-TrackerTests/Pods-Mood-TrackerTests.debug.xcconfig"; sourceTree = "<group>"; };
+		BA9F602F29AD7853007E346A /* MoodTrackerDB.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodTrackerDB.swift; sourceTree = "<group>"; };
+		BB1B3C4A29EE12F800D14F2C /* ChartView-master */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = "ChartView-master"; sourceTree = "<group>"; };
 		C776E45C4B7B15D0E054B425 /* Pods_Mood_Tracker_Mood_TrackerUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Mood_Tracker_Mood_TrackerUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EAFBE0DA96D2EF94BFABF3C7 /* Pods_Mood_TrackerTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Mood_TrackerTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F01763AD3ED25B26B477BB77 /* Pods-Mood-Tracker.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mood-Tracker.release.xcconfig"; path = "Target Support Files/Pods-Mood-Tracker/Pods-Mood-Tracker.release.xcconfig"; sourceTree = "<group>"; };
@@ -179,6 +181,7 @@
 			isa = PBXGroup;
 			children = (
 				3775361322234238005EE5FE /* AppDelegate.swift */,
+				BB1B3C4A29EE12F800D14F2C /* ChartView-master */,
 				5D41D4FC299F085400667275 /* FaceButton.swift */,
 				5DC09875299EB97D007D38A3 /* FacesViewController.swift */,
 				830A118829A4610500E6FDE7 /* SaddestLog.swift */,

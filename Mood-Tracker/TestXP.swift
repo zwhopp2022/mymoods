@@ -10,6 +10,7 @@ import SwiftUI
 struct TestXP: View {
     var body: some View {
         Text("\(userLevel.getCurrentXp()) | \(userLevel.getCurrentLevel())")
+        Text("\(userStreak.getStreak())")
     }
 }
 
