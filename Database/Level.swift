@@ -9,7 +9,7 @@ import Foundation
 
 public struct Level : Hashable {
     private let defaultXp: Int
-    private var currentXp: Int
+    public var currentXp: Int
     
     private var noStreakXpIncrement: Int = 10
     private var threeStreakXp: Int = 15

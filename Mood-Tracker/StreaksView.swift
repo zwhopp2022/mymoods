@@ -36,11 +36,11 @@ struct StreaksView: View {
                 }
                 VStack {
                     if Streaks().streak < 3 {
-                        Image("Sad")
-                            .frame(height: 125)
+                        Image("Ice")
+                            .frame(height: 200)
                     }
                     if Streaks().streak >= 3 {
-                        Image("Happy")
+                        Image("Fire")
                             .frame(height: 125)
                         Text("Current Streak:")
                             .font(.largeTitle)
@@ -59,12 +59,16 @@ struct StreaksView: View {
                         .bold()
                         .padding()
                         .foregroundColor(Color.white)
-                    Text("\(Streaks().streak)")
+                    Text("\(userLevel.getCurrentXp())")
                         .font(.largeTitle)
                         .padding()
                         .foregroundColor(Color.white)
+                    Text("Level: \(userLevel.getCurrentLevel())")
+                        .font(.title2)
+                        .bold()
+                        .foregroundColor(Color.white)
                     Spacer()
-                            .frame(height: 125)
+                            .frame(height: 0)
                     
                 }
                 VStack {
