@@ -57,6 +57,12 @@ struct StreaksView: View {
                         .bold()
                         .padding()
                         .foregroundColor(Color.white)
+                    if userStreak.getStreak() < 3 {
+                        ProgressTestView(width: 300, height: 30, percent: CGFloat(userLevel.getCurrentXp() - userLevel.getCurrentLevel() * 100), color1: Color.teal, color2: Color.teal)
+                    }
+                    if userStreak.getStreak() >= 3 {
+                        ProgressTestView(width: 300, height: 30, percent: CGFloat(userLevel.getCurrentXp() - userLevel.getCurrentLevel() * 100), color1: Color.orange.opacity(0.3), color2: Color.orange.opacity(0.3))
+                    }
                     Text("\(userLevel.getCurrentXp())")
                         .font(.largeTitle)
                         .padding()
