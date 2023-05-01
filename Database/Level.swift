@@ -24,7 +24,7 @@ public struct Level : Hashable {
         self.threeStreakXp = 15
         self.sevenStreakXp = 20
         self.twentyStreakXp = 30
-
+        
         if (!UserDefaults.standard.bool(forKey: "databaseCreated")) {
             self.currentXp = self.defaultXp
             moodDB.addExperienceFirstStart()
@@ -32,7 +32,7 @@ public struct Level : Hashable {
         else {
             self.currentXp = moodDB.retrieveXp()
         }
-
+        
     }
     
     public func getCurrentXp() -> Int {
@@ -62,7 +62,7 @@ public struct Level : Hashable {
         }
     }
     
-
+    
     public func getCurrentLevel() -> Int {
         var level: Int
         if (self.currentXp < 10) {
@@ -77,18 +77,4 @@ public struct Level : Hashable {
         return level
     }
     
-
-    public func getCurrentLevel() -> Int {
-        var level: Int
-        if (self.currentXp < 10) {
-            level = 0
-        }
-        
-        // for every 100 xp, level will increase by 1
-        
-        level = self.currentXp / 100
-        
-        
-        return level
-    }
 }
