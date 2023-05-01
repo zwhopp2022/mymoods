@@ -33,15 +33,15 @@ struct NeutralLog: View {
                         .padding()
                         .foregroundColor(Color.black)
 
-                    TextField("How are you feeling?", text: $userInput)
+                    TextField("How are you feeling?", text: $userInput, axis: .vertical)
                         .padding()
                         .frame(width: 300, height: 100)
                         .multilineTextAlignment(.center)
                         .background(Color("Background"))
                         .cornerRadius(10)
                     Button(action: {
-                        moodDB.addInput(moodValue: "Neutral", inputValue: self.userInput, moodTable: moodDB.neutral)
-                       // moodDB.everythingInput(moodValue: "Neutral", inputValue: self.userInput)
+                        let Time = TimeAndDate()
+                        moodDB.addInput(moodValue: "Neutral", inputValue: self.userInput, moodTable: moodDB.neutral, time: Time.hourAndDate, month: Time.numMonth, calendarDay: Time.numDay)
                                        
                     self.mode.wrappedValue.dismiss()
                     }, label: {

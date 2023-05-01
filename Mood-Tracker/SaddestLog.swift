@@ -32,15 +32,15 @@ struct SaddestLog: View {
                         .padding()
                         .foregroundColor(Color.black)
 
-                    TextField("Sorry, feel free jot anything down :(", text: $userInput)
+                    TextField("Sorry, feel free jot anything down :(", text: $userInput, axis: .vertical)
                         .padding()
                         .frame(width: 300, height: 100)
                         .multilineTextAlignment(.center)
                         .background(Color("Background"))
                         .cornerRadius(10)
                     Button(action: {
-                        moodDB.addInput(moodValue: "Saddest", inputValue: self.userInput, moodTable: moodDB.saddest)
-                        //moodDB.everythingInput(moodValue: "Saddest", inputValue: self.userInput)
+                        let Time = TimeAndDate()
+                        moodDB.addInput(moodValue: "Saddest", inputValue: self.userInput, moodTable: moodDB.saddest, time: Time.hourAndDate, month: Time.numMonth, calendarDay: Time.numDay)
                                        
                     self.mode.wrappedValue.dismiss()
                     }, label: {
