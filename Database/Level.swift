@@ -24,9 +24,13 @@ public struct Level : Hashable {
         self.threeStreakXp = 15
         self.sevenStreakXp = 20
         self.twentyStreakXp = 30
-        self.currentXp = 0
+
         if (!UserDefaults.standard.bool(forKey: "databaseCreated")) {
             self.currentXp = self.defaultXp
+            moodDB.addExperienceFirstStart()
+        }
+        else {
+            self.currentXp = moodDB.retrieveXp()
         }
 
     }
@@ -44,15 +48,15 @@ public struct Level : Hashable {
             self.currentXp += noStreakXpIncrement
             moodDB.addExperienceForInput(newXpLevel: self.currentXp)
         }
-        if userStreak.getStreak() >= 3 {
+        else if userStreak.getStreak() >= 3 {
             self.currentXp += threeStreakXp
             moodDB.addExperienceForInput(newXpLevel: self.currentXp)
         }
-        if userStreak.getStreak() >= 7 {
+        else if userStreak.getStreak() >= 7 {
             self.currentXp += sevenStreakXp
             moodDB.addExperienceForInput(newXpLevel: self.currentXp)
         }
-        if userStreak.getStreak() >= 28 {
+        else if userStreak.getStreak() >= 28 {
             self.currentXp += twentyStreakXp
             moodDB.addExperienceForInput(newXpLevel: self.currentXp)
         }

@@ -41,8 +41,6 @@ struct AngriestLog: View {
                     Button(action: {
                         let Time = TimeAndDate()
                         moodDB.addInput(moodValue: "Angriest", inputValue: self.userInput, moodTable: moodDB.angriest, time: Time.hourAndDate, month: Time.numMonth, calendarDay: Time.numDay)
-                        //moodDB.everythingInput(moodValue: "Angriest", inputValue: self.userInput)
-                                       
                     self.mode.wrappedValue.dismiss()
                     }, label: {
                             Text("Store")

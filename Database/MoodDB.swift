@@ -129,18 +129,10 @@ class MoodDatabase {
         }
     }
     
-//    public func everythingInput(moodValue: String, inputValue: String){
-//            do {
-//                try self.moodDB.run(everything.insert(mood <- moodValue, reason <- inputValue))
-//            } catch {
-//                print(error.localizedDescription)
-//            }
-//        }
     
     public func addInput(moodValue: String, inputValue: String, moodTable: Table!, time: String, month: Int, calendarDay: Int){
             do {
-                //try self.moodDB.run(moodTable.insert(mood <- moodValue, reason <- inputValue))
-                //try self.moodDB.run(self.everything.insert(mood <- moodValue, reason <- inputValue))
+
                 userLevel.addExperience()
                 userStreak.streaks()
                 try self.moodDB.run(moodTable.insert(mood <- moodValue, reason <- inputValue, timeDate <- time, numMonth <- month, numDay <- calendarDay))
@@ -249,6 +241,28 @@ class MoodDatabase {
         } catch {
             print(error.localizedDescription)
         }
+    }
+    
+    public func addExperienceFirstStart() {
+        do {
+            try self.moodDB.run(experience.insert(totalXP <- 0))
+        }
+        catch {
+            print(error.localizedDescription)
+        }
+    }
+    
+    public func retrieveXp() -> Int {
+        var xpReturn: Int = 0
+        do {
+            for inputs in try moodDB.prepare(experience) {
+                xpReturn = inputs[totalXP]
+            }
+        }
+        catch {
+            print(error.localizedDescription)
+        }
+        return xpReturn
     }
     
     public func addStreak(newStreak: Int) {

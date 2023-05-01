@@ -40,7 +40,6 @@ struct SadLog: View {
                     Button(action: {
                         let Time = TimeAndDate()
                         moodDB.addInput(moodValue: "Sad", inputValue: self.userInput, moodTable: moodDB.sad, time: Time.hourAndDate, month: Time.numMonth, calendarDay: Time.numDay)
-                       // moodDB.everythingInput(moodValue: "Sad", inputValue: self.userInput)
                                        
                     self.mode.wrappedValue.dismiss()
                     }, label: {

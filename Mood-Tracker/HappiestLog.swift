@@ -41,7 +41,6 @@ struct HappiestLog: View {
                         Button(action: {
                             let Time = TimeAndDate()
                             moodDB.addInput(moodValue: "Happiest", inputValue: self.userInput, moodTable: moodDB.happiest, time: Time.hourAndDate, month: Time.numMonth, calendarDay: Time.numDay)
-                            //moodDB.everythingInput(moodValue: "Happiest", inputValue: self.userInput)
                                            
                         self.mode.wrappedValue.dismiss()
                         }, label: {

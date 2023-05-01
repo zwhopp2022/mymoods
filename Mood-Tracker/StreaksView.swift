@@ -7,18 +7,7 @@
 
 import SwiftUI
 
-//struct ContentView: View {
-  //  @State var progress: Float = 0.0
-    
-   // var body: some View {
-     //   VStack {
-       //     StreaksView(value: $progress).frame(height: 10)
-//        }
-  //  }
-//}
-
 struct StreaksView: View {
-  //  @Binding var value: Float
     @Environment(\.presentationMode) var mode: Binding<PresentationMode>
     
     var body: some View {
@@ -68,13 +57,6 @@ struct StreaksView: View {
                         .bold()
                         .padding()
                         .foregroundColor(Color.white)
-         //           GeometryReader { _ in
-         //               ZStack {
-         //                   Rectangle().frame(width: 400, height: 40)
-         //                       .opacity(0.3)
-         //                       .foregroundColor(Color.white)
-         //               }.cornerRadius(45.0)
-         //           }
                     Text("\(userLevel.getCurrentXp())")
                         .font(.largeTitle)
                         .padding()

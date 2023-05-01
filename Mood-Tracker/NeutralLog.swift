@@ -42,7 +42,6 @@ struct NeutralLog: View {
                     Button(action: {
                         let Time = TimeAndDate()
                         moodDB.addInput(moodValue: "Neutral", inputValue: self.userInput, moodTable: moodDB.neutral, time: Time.hourAndDate, month: Time.numMonth, calendarDay: Time.numDay)
-                       // moodDB.everythingInput(moodValue: "Neutral", inputValue: self.userInput)
                                        
                     self.mode.wrappedValue.dismiss()
                     }, label: {
