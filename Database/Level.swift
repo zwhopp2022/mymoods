@@ -76,4 +76,19 @@ public struct Level : Hashable {
         
         return level
     }
+    
+
+    public func getCurrentLevel() -> Int {
+        var level: Int
+        if (self.currentXp < 10) {
+            level = 0
+        }
+        
+        // for every 100 xp, level will increase by 1
+        
+        level = self.currentXp / 100
+        
+        
+        return level
+    }
 }
