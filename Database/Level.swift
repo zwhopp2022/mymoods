@@ -43,6 +43,10 @@ public struct Level : Hashable {
         return self.currentXp
     }
     
+    public func getCurrentIntXp() -> CGFloat {
+        return CGFloat(self.currentXp)
+    }
+    
     public mutating func addExperience() {
         if userStreak.getStreak() < 3 {
             self.currentXp += noStreakXpIncrement
@@ -65,7 +69,7 @@ public struct Level : Hashable {
     
     public func getCurrentLevel() -> Int {
         var level: Int
-        if (self.currentXp < 10) {
+        if (self.currentXp < 100) {
             level = 0
         }
         

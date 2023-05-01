@@ -118,8 +118,8 @@ class MoodDatabase {
                     t.column(mood)
                     t.column(reason)
                     t.column(timeDate)
-                    t.column(numMonth)
                     t.column(numDay)
+                    t.column(numMonth)
                 })
                 UserDefaults.standard.set(true, forKey: "databaseCreated")
             }

@@ -28,6 +28,7 @@
 		830A119129A471A600E6FDE7 /* NeutralLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 830A119029A471A600E6FDE7 /* NeutralLog.swift */; };
 		830A119329A471FB00E6FDE7 /* AngriestLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 830A119229A471FB00E6FDE7 /* AngriestLog.swift */; };
 		8332530F29B56D8900B2AD00 /* FeelingInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8332530E29B56D8900B2AD00 /* FeelingInput.swift */; };
+		8356BC7C2A00395D0055C114 /* ProgressTestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8356BC7B2A00395D0055C114 /* ProgressTestView.swift */; };
 		83B1798129B8502300A2F651 /* SaddestDisplay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83B1798029B8502300A2F651 /* SaddestDisplay.swift */; };
 		83B1798329B8502E00A2F651 /* HappiestDisplay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83B1798229B8502E00A2F651 /* HappiestDisplay.swift */; };
 		83B1798529B8503800A2F651 /* HappyDisplay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83B1798429B8503800A2F651 /* HappyDisplay.swift */; };
@@ -85,6 +86,7 @@
 		830A119029A471A600E6FDE7 /* NeutralLog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NeutralLog.swift; sourceTree = "<group>"; };
 		830A119229A471FB00E6FDE7 /* AngriestLog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AngriestLog.swift; sourceTree = "<group>"; };
 		8332530E29B56D8900B2AD00 /* FeelingInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeelingInput.swift; sourceTree = "<group>"; };
+		8356BC7B2A00395D0055C114 /* ProgressTestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressTestView.swift; sourceTree = "<group>"; };
 		83B1798029B8502300A2F651 /* SaddestDisplay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaddestDisplay.swift; sourceTree = "<group>"; };
 		83B1798229B8502E00A2F651 /* HappiestDisplay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HappiestDisplay.swift; sourceTree = "<group>"; };
 		83B1798429B8503800A2F651 /* HappyDisplay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HappyDisplay.swift; sourceTree = "<group>"; };
@@ -171,6 +173,7 @@
 			isa = PBXGroup;
 			children = (
 				3775361322234238005EE5FE /* AppDelegate.swift */,
+				8356BC7B2A00395D0055C114 /* ProgressTestView.swift */,
 				830A118829A4610500E6FDE7 /* SaddestLog.swift */,
 				83B1798029B8502300A2F651 /* SaddestDisplay.swift */,
 				83B7B6DB29F036820003A506 /* StreaksView.swift */,
@@ -495,6 +498,7 @@
 				83B1798529B8503800A2F651 /* HappyDisplay.swift in Sources */,
 				830A118F29A4713B00E6FDE7 /* SadLog.swift in Sources */,
 				5D14EE9B29B8448500CC42BC /* EverythingView.swift in Sources */,
+				8356BC7C2A00395D0055C114 /* ProgressTestView.swift in Sources */,
 				830A118929A4610500E6FDE7 /* SaddestLog.swift in Sources */,
 				83B1798929B8504A00A2F651 /* AngryDisplay.swift in Sources */,
 				3775361422234238005EE5FE /* AppDelegate.swift in Sources */,
