@@ -75,7 +75,7 @@ struct FacesView: View {
                         
                         
                         NavigationLink ("Analytics") {
-                            AnalyticsView()
+                            Progress(value: Float(userLevel.getCurrentXp()))
                         }
                         
                     }
