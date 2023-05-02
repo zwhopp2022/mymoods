@@ -104,8 +104,7 @@ public func createMonthlyPieChartSlicesFromMoods() -> ([PiePart], Int) {
     return (pieSlices, counter)
 }
 
-
-struct PieChart: View {
+struct DailyPieChart: View {
     
     @State private var animate = false
     @State private var moodSlices = createDailyPieChartSlicesFromMoods().0
@@ -144,7 +143,11 @@ struct PieChart: View {
             }
         }
     }
+    
+    
 }
+
+
 
 struct MonthlyPieChart: View {
     
