@@ -19,6 +19,7 @@ struct AnalyticsView: View {
     @State var currentDay = TimeAndDate().userDay
     @State var selectedPieChart: PieType = .nothing
     var currentMonth = TimeAndDate().userMonth
+    var currentYear = TimeAndDate().userYear
     var body: some View {
         ZStack {
             Color("Background")
@@ -34,6 +35,11 @@ struct AnalyticsView: View {
                         .bold()
                         .font(.system(size: 40))
                     DailyPieChart()
+                case .monthly:
+                    Text("\(currentMonth) \(currentYear)")
+                        .bold()
+                        .font(.system(size:40))
+                    MonthlyPieChart()
                 default:
                     Text("")
                 }
@@ -42,6 +48,11 @@ struct AnalyticsView: View {
                         selectedPieChart = .daily
                     }, label: {
                         Text("Daily")
+                    })
+                    Button(action: {
+                        selectedPieChart = .monthly
+                    }, label: {
+                        Text("Monthly")
                     })
                 }
             }
