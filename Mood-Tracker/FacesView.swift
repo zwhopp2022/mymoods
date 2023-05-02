@@ -76,7 +76,7 @@ struct FacesView: View {
                             StreaksView()
                         }
                         NavigationLink ("Analytics") {
-                            ProgressTestView()
+                            AnalyticsView()
                         }
                         
                         

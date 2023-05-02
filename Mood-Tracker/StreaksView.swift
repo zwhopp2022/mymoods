@@ -23,7 +23,7 @@ struct StreaksView: View {
                         .scale(1.4)
                         .foregroundColor(.white.opacity(0.15))
                 }
-                if userStreak.getStreak() >= 3 {
+                else if userStreak.getStreak() >= 3 {
                     Color.orange
                         .ignoresSafeArea()
                     Circle()
@@ -38,7 +38,7 @@ struct StreaksView: View {
                         Image("Ice")
                             .frame(height: 200)
                     }
-                    if userStreak.getStreak() >= 3 {
+                    else if userStreak.getStreak() >= 3 {
                         Image("Fire")
                             .frame(height: 125)
                             .padding()
@@ -60,7 +60,7 @@ struct StreaksView: View {
                     if userStreak.getStreak() < 3 {
                         ProgressTestView(width: 300, height: 30, percent: CGFloat(userLevel.getCurrentXp() - userLevel.getCurrentLevel() * 100), color1: Color.teal, color2: Color.teal)
                     }
-                    if userStreak.getStreak() >= 3 {
+                    else if userStreak.getStreak() >= 3 {
                         ProgressTestView(width: 300, height: 30, percent: CGFloat(userLevel.getCurrentXp() - userLevel.getCurrentLevel() * 100), color1: Color.orange.opacity(0.3), color2: Color.orange.opacity(0.3))
                     }
                     Text("\(userLevel.getCurrentXp())")
