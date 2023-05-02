@@ -35,7 +35,7 @@
 		83B1798729B8504200A2F651 /* SadDisplay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83B1798629B8504200A2F651 /* SadDisplay.swift */; };
 		83B1798929B8504A00A2F651 /* AngryDisplay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83B1798829B8504A00A2F651 /* AngryDisplay.swift */; };
 		83B1798B29B8505600A2F651 /* NeutralDisplay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83B1798A29B8505600A2F651 /* NeutralDisplay.swift */; };
-		BBC079C029F232B40043FA4E /* NavBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBC079BF29F232B40043FA4E /* NavBar.swift */; };
+		BB7F6F5329FFB26900C634B8 /* NavBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB7F6F5229FFB26900C634B8 /* NavBar.swift */; };
 		D4FC5CEB25BC358D7740C9D9 /* Pods_Mood_Tracker_Mood_TrackerUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C776E45C4B7B15D0E054B425 /* Pods_Mood_Tracker_Mood_TrackerUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -95,7 +95,7 @@
 		8F46C47A580A6CAE24B25EE5 /* Pods-Mood-Tracker-Mood-TrackerUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mood-Tracker-Mood-TrackerUITests.release.xcconfig"; path = "Target Support Files/Pods-Mood-Tracker-Mood-TrackerUITests/Pods-Mood-Tracker-Mood-TrackerUITests.release.xcconfig"; sourceTree = "<group>"; };
 		91BB21799F118671CB395975 /* Pods-Mood-TrackerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mood-TrackerTests.release.xcconfig"; path = "Target Support Files/Pods-Mood-TrackerTests/Pods-Mood-TrackerTests.release.xcconfig"; sourceTree = "<group>"; };
 		9B653AFB5B2DDF4BA8FD6437 /* Pods-Mood-TrackerTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mood-TrackerTests.debug.xcconfig"; path = "Target Support Files/Pods-Mood-TrackerTests/Pods-Mood-TrackerTests.debug.xcconfig"; sourceTree = "<group>"; };
-		BBC079BF29F232B40043FA4E /* NavBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = NavBar.swift; path = "mood-tracker/NavBar.swift"; sourceTree = SOURCE_ROOT; };
+		BB7F6F5229FFB26900C634B8 /* NavBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = NavBar.swift; path = "mood-tracker/NavBar.swift"; sourceTree = SOURCE_ROOT; };
 		C776E45C4B7B15D0E054B425 /* Pods_Mood_Tracker_Mood_TrackerUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Mood_Tracker_Mood_TrackerUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EAFBE0DA96D2EF94BFABF3C7 /* Pods_Mood_TrackerTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Mood_TrackerTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F01763AD3ED25B26B477BB77 /* Pods-Mood-Tracker.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mood-Tracker.release.xcconfig"; path = "Target Support Files/Pods-Mood-Tracker/Pods-Mood-Tracker.release.xcconfig"; sourceTree = "<group>"; };
@@ -181,7 +181,6 @@
 				830A118E29A4713B00E6FDE7 /* SadLog.swift */,
 				830A119029A471A600E6FDE7 /* NeutralLog.swift */,
 				830A118A29A46C0200E6FDE7 /* HappyLog.swift */,
-				BBC079BF29F232B40043FA4E /* NavBar.swift */,
 				830A118C29A4704E00E6FDE7 /* HappiestLog.swift */,
 				830A119229A471FB00E6FDE7 /* AngriestLog.swift */,
 				5DBF7B8429A1B32300DFAAB5 /* FacesView.swift */,
@@ -190,6 +189,7 @@
 				3775361C22234238005EE5FE /* LaunchScreen.storyboard */,
 				3775361F22234238005EE5FE /* Info.plist */,
 				5D14EE9A29B8448500CC42BC /* EverythingView.swift */,
+				BB7F6F5229FFB26900C634B8 /* NavBar.swift */,
 			);
 			path = "Mood-Tracker";
 			sourceTree = "<group>";
@@ -478,7 +478,7 @@
 				83B1798729B8504200A2F651 /* SadDisplay.swift in Sources */,
 				5D480A1A29B52AB900CD077D /* MoodDB.swift in Sources */,
 				5D91191029ECEDB200682435 /* TestXP.swift in Sources */,
-				BBC079C029F232B40043FA4E /* NavBar.swift in Sources */,
+				BB7F6F5329FFB26900C634B8 /* NavBar.swift in Sources */,
 				5DC09876299EB97D007D38A3 /* FacesViewController.swift in Sources */,
 				83B1798B29B8505600A2F651 /* NeutralDisplay.swift in Sources */,
 				5D480A1629B1496600CD077D /* UserDefaultsChecker.swift in Sources */,
