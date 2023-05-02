@@ -55,7 +55,7 @@ struct EverythingView: View {
                     .font(.title2)
                     .foregroundColor(.white)
                     .padding(.all)
-                    .background(Color.blue)
+                    .background(Color("Background"))
                     .cornerRadius(20)
                 Spacer()
             }.padding(.all)
