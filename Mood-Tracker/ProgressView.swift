@@ -1,5 +1,5 @@
 //
-//  ProgressTestView.swift
+//  ProgressView.swift
 //  Mood-Tracker
 //
 //  Created by Jack McLean on 5/1/23.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct ProgressTestView: View {
+struct ProgressView: View {
     var width: CGFloat = 200
     var height: CGFloat = 20
     var percent: CGFloat = 0
@@ -30,8 +30,8 @@ struct ProgressTestView: View {
     }
 }
 
-struct ProgressTestView_Previews: PreviewProvider {
+struct ProgressView_Previews: PreviewProvider {
     static var previews: some View {
-        ProgressTestView()
+        ProgressView()
     }
 }
