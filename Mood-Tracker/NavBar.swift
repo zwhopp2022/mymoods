@@ -14,24 +14,19 @@ struct NavBarView: View {
             FacesView()
                 .tabItem() {
                     Image("Happy")
-                    Text("Faces View")
                 }
             TestXP()
                 .tabItem() {
                     Image("Sad")
-                    Text("XP")
                 }
             SadLog()
                 .tabItem() {
-                    Image("Neutral")
-                    Text("Pie Charts")
+                    Image("Saddest")
                 }
             EverythingView()
                 .tabItem() {
                     Image("Happiest")
-                    Text("All Inputs")
                 }
-                .frame(height: 80)
         }
     }
 }
