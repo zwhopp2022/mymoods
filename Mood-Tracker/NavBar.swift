@@ -8,25 +8,37 @@
 import Foundation
 import SwiftUI
 
-struct ContentView: View {
+struct NavBarView: View {
     var body: some View {
         TabView {
-            NavigationView {
-                ZStack {
-                    NavigationLink(destination: FacesView()) {
-                        .tabItem {
-                            Image(systemName: book.fill)
-                                .imageScale(.large)
-                        }
-                    }
+            FacesView()
+                .tabItem() {
+                    Image("Happy")
+                    Text("Faces View")
                 }
-            }
+            TestXP()
+                .tabItem() {
+                    Image("Sad")
+                    Text("XP")
+                }
+            SadLog()
+                .tabItem() {
+                    Image("Neutral")
+                    Text("Pie Charts")
+                }
+            EverythingView()
+                .tabItem() {
+                    Image("Happiest")
+                    Text("All Inputs")
+                }
+                .frame(height: 80)
         }
     }
 }
 
-struct ContentView_Previews: PreviewProvider {
+struct NavBarView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        NavBarView()
     }
 }
+
