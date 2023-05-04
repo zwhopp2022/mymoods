@@ -16,6 +16,8 @@ struct EverythingView: View {
     var feelingInputs = moodDB.retrieveReasons(moodTable: "everything")
     var count: Int = 1
     let backgroundGradient1 = LinearGradient(colors: [Color.green, Color.yellow, Color.gray, Color.cyan, Color.blue, Color.red, Color.red], startPoint: .top, endPoint: .bottom)
+    
+    @Environment(\.presentationMode) var mode: Binding<PresentationMode>
         
     var body: some View {
         ZStack{
@@ -37,7 +39,7 @@ struct EverythingView: View {
                 DisclosureGroup("All of your Entries", isExpanded: $isScrollExpanded) {
                     ScrollView{
                         VStack{
-                            ForEach(moodDB.retrieveReasons(moodTable: "everything"), id: \.self) { input in Text("\(input.mood): \(input.reason)")
+                            ForEach(moodDB.retrieveReasons(moodTable: "everything"), id: \.self) { input in Text("\(input.timeDate) \n\(input.mood): \(input.reason)")
                                     .frame(maxWidth: .infinity)
                                     .font(.title3)
                                     .padding(.all).onTapGesture {
@@ -61,14 +63,13 @@ struct EverythingView: View {
                 Spacer()
                     .frame(height: 675)
                 HStack() {
-                    NavigationLink ("Back"){
-                        FacesView()
+                    Button ("Back"){
+                        self.mode.wrappedValue.dismiss()
                     }
                 }
             }
         }
-        
-        
+        .navigationBarHidden(true)
     }
 }
 

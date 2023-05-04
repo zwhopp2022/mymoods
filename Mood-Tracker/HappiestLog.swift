@@ -31,7 +31,7 @@ struct HappiestLog: View {
                         .bold()
                         .padding()
                         .foregroundColor(Color.black)
-                    TextField("Yippee! What's happening?", text: $userInput)
+                    TextField("Yippee! What's happening?", text: $userInput, axis: .vertical)
                         .padding()
                         .frame(width: 300, height: 100)
                         .multilineTextAlignment(.center)
@@ -39,8 +39,8 @@ struct HappiestLog: View {
                         .cornerRadius(10)
 
                         Button(action: {
-                            moodDB.addInput(moodValue: "Happiest", inputValue: self.userInput, moodTable: moodDB.happiest)
-                            //moodDB.everythingInput(moodValue: "Happiest", inputValue: self.userInput)
+                            let Time = TimeAndDate()
+                            moodDB.addInput(moodValue: "Happiest", inputValue: self.userInput, moodTable: moodDB.happiest, time: Time.hourAndDate, month: Time.numMonth, calendarDay: Time.numDay)
                                            
                         self.mode.wrappedValue.dismiss()
                         }, label: {

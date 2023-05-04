@@ -32,15 +32,15 @@ struct HappyLog: View {
                         .padding()
                         .foregroundColor(Color.black)
 
-                    TextField("Yay! Want to write it down?", text: $userInput)
+                    TextField("Yay! Want to write it down?", text: $userInput, axis: .vertical)
                         .padding()
                         .frame(width: 300, height: 100)
                         .multilineTextAlignment(.center)
                         .background(Color("Background"))
                         .cornerRadius(10)
                     Button(action: {
-                        moodDB.addInput(moodValue: "Happy", inputValue: self.userInput, moodTable: moodDB.happy)
-                        //moodDB.everythingInput(moodValue: "Happy", inputValue: self.userInput)
+                        let Time = TimeAndDate()
+                        moodDB.addInput(moodValue: "Happy", inputValue: self.userInput, moodTable: moodDB.happy, time: Time.hourAndDate, month: Time.numMonth, calendarDay: Time.numDay)
                                        
                     self.mode.wrappedValue.dismiss()
                     }, label: {

@@ -1,0 +1,23 @@
+{
+  "images" : [
+    {
+      "filename" : "pngtree-fuego-png-png-image_6502195 1.png",
+      "idiom" : "universal",
+      "scale" : "1x"
+    },
+    {
+      "filename" : "pngtree-fuego-png-png-image_6502195.png",
+      "idiom" : "universal",
+      "scale" : "2x"
+    },
+    {
+      "filename" : "pngtree-fuego-png-png-image_6502195 2.png",
+      "idiom" : "universal",
+      "scale" : "3x"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

@@ -31,16 +31,15 @@ struct SadLog: View {
                         .bold()
                         .padding()
                         .foregroundColor(Color.black)
-
-                    TextField("Want to talk about?", text: $userInput)
+                    TextField("Want to talk about?", text: $userInput, axis: .vertical)
                         .padding()
                         .frame(width: 300, height: 100)
                         .multilineTextAlignment(.center)
                         .background(Color("Background"))
                         .cornerRadius(10)
                     Button(action: {
-                        moodDB.addInput(moodValue: "Sad", inputValue: self.userInput, moodTable: moodDB.sad)
-                       // moodDB.everythingInput(moodValue: "Sad", inputValue: self.userInput)
+                        let Time = TimeAndDate()
+                        moodDB.addInput(moodValue: "Sad", inputValue: self.userInput, moodTable: moodDB.sad, time: Time.hourAndDate, month: Time.numMonth, calendarDay: Time.numDay)
                                        
                     self.mode.wrappedValue.dismiss()
                     }, label: {
