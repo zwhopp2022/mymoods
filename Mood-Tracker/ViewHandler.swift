@@ -8,18 +8,18 @@
 import Foundation
 import SwiftUI
 
-struct NavBarView: View {
+struct ViewHandler: View {
     var body: some View {
         TabView {
             FacesView()
                 .tabItem() {
                     Image("smile")
                 }
-            TestXP()
+            StreaksView()
                 .tabItem() {
                     Image("medal")
                 }
-            SadLog()
+            AnalyticsView()
                 .tabItem() {
                     Image("pie")
                 }
@@ -33,7 +33,7 @@ struct NavBarView: View {
 
 struct NavBarView_Previews: PreviewProvider {
     static var previews: some View {
-        NavBarView()
+        ViewHandler()
     }
 }
 
