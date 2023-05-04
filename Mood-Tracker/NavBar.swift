@@ -11,7 +11,7 @@ import SwiftUI
 struct NavBarView: View {
     var body: some View {
         TabView {
-            AnalyticsView()
+            StreaksView()
                 .tabItem() {
                     Image("medal")
                 }
@@ -23,7 +23,7 @@ struct NavBarView: View {
                 .tabItem() {
                     Image("book")
                 }
-            SadLog()
+            AnalyticsView()
                 .tabItem() {
                     Image("pie")
                 }
