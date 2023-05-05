@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct HappyDisplay: View {
+    @Environment(\.colorScheme) var colorScheme
     
     @State private var isScrollExpanded = false
     @State private var selectedScrollNum = 1
@@ -38,6 +39,7 @@ struct HappyDisplay: View {
                                     Text("\(input.timeDate) \n\(input.reason)")
                                         .frame(maxWidth: .infinity)
                                         .font(.title3)
+                                        .foregroundColor(colorScheme == .dark ? .white : .black)
                                         .padding(.all).onTapGesture {
                                             withAnimation {
                                                 self.isScrollExpanded.toggle()
@@ -48,6 +50,7 @@ struct HappyDisplay: View {
                             }
                         }.frame(height:400)
                     }.accentColor(.white)
+                     .foregroundColor(colorScheme == .dark ? .white : .black)
                         .font(.title2)
                         .foregroundColor(.white)
                         .padding(.all)
