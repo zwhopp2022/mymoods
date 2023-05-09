@@ -62,6 +62,49 @@ public func createDailyPieChartSlicesFromMoods() -> ([PiePart], Int) {
     
     return (pieSlices, counter)
 }
+ 
+
+public func createWeeklyPieChartSlicesFromMoods() -> ([PiePart], Int) {
+    let timeNow = Date()
+    let calendar = Calendar.current
+    let currentMonth: Int = calendar.component(.month, from: timeNow)
+    let currentDay: Int = calendar.component(.day, from: timeNow)
+    var feelingsToExamine = moodDB.retrieveReasons(moodTable: "everything")
+    var pieSlices = [PiePart(countOfMood: 0, color: Color.indigo, moodName: "Saddest"), PiePart(countOfMood: 0, color: Color.green, moodName: "Happiest"), PiePart(countOfMood: 0, color: Color.red, moodName: "Angriest"), PiePart(countOfMood: 0, color: Color.gray, moodName: "Neutral"), PiePart(countOfMood: 0, color: Color.yellow, moodName: "Happy"), PiePart(countOfMood: 0, color: Color.cyan, moodName: "Sad")]
+    var counter: Int = 0
+    
+    
+    for input in feelingsToExamine {
+        if (input.numDay == currentDay) && (input.numMonth == currentMonth)
+        {
+            switch input.mood {
+            case "Saddest":
+                pieSlices[0].countOfMood += 1
+                counter += 1
+            case "Happiest":
+                pieSlices[1].countOfMood += 1
+                counter += 1
+            case "Angriest":
+                pieSlices[2].countOfMood += 1
+                counter += 1
+            case "Neutral":
+                pieSlices[3].countOfMood += 1
+                counter += 1
+            case "Happy":
+                pieSlices[4].countOfMood += 1
+                counter += 1
+            case "Sad":
+                pieSlices[5].countOfMood += 1
+                counter += 1
+            default:
+                break
+            }
+        }
+    }
+    
+    return (pieSlices, counter)
+}
+
 
 public func createMonthlyPieChartSlicesFromMoods() -> ([PiePart], Int) {
     let timeNow = Date()
