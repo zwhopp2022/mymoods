@@ -43,22 +43,25 @@ struct AnalyticsView: View {
                 default:
                     Text("")
                 }
-                Spacer()
-                    .frame(height: 500)
-                HStack {
-                    Button(action: {
-                        selectedPieChart = .daily
-                    }, label: {
-                        Text("Daily")
-                    })
-                    Button(action: {
-                        selectedPieChart = .monthly
-                    }, label: {
-                        Text("Monthly")
-                    })
+                VStack {
+                    HStack {
+                        Button(action: {
+                            selectedPieChart = .daily
+                        }, label: {
+                            Text("Daily")
+                        })
+                        Button(action: {
+                            selectedPieChart = .monthly
+                        }, label: {
+                            Text("Monthly")
+                        })
+                    }
+                    VStack {
+                        NavBar().frame(maxHeight: 50)
+                    }
                 }
-                NavBar()
             }
+            
         }
     }
 }
