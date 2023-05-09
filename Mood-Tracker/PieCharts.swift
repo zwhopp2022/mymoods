@@ -67,6 +67,7 @@ public func createMonthlyPieChartSlicesFromMoods() -> ([PiePart], Int) {
     let timeNow = Date()
     let calendar = Calendar.current
     let currentMonth: Int = calendar.component(.month, from: timeNow)
+   
     var feelingsToExamine = moodDB.retrieveReasons(moodTable: "everything")
     var pieSlices = [PiePart(countOfMood: 0, color: Color.indigo, moodName: "Saddest"), PiePart(countOfMood: 0, color: Color.green, moodName: "Happiest"), PiePart(countOfMood: 0, color: Color.red, moodName: "Angriest"), PiePart(countOfMood: 0, color: Color.gray, moodName: "Neutral"), PiePart(countOfMood: 0, color: Color.yellow, moodName: "Happy"), PiePart(countOfMood: 0, color: Color.cyan, moodName: "Sad")]
     var counter: Int = 0
@@ -148,3 +149,45 @@ struct DailyPieChart: View {
 
 
 
+struct MonthlyPieChart: View {
+    
+    @State private var animate = false
+    @State private var moodSlices = createMonthlyPieChartSlicesFromMoods().0
+    @State private var moodsCount = createMonthlyPieChartSlicesFromMoods().1
+    
+    
+    
+    var body: some View {
+        VStack {
+            Canvas { context, size in
+                if (moodsCount > 0) {
+                    let totalSlices = moodSlices.reduce(0) { $0 + $1.countOfMood }
+                    context.translateBy(x: (size.width / 2), y: size.height / 2)
+                    var pieContext = context
+                    pieContext.rotate(by: .degrees(90))
+                    
+                    let radius = min(size.width, size.height) * 0.35
+                    
+                    var startAngle = Angle.zero
+                    
+                    for slice in moodSlices {
+                        let angle = Angle(degrees: 360 * (slice.countOfMood / totalSlices))
+                        let endAngle = startAngle + angle
+                        
+                        let path = Path { p in
+                            p.move(to: .zero)
+                            p.addArc(center: .zero, radius: radius, startAngle: startAngle, endAngle: endAngle, clockwise: false)
+                            p.closeSubpath()
+                        }
+                        pieContext.fill(path, with: .color(slice.color.opacity(1)))
+                        pieContext.stroke(path, with: .color(slice.color), lineWidth: 3)
+                        startAngle = endAngle
+                    }
+                    
+                }
+            }
+        }
+    }
+    
+    
+}
