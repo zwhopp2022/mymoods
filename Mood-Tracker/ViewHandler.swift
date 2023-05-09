@@ -32,19 +32,19 @@ import SwiftUI
 //}
 
 
-struct ViewHandler: View {
-    var body: some View {
-        NavigationView {
-            .toolbar {
-                ToolbarItem(placement: .navigationBarLeading)
-            }
-    }
-}
-
-
-struct NavBarView_Previews: PreviewProvider {
-    static var previews: some View {
-        ViewHandler()
-    }
-}
+//struct ViewHandler: View {
+//    var body: some View {
+//        NavigationView {
+//            .toolbar {
+//                ToolbarItem(placement: .navigationBarLeading)
+//            }
+//    }
+//}
+//
+//
+//struct NavBarView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        ViewHandler()
+//    }
+//}
 
