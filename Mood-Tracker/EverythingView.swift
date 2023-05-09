@@ -63,9 +63,7 @@ struct EverythingView: View {
                 Spacer()
                     .frame(height: 675)
                 HStack() {
-                    Button ("Back"){
-                        self.mode.wrappedValue.dismiss()
-                    }
+                    NavBar()
                 }
             }
         }

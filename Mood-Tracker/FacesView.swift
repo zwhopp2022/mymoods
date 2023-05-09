@@ -68,23 +68,9 @@ struct FacesView: View {
                             Image("Angriest")
                         }
                     }
-                    VStack(){
-                        NavigationLink ("History"){
-                            EverythingView()
-                        }
-                        NavigationLink ("XP") {
-                            StreaksView()
-                        }
-                        NavigationLink ("Analytics") {
-                            AnalyticsView()
-                        }
-                        
-                        
-                        
-                        
-                    }
-                    Spacer()
-                        .frame(height:60)
+                   Spacer()
+                        .frame(height:80)
+                    NavBar()
                 }.padding()
             }
             .navigationBarHidden(true)
