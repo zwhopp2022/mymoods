@@ -20,6 +20,20 @@ struct AnalyticsView: View {
     @State var selectedPieChart: PieType = .nothing
     var currentMonth = TimeAndDate().userMonth
     var currentYear = TimeAndDate().userYear
+    let calendar = Calendar.current
+    let currentWeekInterval = determineWeek()
+    let dateFormatter = DateFormatter()
+    
+//    let startDay: Int
+//    let startMonth: String
+//    let endMonth: String
+//    let endDay: Int
+    
+//    startDay = calendar.component(.day, from: currentWeekInterval.0)
+//    startMonth = calendar.component(.month, from: currentWeekInterval.0)
+//    endMonth = calendar.component(.month, from: currentWeekInterval.1)
+//    endDay = calendar.component(.day, from: currentWeekInterval.1)
+    
     var body: some View {
         ZStack {
             Color("Background")
@@ -35,6 +49,11 @@ struct AnalyticsView: View {
                         .bold()
                         .font(.system(size: 40))
                     DailyPieChart()
+                case .weekly:
+                    Text("\(dateFormatter.monthSymbols[(calendar.component(.month, from: currentWeekInterval.0)) - 1]) \(calendar.component(.day, from: currentWeekInterval.0)) - \(dateFormatter.monthSymbols[(calendar.component(.month, from: currentWeekInterval.1))-1]) \(calendar.component(.day, from: currentWeekInterval.1))")
+                        .bold()
+                        .font(.system(size: 40))
+                    WeeklyPieChart()
                 case .monthly:
                     Text("\(currentMonth) \(currentYear)")
                         .bold()
@@ -48,6 +67,11 @@ struct AnalyticsView: View {
                         selectedPieChart = .daily
                     }, label: {
                         Text("Daily")
+                    })
+                    Button(action: {
+                        selectedPieChart = .weekly
+                    }, label: {
+                        Text("Weekly")
                     })
                     Button(action: {
                         selectedPieChart = .monthly
