@@ -68,6 +68,17 @@ struct FacesView: View {
                             Image("Angriest")
                         }
                     }
+                    HStack() {
+                        NavigationLink ("History"){
+                            EverythingView()
+                        }
+                        
+                        
+                        
+                        NavigationLink ("Analytics") {
+                            Progress(value: Float(userLevel.getCurrentXp()))
+                        }
+                    }
                    Spacer()
                         .frame(height:80)
                     NavBar()
