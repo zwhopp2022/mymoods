@@ -68,23 +68,20 @@ struct FacesView: View {
                             Image("Angriest")
                         }
                     }
-                    VStack(){
+                    HStack() {
                         NavigationLink ("History"){
                             EverythingView()
                         }
-                        NavigationLink ("XP") {
-                            StreaksView()
-                        }
+                        
+                        
+                        
                         NavigationLink ("Analytics") {
-                            AnalyticsView()
+                            Progress(value: Float(userLevel.getCurrentXp()))
                         }
-                        
-                        
-                        
-                        
                     }
-                    Spacer()
-                        .frame(height:60)
+                   Spacer()
+                        .frame(height:80)
+                    NavBar()
                 }.padding()
             }
             .navigationBarHidden(true)

@@ -80,6 +80,7 @@ struct AnalyticsView: View {
                     })
                 }
             }
+            
         }
     }
 }
