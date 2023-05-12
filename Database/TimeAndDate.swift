@@ -16,7 +16,6 @@ struct TimeAndDate: Hashable {
     var hourAndDate: String = ""
     var numDay: Int = 0
     var numMonth: Int = 0
-    var numHour: Int = 0
 
     
     public init(){

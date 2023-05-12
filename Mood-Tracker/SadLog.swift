@@ -31,7 +31,6 @@ struct SadLog: View {
                         .bold()
                         .padding()
                         .foregroundColor(Color.black)
-
                     TextField("Want to talk about?", text: $userInput, axis: .vertical)
                         .padding()
                         .frame(width: 300, height: 100)
@@ -41,7 +40,6 @@ struct SadLog: View {
                     Button(action: {
                         let Time = TimeAndDate()
                         moodDB.addInput(moodValue: "Sad", inputValue: self.userInput, moodTable: moodDB.sad, time: Time.hourAndDate, month: Time.numMonth, calendarDay: Time.numDay)
-                       // moodDB.everythingInput(moodValue: "Sad", inputValue: self.userInput)
                                        
                     self.mode.wrappedValue.dismiss()
                     }, label: {
@@ -56,7 +54,7 @@ struct SadLog: View {
                 }
                 VStack {
                     Spacer()
-                        .frame(height: 500)
+                        .frame(height: 600)
                     HStack() {
                         NavigationLink ("Entries"){
                             SadDisplay()
@@ -65,6 +63,10 @@ struct SadLog: View {
                             self.mode.wrappedValue.dismiss()
                         }
                     }
+                    Spacer()
+                        .frame(height:60)
+                    NavBar()
+
                 }
             }
         }

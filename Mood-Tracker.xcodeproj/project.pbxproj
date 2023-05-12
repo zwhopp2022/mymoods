@@ -14,16 +14,13 @@
 		3775363422234239005EE5FE /* MoodTrackerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3775363322234239005EE5FE /* MoodTrackerUITests.swift */; };
 		3FBAB9CE23A011B8BBCC41E5 /* Pods_Mood_TrackerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAFBE0DA96D2EF94BFABF3C7 /* Pods_Mood_TrackerTests.framework */; };
 		5D14EE9B29B8448500CC42BC /* EverythingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D14EE9A29B8448500CC42BC /* EverythingView.swift */; };
-		5D41D4FD299F085400667275 /* FaceButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D41D4FC299F085400667275 /* FaceButton.swift */; };
-		5D480A1629B1496600CD077D /* UserDefaultsChecker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D480A1529B1496600CD077D /* UserDefaultsChecker.swift */; };
 		5D480A1A29B52AB900CD077D /* MoodDB.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D480A1929B52AB900CD077D /* MoodDB.swift */; };
 		5D7147E829F2005B0085976F /* SwiftUICharts in Frameworks */ = {isa = PBXBuildFile; productRef = 5D7147E729F2005B0085976F /* SwiftUICharts */; };
 		5D7147EA29F20FE10085976F /* PieCharts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D7147E929F20FE10085976F /* PieCharts.swift */; };
 		5D7147EE29F226EC0085976F /* AnalyticsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D7147ED29F226EC0085976F /* AnalyticsView.swift */; };
-		5D91191029ECEDB200682435 /* TestXP.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D91190F29ECEDB200682435 /* TestXP.swift */; };
+		5D9F182D2A09CD080019E92B /* NavBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D9F182C2A09CD080019E92B /* NavBar.swift */; };
 		5DAC6FB929E9D5C20017A18D /* Level.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DAC6FB829E9D5C10017A18D /* Level.swift */; };
 		5DBF7B8529A1B32300DFAAB5 /* FacesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DBF7B8429A1B32300DFAAB5 /* FacesView.swift */; };
-		5DC09876299EB97D007D38A3 /* FacesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DC09875299EB97D007D38A3 /* FacesViewController.swift */; };
 		67825E3D93B37BF636AE5A78 /* Pods_Mood_Tracker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F513E413E0E81ADCB30F88F /* Pods_Mood_Tracker.framework */; };
 		830A118929A4610500E6FDE7 /* SaddestLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 830A118829A4610500E6FDE7 /* SaddestLog.swift */; };
 		830A118B29A46C0200E6FDE7 /* HappyLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 830A118A29A46C0200E6FDE7 /* HappyLog.swift */; };
@@ -42,6 +39,7 @@
 		83B7B6DC29F036820003A506 /* StreaksView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83B7B6DB29F036820003A506 /* StreaksView.swift */; };
 		83B7B6DE29F03B000003A506 /* Streaks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83B7B6DD29F03B000003A506 /* Streaks.swift */; };
 		83B7B6E029F03D700003A506 /* TimeAndDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83B7B6DF29F03D700003A506 /* TimeAndDate.swift */; };
+		BB7F6F5329FFB26900C634B8 /* ViewHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB7F6F5229FFB26900C634B8 /* ViewHandler.swift */; };
 		D4FC5CEB25BC358D7740C9D9 /* Pods_Mood_Tracker_Mood_TrackerUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C776E45C4B7B15D0E054B425 /* Pods_Mood_Tracker_Mood_TrackerUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -77,15 +75,12 @@
 		3775363322234239005EE5FE /* MoodTrackerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodTrackerUITests.swift; sourceTree = "<group>"; };
 		3775363522234239005EE5FE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5D14EE9A29B8448500CC42BC /* EverythingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EverythingView.swift; sourceTree = "<group>"; };
-		5D41D4FC299F085400667275 /* FaceButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaceButton.swift; sourceTree = "<group>"; };
-		5D480A1529B1496600CD077D /* UserDefaultsChecker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsChecker.swift; sourceTree = "<group>"; };
 		5D480A1929B52AB900CD077D /* MoodDB.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodDB.swift; sourceTree = "<group>"; };
 		5D7147E929F20FE10085976F /* PieCharts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PieCharts.swift; sourceTree = "<group>"; };
 		5D7147ED29F226EC0085976F /* AnalyticsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalyticsView.swift; sourceTree = "<group>"; };
-		5D91190F29ECEDB200682435 /* TestXP.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestXP.swift; sourceTree = "<group>"; };
+		5D9F182C2A09CD080019E92B /* NavBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavBar.swift; sourceTree = "<group>"; };
 		5DAC6FB829E9D5C10017A18D /* Level.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Level.swift; sourceTree = "<group>"; };
 		5DBF7B8429A1B32300DFAAB5 /* FacesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FacesView.swift; sourceTree = "<group>"; };
-		5DC09875299EB97D007D38A3 /* FacesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FacesViewController.swift; sourceTree = "<group>"; };
 		7C8EB9E7E668237BD1E5EA72 /* Pods-Mood-Tracker-Mood-TrackerUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mood-Tracker-Mood-TrackerUITests.debug.xcconfig"; path = "Target Support Files/Pods-Mood-Tracker-Mood-TrackerUITests/Pods-Mood-Tracker-Mood-TrackerUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		830A118829A4610500E6FDE7 /* SaddestLog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaddestLog.swift; sourceTree = "<group>"; };
 		830A118A29A46C0200E6FDE7 /* HappyLog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HappyLog.swift; sourceTree = "<group>"; };
@@ -107,6 +102,7 @@
 		8F46C47A580A6CAE24B25EE5 /* Pods-Mood-Tracker-Mood-TrackerUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mood-Tracker-Mood-TrackerUITests.release.xcconfig"; path = "Target Support Files/Pods-Mood-Tracker-Mood-TrackerUITests/Pods-Mood-Tracker-Mood-TrackerUITests.release.xcconfig"; sourceTree = "<group>"; };
 		91BB21799F118671CB395975 /* Pods-Mood-TrackerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mood-TrackerTests.release.xcconfig"; path = "Target Support Files/Pods-Mood-TrackerTests/Pods-Mood-TrackerTests.release.xcconfig"; sourceTree = "<group>"; };
 		9B653AFB5B2DDF4BA8FD6437 /* Pods-Mood-TrackerTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mood-TrackerTests.debug.xcconfig"; path = "Target Support Files/Pods-Mood-TrackerTests/Pods-Mood-TrackerTests.debug.xcconfig"; sourceTree = "<group>"; };
+		BB7F6F5229FFB26900C634B8 /* ViewHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ViewHandler.swift; path = "mood-tracker/ViewHandler.swift"; sourceTree = SOURCE_ROOT; };
 		C776E45C4B7B15D0E054B425 /* Pods_Mood_Tracker_Mood_TrackerUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Mood_Tracker_Mood_TrackerUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EAFBE0DA96D2EF94BFABF3C7 /* Pods_Mood_TrackerTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Mood_TrackerTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F01763AD3ED25B26B477BB77 /* Pods-Mood-Tracker.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mood-Tracker.release.xcconfig"; path = "Target Support Files/Pods-Mood-Tracker/Pods-Mood-Tracker.release.xcconfig"; sourceTree = "<group>"; };
@@ -181,8 +177,6 @@
 			isa = PBXGroup;
 			children = (
 				3775361322234238005EE5FE /* AppDelegate.swift */,
-				5D41D4FC299F085400667275 /* FaceButton.swift */,
-				5DC09875299EB97D007D38A3 /* FacesViewController.swift */,
 				830A118829A4610500E6FDE7 /* SaddestLog.swift */,
 				83B1798029B8502300A2F651 /* SaddestDisplay.swift */,
 				8364D51C29FF1AE700B2D84E /* Progress.swift */,
@@ -198,13 +192,14 @@
 				830A118C29A4704E00E6FDE7 /* HappiestLog.swift */,
 				830A119229A471FB00E6FDE7 /* AngriestLog.swift */,
 				5DBF7B8429A1B32300DFAAB5 /* FacesView.swift */,
-				5D91190F29ECEDB200682435 /* TestXP.swift */,
 				3775361A22234238005EE5FE /* Assets.xcassets */,
 				3775361C22234238005EE5FE /* LaunchScreen.storyboard */,
 				3775361F22234238005EE5FE /* Info.plist */,
 				5D14EE9A29B8448500CC42BC /* EverythingView.swift */,
 				5D7147E929F20FE10085976F /* PieCharts.swift */,
 				5D7147ED29F226EC0085976F /* AnalyticsView.swift */,
+				BB7F6F5229FFB26900C634B8 /* ViewHandler.swift */,
+				5D9F182C2A09CD080019E92B /* NavBar.swift */,
 			);
 			path = "Mood-Tracker";
 			sourceTree = "<group>";
@@ -240,7 +235,6 @@
 		BA9F602529AD726E007E346A /* Database */ = {
 			isa = PBXGroup;
 			children = (
-				5D480A1529B1496600CD077D /* UserDefaultsChecker.swift */,
 				5D480A1929B52AB900CD077D /* MoodDB.swift */,
 				8332530E29B56D8900B2AD00 /* FeelingInput.swift */,
 				5DAC6FB829E9D5C10017A18D /* Level.swift */,
@@ -493,7 +487,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5D41D4FD299F085400667275 /* FaceButton.swift in Sources */,
+				5D9F182D2A09CD080019E92B /* NavBar.swift in Sources */,
 				5DAC6FB929E9D5C20017A18D /* Level.swift in Sources */,
 				830A118B29A46C0200E6FDE7 /* HappyLog.swift in Sources */,
 				5D7147EA29F20FE10085976F /* PieCharts.swift in Sources */,
@@ -505,11 +499,9 @@
 				83B1798729B8504200A2F651 /* SadDisplay.swift in Sources */,
 				5D7147EE29F226EC0085976F /* AnalyticsView.swift in Sources */,
 				5D480A1A29B52AB900CD077D /* MoodDB.swift in Sources */,
-				5D91191029ECEDB200682435 /* TestXP.swift in Sources */,
-				5DC09876299EB97D007D38A3 /* FacesViewController.swift in Sources */,
 				83B7B6DC29F036820003A506 /* StreaksView.swift in Sources */,
+				BB7F6F5329FFB26900C634B8 /* ViewHandler.swift in Sources */,
 				83B1798B29B8505600A2F651 /* NeutralDisplay.swift in Sources */,
-				5D480A1629B1496600CD077D /* UserDefaultsChecker.swift in Sources */,
 				83B1798129B8502300A2F651 /* SaddestDisplay.swift in Sources */,
 				830A119129A471A600E6FDE7 /* NeutralLog.swift in Sources */,
 				83B1798529B8503800A2F651 /* HappyDisplay.swift in Sources */,

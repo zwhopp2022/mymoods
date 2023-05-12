@@ -10,6 +10,7 @@ import SwiftUI
 // background color gradient
 let backgroundGradient = LinearGradient(colors: [Color.blue, Color.green, Color.yellow, Color.red], startPoint: .top, endPoint: .bottom)
 var userLevel = Level()
+var userStreak = Streaks()
 let moodDB = MoodDatabase()
 
 struct FacesView: View {
@@ -77,10 +78,10 @@ struct FacesView: View {
                         NavigationLink ("Analytics") {
                             Progress(value: Float(userLevel.getCurrentXp()))
                         }
-                        
                     }
-                    Spacer()
-                        .frame(height:140)
+                   Spacer()
+                        .frame(height:80)
+                    NavBar()
                 }.padding()
             }
             .navigationBarHidden(true)

@@ -59,9 +59,7 @@ struct HappiestDisplay: View {
                     Spacer()
                         .frame(height: 675)
                     HStack() {
-                        NavigationLink ("Home Page"){
-                            FacesView()
-                        }
+                        NavBar()
                     }
                 }
             }
