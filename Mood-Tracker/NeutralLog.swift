@@ -56,7 +56,7 @@ struct NeutralLog: View {
                 }
                 VStack {
                     Spacer()
-                        .frame(height: 500)
+                        .frame(height: 600)
                     HStack() {
                         NavigationLink ("Entries"){
                             NeutralDisplay()
@@ -65,6 +65,10 @@ struct NeutralLog: View {
                             self.mode.wrappedValue.dismiss()
                         }
                     }
+                    Spacer()
+                        .frame(height:60)
+                    NavBar()
+
                 }
             }
         }

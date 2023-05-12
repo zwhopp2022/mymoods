@@ -77,12 +77,15 @@ struct StreaksView: View {
                 }
                 VStack {
                     Spacer()
-                        .frame(height: 570)
+                        .frame(height: 600)
                     HStack() {
                         Button ("Back"){
                             self.mode.wrappedValue.dismiss()
                         }
                     }
+                    Spacer()
+                        .frame(height: 30)
+                    NavBar()
                 }
             }
             .navigationBarHidden(true)

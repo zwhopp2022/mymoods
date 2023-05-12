@@ -55,7 +55,7 @@ struct HappyLog: View {
                 }
                 VStack {
                     Spacer()
-                        .frame(height: 500)
+                        .frame(height: 600)
                     HStack() {
                         NavigationLink ("Entries"){
                             HappyDisplay()
@@ -64,6 +64,10 @@ struct HappyLog: View {
                             self.mode.wrappedValue.dismiss()
                         }
                     }
+                    Spacer()
+                        .frame(height:60)
+                    NavBar()
+
                 }
             }
         }

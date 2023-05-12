@@ -55,7 +55,7 @@ struct SaddestLog: View {
                 }
                 VStack {
                     Spacer()
-                        .frame(height: 500)
+                        .frame(height: 600)
                     HStack() {
                         NavigationLink ("Entries"){
                             SaddestDisplay()
@@ -63,8 +63,13 @@ struct SaddestLog: View {
                         Button ("Back"){
                             self.mode.wrappedValue.dismiss()
                         }
+                        
                     }
+                    Spacer()
+                        .frame(height:60)
+                    NavBar()
                 }
+                
             }
         }
         .navigationBarHidden(true)

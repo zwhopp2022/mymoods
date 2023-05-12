@@ -10,7 +10,8 @@ import SwiftUI
 
 
 struct EverythingView: View {
-    
+    @Environment(\.colorScheme) var colorScheme
+
     @State private var isScrollExpanded = false
     @State private var selectedScrollNum = 1
     var feelingInputs = moodDB.retrieveReasons(moodTable: "everything")
@@ -21,9 +22,7 @@ struct EverythingView: View {
         
     var body: some View {
         ZStack{
-            backgroundGradient.ignoresSafeArea()
-                .blur(radius: 85)
-                .navigationBarHidden(true)
+            Color("Background").ignoresSafeArea()
             VStack{
                 Image("EveryFace")
                     .padding()
@@ -53,9 +52,8 @@ struct EverythingView: View {
                     }.frame(height:400)
                 }.accentColor(.white)
                     .font(.title2)
-                    .foregroundColor(.white)
-                    .padding(.all)
-                    .background(Color.blue)
+                    .foregroundColor(colorScheme == .dark ? .black : .white)  .padding(.all)
+                    .background(colorScheme == .dark ? .white : .black)
                     .cornerRadius(20)
                 Spacer()
             }.padding(.all)
@@ -63,9 +61,7 @@ struct EverythingView: View {
                 Spacer()
                     .frame(height: 675)
                 HStack() {
-                    Button ("Back"){
-                        self.mode.wrappedValue.dismiss()
-                    }
+                    NavBar()
                 }
             }
         }
