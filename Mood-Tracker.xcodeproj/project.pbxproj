@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 52;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -15,7 +15,6 @@
 		3FBAB9CE23A011B8BBCC41E5 /* Pods_Mood_TrackerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAFBE0DA96D2EF94BFABF3C7 /* Pods_Mood_TrackerTests.framework */; };
 		5D14EE9B29B8448500CC42BC /* EverythingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D14EE9A29B8448500CC42BC /* EverythingView.swift */; };
 		5D480A1A29B52AB900CD077D /* MoodDB.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D480A1929B52AB900CD077D /* MoodDB.swift */; };
-		5D7147E829F2005B0085976F /* SwiftUICharts in Frameworks */ = {isa = PBXBuildFile; productRef = 5D7147E729F2005B0085976F /* SwiftUICharts */; };
 		5D7147EA29F20FE10085976F /* PieCharts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D7147E929F20FE10085976F /* PieCharts.swift */; };
 		5D7147EE29F226EC0085976F /* AnalyticsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D7147ED29F226EC0085976F /* AnalyticsView.swift */; };
 		5D9F182D2A09CD080019E92B /* NavBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D9F182C2A09CD080019E92B /* NavBar.swift */; };
@@ -114,7 +113,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				67825E3D93B37BF636AE5A78 /* Pods_Mood_Tracker.framework in Frameworks */,
-				5D7147E829F2005B0085976F /* SwiftUICharts in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -263,7 +261,6 @@
 			);
 			name = "Mood-Tracker";
 			packageProductDependencies = (
-				5D7147E729F2005B0085976F /* SwiftUICharts */,
 			);
 			productName = iOSTemplate;
 			productReference = 3775361022234238005EE5FE /* Mood-Tracker.app */;
@@ -340,7 +337,6 @@
 			);
 			mainGroup = 3775360722234238005EE5FE;
 			packageReferences = (
-				5D7147E629F2005B0085976F /* XCRemoteSwiftPackageReference "ChartView" */,
 			);
 			productRefGroup = 3775361122234238005EE5FE /* Products */;
 			projectDirPath = "";
@@ -837,25 +833,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCRemoteSwiftPackageReference section */
-		5D7147E629F2005B0085976F /* XCRemoteSwiftPackageReference "ChartView" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/AppPear/ChartView";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 1.0.0;
-			};
-		};
-/* End XCRemoteSwiftPackageReference section */
-
-/* Begin XCSwiftPackageProductDependency section */
-		5D7147E729F2005B0085976F /* SwiftUICharts */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 5D7147E629F2005B0085976F /* XCRemoteSwiftPackageReference "ChartView" */;
-			productName = SwiftUICharts;
-		};
-/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 3775360822234238005EE5FE /* Project object */;
 }
