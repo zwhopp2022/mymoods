@@ -10,7 +10,8 @@ import SwiftUI
 
 
 struct EverythingView: View {
-    
+    @Environment(\.colorScheme) var colorScheme
+
     @State private var isScrollExpanded = false
     @State private var selectedScrollNum = 1
     var feelingInputs = moodDB.retrieveReasons(moodTable: "everything")
@@ -51,9 +52,8 @@ struct EverythingView: View {
                     }.frame(height:400)
                 }.accentColor(.white)
                     .font(.title2)
-                    .foregroundColor(.white)
-                    .padding(.all)
-                    .background(Color("Background"))
+                    .foregroundColor(colorScheme == .dark ? .black : .white)  .padding(.all)
+                    .background(colorScheme == .dark ? .white : .black)
                     .cornerRadius(20)
                 Spacer()
             }.padding(.all)
