@@ -79,6 +79,9 @@ struct AnalyticsView: View {
                         Text("Monthly")
                     })
                 }
+                VStack {
+                    NavBar().frame(maxHeight: 50)
+                }
             }
             
         }
