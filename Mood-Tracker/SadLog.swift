@@ -54,7 +54,7 @@ struct SadLog: View {
                 }
                 VStack {
                     Spacer()
-                        .frame(height: 500)
+                        .frame(height: 600)
                     HStack() {
                         NavigationLink ("Entries"){
                             SadDisplay()
@@ -63,6 +63,10 @@ struct SadLog: View {
                             self.mode.wrappedValue.dismiss()
                         }
                     }
+                    Spacer()
+                        .frame(height:60)
+                    NavBar()
+
                 }
             }
         }
