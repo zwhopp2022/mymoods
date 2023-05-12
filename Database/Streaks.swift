@@ -38,7 +38,7 @@ struct Streaks: Hashable {
         
         if Int(lastMonth) == Int(recentMonth) {
             if Int(lastDay) == Int(recentDay) {
-                self.streak += incrementTest
+                self.streak += self.streak
                 moodDB.addStreak(newStreak: self.streak)
             }
             if (Int(lastDay) + 1) == Int(recentDay ) {
