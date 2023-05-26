@@ -28,7 +28,9 @@ To install CocoaPods and SQLite, follow these steps
 use_frameworks!
 
 target 'YourAppTargetName' do
+
     pod 'SQLite.swift', '~> 0.14.0'
+
 end
 
 3. Run this command in your command line: `pod install --repo-update`
