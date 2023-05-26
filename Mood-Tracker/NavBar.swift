@@ -7,6 +7,8 @@
 
 import SwiftUI
 
+var showNavigationBar = false
+
 struct NavBar: View {
     @Environment(\.colorScheme) var colorScheme
     var body: some View {
@@ -15,9 +17,19 @@ struct NavBar: View {
                 .ignoresSafeArea()
             NavigationStack {
                 HStack {
-                    NavigationLink {
-                        FacesView()
-                    } label: { Image(colorScheme == .light ? "smile" : "smileWhite") }
+                    Button (action: {
+                        showNavigationBar = true
+                    }) {
+                        if showNavigationBar {
+                            ZStack {
+                                HStack {
+                                    NavigationLink {
+                                        FacesView()
+                                    } label: { Image(colorScheme == .light ? "medal" : "medalWhite")}
+                                }
+                            }
+                        }
+                    }
                     Spacer()
                         .frame(width: 50)
                     NavigationLink {
