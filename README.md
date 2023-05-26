@@ -13,13 +13,21 @@ On our [repository](https://gitlab.cci.drexel.edu/fds23/65/team-15/mood-tracker/
 
 Inside of your command line, create a directory with a name of your choosing and **cd** into it. Example:  `mkdir myDirectory`,`cd myDirectory`
 
-Next run the command `git clone `
+Next run the command `git clone [clone with https link from previous step]`
 
-If you want to use GitLab CI with your own MacOS runners (a requirement since we
-do not currently yet offer shared MacOS runners - follow [infrastructure#5294](https://gitlab.com/gitlab-com/gl-infra/infrastructure/issues/5294) for
-updates on that front) please read through the blog post above which will walk 
-you through everything you need to get up and running.
+Now you will be able to access the MyMoods source code, create branches, and edit the code! But there's a couple more steps.
 
-## What's contained in this project
+## Installing CocoaPods and SQLite
+
+[CocoaPods](https://cocoapods.org/) is a dependency manager that MyMoods utilizes to use the [SQLite package](https://github.com/stephencelis/SQLite.swift) which allows the storage of data on a user's device. 
+
+To install CocoaPods and SQLite, follow these steps
+1. Run this command in your command line: `sudo gem install cocoapods`
+2. Update the pods file that is created to the following configuration
+`use_frameworks!`
+
+`target 'YourAppTargetName' do`
+    pod 'SQLite.swift', '~> 0.14.0'
+`end`
 
 This template contains a simple Food Tracker App based off of the [Start Developing iOS Apps (Swift) Lessons](https://developer.apple.com/library/archive/referencelibrary/GettingStarted/DevelopiOSAppsSwift/index.html). Where necessary the template has been upgraded to use Swift 4. The app displays a list of meals consisting of a name, rating, and photo. Users are able to add or edit a meal by navigating to a detail screen. The app also includes a lightweight solution for basic data persistence.
