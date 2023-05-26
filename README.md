@@ -1,18 +1,19 @@
-# Introduction
+# MyMoods
 
-This is a test commit - Zachary
+Thank you for checking out MyMoods! Here is some important info on how to get started if you'd like to test the app and/or contribute to development!
 
-This is a template for getting started with iOS development using GitLab and [fastlane](https://fastlane.tools/).
+# Development Environment 
 
-# Reference links
+## IDE
+ - Xcode 14 - ideal for iOS development given its built in iOS simulators for efficient testing. (You'll need a device running macOS)
 
-- [GitLab CI Documentation](https://docs.gitlab.com/ee/ci/)
-- [Blog post: Android publishing with iOS and fastlane](https://about.gitlab.com/2019/03/06/ios-publishing-with-gitlab-and-fastlane/)
+# Cloning repository
 
-# Getting started
+On our [repository](https://gitlab.cci.drexel.edu/fds23/65/team-15/mood-tracker/-/tree/master), click the blue **Clone** button and copy the **Clone with HTTPS** link.
 
-You'll need a working MacOS development environment with XCode 10 to use this
-template. You can find instructions to get up and running on the Apple [XCode website](https://developer.apple.com/xcode/).
+Inside of your command line, create a directory with a name of your choosing and **cd** into it. Example:  `mkdir myDirectory`,`cd myDirectory`
+
+Next run the command `git clone `
 
 If you want to use GitLab CI with your own MacOS runners (a requirement since we
 do not currently yet offer shared MacOS runners - follow [infrastructure#5294](https://gitlab.com/gitlab-com/gl-infra/infrastructure/issues/5294) for
