@@ -24,11 +24,13 @@ Now you will be able to access the MyMoods source code, create branches, and edi
 To install CocoaPods and SQLite, follow these steps
 1. Run this command in your command line: `sudo gem install cocoapods`
 2. Update the pods file that is created to the following configuration
-`use_frameworks!`
 
-> target 'YourAppTargetName' do
->     pod 'SQLite.swift', '~> 0.14.0`
-> end
+use_frameworks!
 
+target 'YourAppTargetName' do
+    pod 'SQLite.swift', '~> 0.14.0'
+end
+
+3. Run this command in your command line: `pod install --repo-update`
 
 This template contains a simple Food Tracker App based off of the [Start Developing iOS Apps (Swift) Lessons](https://developer.apple.com/library/archive/referencelibrary/GettingStarted/DevelopiOSAppsSwift/index.html). Where necessary the template has been upgraded to use Swift 4. The app displays a list of meals consisting of a name, rating, and photo. Users are able to add or edit a meal by navigating to a detail screen. The app also includes a lightweight solution for basic data persistence.
