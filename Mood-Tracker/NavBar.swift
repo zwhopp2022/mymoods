@@ -32,19 +32,11 @@ struct NavBar: View {
                     } label: { Image(colorScheme == .light ? "pie" : "pieWhite") }
                     Spacer()
                         .frame(width: 50)
-                        Button (action: {
-                            showNavigationBar.toggle()
-                        }) { label: { Image(colorScheme == .light ? "book" : "bookWhite")}
-                            if showNavigationBar {
-                                    HStack {
-                                        NavigationLink {
-                                            FacesView()
-                                        } label: { Image(colorScheme == .light ? "medal" : "medalWhite")}
-                                        Spacer()
-                                            .frame(width: 50)
-                                    }
-                            }
-                        }
+                    Menu(label: {(colorScheme == .light ? "book" : "bookWhite"))} {
+                        NavigationLink {
+                            FacesView()
+                        } label: { Image(colorScheme == .light ? "smile" : "smileWhite")}
+                    }
                 }
             }
         }
@@ -56,3 +48,17 @@ struct NavBar_Previews: PreviewProvider {
         NavBar()
     }
 }
+
+//Button (action: {
+//    showNavigationBar.toggle()
+//}) { label: { Image(colorScheme == .light ? "book" : "bookWhite")}
+//    if showNavigationBar {
+//            HStack {
+//                NavigationLink {
+//                  FacesView()
+//                } label: { Image(colorScheme == .light ? "medal" : "medalWhite")}
+//                Spacer()
+//                    .frame(width: 50)
+//            }
+//    }
+//}
