@@ -17,19 +17,9 @@ struct NavBar: View {
                 .ignoresSafeArea()
             NavigationStack {
                 HStack {
-                    Button (action: {
-                        showNavigationBar = true
-                    }) {
-                        if showNavigationBar {
-                            ZStack {
-                                HStack {
-                                    NavigationLink {
-                                        FacesView()
-                                    } label: { Image(colorScheme == .light ? "medal" : "medalWhite")}
-                                }
-                            }
-                        }
-                    }
+                    NavigationLink {
+                        FacesView()
+                    } label: { Image(colorScheme == .light ? "smile" : "smileWhite")}
                     Spacer()
                         .frame(width: 50)
                     NavigationLink {
@@ -43,8 +33,20 @@ struct NavBar: View {
                     Spacer()
                         .frame(width: 50)
                     NavigationLink {
-                        EverythingView()
-                    } label: { Image(colorScheme == .light ? "book" : "bookWhite") }
+                        Button (action: {
+                            showNavigationBar = true
+                        }) {
+                            if showNavigationBar {
+                                ZStack {
+                                    HStack {
+                                        NavigationLink {
+                                            FacesView()
+                                        } label: { Image(colorScheme == .light ? "medal" : "medalWhite")}
+                                    }
+                                }
+                            }
+                        }
+                    } label: { Image(colorScheme == .light ? "book" : "bookWhite")}
                 }
             }
         }
