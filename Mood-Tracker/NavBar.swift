@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-var showNavigationBar = false
+@State private var showNavigationBar = false
 
 struct NavBar: View {
     @Environment(\.colorScheme) var colorScheme
@@ -34,7 +34,7 @@ struct NavBar: View {
                         .frame(width: 50)
                     NavigationLink {
                         Button (action: {
-                            showNavigationBar = true
+                            showNavigationBar.toggle()
                         }) {
                             if showNavigationBar {
                                 ZStack {
