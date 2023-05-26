@@ -35,4 +35,6 @@ end
 
 3. Run this command in your command line: `pod install --repo-update`
 
-This template contains a simple Food Tracker App based off of the [Start Developing iOS Apps (Swift) Lessons](https://developer.apple.com/library/archive/referencelibrary/GettingStarted/DevelopiOSAppsSwift/index.html). Where necessary the template has been upgraded to use Swift 4. The app displays a list of meals consisting of a name, rating, and photo. Users are able to add or edit a meal by navigating to a detail screen. The app also includes a lightweight solution for basic data persistence.
+## Have fun working!
+
+You are now ready to contribute to and build off of MyMoods! 
