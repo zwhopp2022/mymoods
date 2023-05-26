@@ -7,10 +7,10 @@
 
 import SwiftUI
 
-@State private var showNavigationBar = false
 
 struct NavBar: View {
     @Environment(\.colorScheme) var colorScheme
+    @State private var showNavigationBar = false
     var body: some View {
         ZStack {
             Color.clear
@@ -32,10 +32,9 @@ struct NavBar: View {
                     } label: { Image(colorScheme == .light ? "pie" : "pieWhite") }
                     Spacer()
                         .frame(width: 50)
-                    NavigationLink {
                         Button (action: {
                             showNavigationBar.toggle()
-                        }) {
+                        }) { label: { Image(colorScheme == .light ? "book" : "bookWhite")}
                             if showNavigationBar {
                                 ZStack {
                                     HStack {
@@ -46,7 +45,6 @@ struct NavBar: View {
                                 }
                             }
                         }
-                    } label: { Image(colorScheme == .light ? "book" : "bookWhite")}
                 }
             }
         }
