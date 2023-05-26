@@ -36,13 +36,13 @@ struct NavBar: View {
                             showNavigationBar.toggle()
                         }) { label: { Image(colorScheme == .light ? "book" : "bookWhite")}
                             if showNavigationBar {
-                                ZStack {
                                     HStack {
                                         NavigationLink {
                                             FacesView()
                                         } label: { Image(colorScheme == .light ? "medal" : "medalWhite")}
+                                        Spacer()
+                                            .frame(width: 50)
                                     }
-                                }
                             }
                         }
                 }
