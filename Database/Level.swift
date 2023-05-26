@@ -8,7 +8,6 @@
 import Foundation
 
 public struct Level : Hashable {
-    private let defaultXp: Int
     private var currentXp: Int
     
     private var noStreakXpIncrement: Int = 10
@@ -19,20 +18,24 @@ public struct Level : Hashable {
     // have levels become longer to reach sequentially
     
     init () {
-        self.defaultXp = 0
         self.noStreakXpIncrement = 10
         self.threeStreakXp = 15
         self.sevenStreakXp = 20
         self.twentyStreakXp = 30
         
         if (!UserDefaults.standard.bool(forKey: "databaseCreated")) {
-            self.currentXp = self.defaultXp
+            self.currentXp = 0
             moodDB.addExperienceFirstStart()
         }
         else {
-            self.currentXp = moodDB.retrieveXp()
+            if moodDB.retrieveXp().count == 0 {
+                self.currentXp = 0
+                moodDB.addExperienceFirstStart()
+            }
+            else {
+                self.currentXp = moodDB.retrieveXp()[0].XP
+            }
         }
-        
     }
     
     public func getCurrentXp() -> Int {

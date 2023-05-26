@@ -24,6 +24,15 @@ struct Streaks: Hashable {
         if (!UserDefaults.standard.bool(forKey: "databaseCreated")) {
             self.streak = self.defaultStreak
         }
+        else {
+            if moodDB.retrieveStreak().count == 0 {
+                self.streak = 0
+                moodDB.addStreakFirstStart()
+            }
+            else {
+                self.streak = moodDB.retrieveStreak()[0].streak
+            }
+        }
     }
     
     public mutating func streaks() {
@@ -38,11 +47,10 @@ struct Streaks: Hashable {
         
         if Int(lastMonth) == Int(recentMonth) {
             if Int(lastDay) == Int(recentDay) {
-                self.streak += self.streak
                 moodDB.addStreak(newStreak: self.streak)
             }
             if (Int(lastDay) + 1) == Int(recentDay ) {
-                self.streak += streakIncrement
+                self.streak += self.streakIncrement
                 moodDB.addStreak(newStreak: self.streak)
             }
             if Int(lastDay) != Int(recentDay) {
