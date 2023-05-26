@@ -39,9 +39,13 @@ struct NavBar: View {
                             Image(colorScheme == .light ? "pie" : "pieWhite")
                         }
                         if showNavigationBar {
-                            NavigationLink {
-                                AnalyticsView()
-                            } label: { Image(colorScheme == .light ? "pie" : "pieWhite") }
+                            ZStack {
+                                Color.clear
+                                    .ignoresSafeArea()
+                                NavigationLink {
+                                    AnalyticsView()
+                                } label: { Image(colorScheme == .light ? "pie" : "pieWhite") }
+                            }
                         }
                     }
                 }
