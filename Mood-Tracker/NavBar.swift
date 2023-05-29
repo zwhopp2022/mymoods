@@ -42,11 +42,9 @@ struct NavBar: View {
                             ZStack {
                                 Color.clear
                                     .ignoresSafeArea()
-                                Button(action: {
+                                NavigationLink {
                                     AnalyticsView()
-                                }) {
-                                label: { Image(colorScheme == .light ? "pie" : "pieWhite") }
-                                }
+                                } label: { Image(colorScheme == .light ? "pie" : "pieWhite") }
                             }
                         }
                     }
