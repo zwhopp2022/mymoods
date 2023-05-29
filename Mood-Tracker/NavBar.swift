@@ -36,15 +36,17 @@ struct NavBar: View {
                         Button(action: {
                             self.showNavigationBar.toggle()
                         }) {
-                            Image(colorScheme == .light ? "pie" : "pieWhite")
+                            Image(colorScheme == .light ? "book" : "bookWhite")
                         }
                         if showNavigationBar {
                             ZStack {
                                 Color.clear
                                     .ignoresSafeArea()
-                                NavigationLink {
+                                Button(action: {
                                     AnalyticsView()
-                                } label: { Image(colorScheme == .light ? "pie" : "pieWhite") }
+                                }) {
+                                label: { Image(colorScheme == .light ? "pie" : "pieWhite") }
+                                }
                             }
                         }
                     }
