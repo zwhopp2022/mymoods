@@ -40,11 +40,50 @@ struct NavBar: View {
                         }
                         if showNavigationBar {
                             ZStack {
-                                Color.clear
-                                    .ignoresSafeArea()
-                                NavigationLink {
-                                    AnalyticsView()
-                                } label: { Image(colorScheme == .light ? "pie" : "pieWhite") }
+                                HStack {
+                                    NavigationLink {
+                                        HappiestDisplay()
+                                    } label: {
+                                        Image("Happiest")
+                                            .resizable()
+                                            .frame(width: 50, height: 50)
+                                    }
+                                    NavigationLink {
+                                        SaddestDisplay()
+                                    } label: {
+                                        Image("Saddest")
+                                            .resizable()
+                                            .frame(width: 50, height: 50)
+                                    }
+                                    NavigationLink {
+                                        HappyDisplay()
+                                    } label: {
+                                        Image("Happy")
+                                            .resizable()
+                                            .frame(width: 50, height: 50)
+                                    }
+                                    NavigationLink {
+                                        SadDisplay()
+                                    } label: {
+                                        Image("Sad")
+                                            .resizable()
+                                            .frame(width: 50, height: 50)
+                                    }
+                                    NavigationLink {
+                                        NeutralDisplay()
+                                    } label: {
+                                        Image("neutral")
+                                            .resizable()
+                                            .frame(width: 50, height: 50)
+                                    }
+                                    NavigationLink {
+                                        AngryDisplay()
+                                    } label: {
+                                        Image("Angriest")
+                                            .resizable()
+                                            .frame(width: 50, height: 50)
+                                    }
+                                }
                             }
                         }
                     }
