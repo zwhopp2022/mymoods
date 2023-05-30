@@ -32,60 +32,61 @@ struct NavBar: View {
                     } label: { Image(colorScheme == .light ? "pie" : "pieWhite") }
                     Spacer()
                         .frame(width: 50)
-                    VStack {
-                        Button(action: {
-                            self.showNavigationBar.toggle()
-                        }) {
-                            Image(colorScheme == .light ? "book" : "bookWhite")
-                        }
-                        if showNavigationBar {
-                            ZStack {
-                                HStack {
-                                    NavigationLink {
-                                        HappiestDisplay()
-                                    } label: {
-                                        Image("Happiest")
-                                            .resizable()
-                                            .frame(width: 50, height: 50)
-                                    }
-                                    NavigationLink {
-                                        SaddestDisplay()
-                                    } label: {
-                                        Image("Saddest")
-                                            .resizable()
-                                            .frame(width: 50, height: 50)
-                                    }
-                                    NavigationLink {
-                                        HappyDisplay()
-                                    } label: {
-                                        Image("Happy")
-                                            .resizable()
-                                            .frame(width: 50, height: 50)
-                                    }
-                                    NavigationLink {
-                                        SadDisplay()
-                                    } label: {
-                                        Image("Sad")
-                                            .resizable()
-                                            .frame(width: 50, height: 50)
-                                    }
-                                    NavigationLink {
-                                        NeutralDisplay()
-                                    } label: {
-                                        Image("neutral")
-                                            .resizable()
-                                            .frame(width: 50, height: 50)
-                                    }
-                                    NavigationLink {
-                                        AngryDisplay()
-                                    } label: {
-                                        Image("Angriest")
-                                            .resizable()
-                                            .frame(width: 50, height: 50)
-                                    }
-                                }
+                    Button(action: {
+                        self.showNavigationBar.toggle()
+                    }) {
+                        Image(colorScheme == .light ? "book" : "bookWhite")
+                    }
+                }
+            }
+            NavigationStack {
+                if showNavigationBar {
+                    ZStack {
+                        HStack {
+                            NavigationLink {
+                                HappiestDisplay()
+                            } label: {
+                                Image("Happiest")
+                                    .resizable()
+                                    .frame(width: 75, height: 75)
+                            }
+                            NavigationLink {
+                                SaddestDisplay()
+                            } label: {
+                                Image("Saddest")
+                                    .resizable()
+                                    .frame(width: 75, height: 75)
+                            }
+                            NavigationLink {
+                                HappyDisplay()
+                            } label: {
+                                Image("Happy")
+                                    .resizable()
+                                    .frame(width: 75, height: 75)
+                            }
+                            NavigationLink {
+                                SadDisplay()
+                            } label: {
+                                Image("Sad")
+                                    .resizable()
+                                    .frame(width: 75, height: 75)
+                            }
+                            NavigationLink {
+                                NeutralDisplay()
+                            } label: {
+                                Image("neutral")
+                                    .resizable()
+                                    .frame(width: 75, height: 75)
+                            }
+                            NavigationLink {
+                                AngryDisplay()
+                            } label: {
+                                Image("Angriest")
+                                    .resizable()
+                                    .frame(width: 75, height: 75)
                             }
                         }
+                        Spacer()
                     }
                 }
             }
