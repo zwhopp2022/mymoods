@@ -45,8 +45,8 @@ public class NotificationHandler {
         bodyChoice.append("Feel free to come back anytime and write how you're feeling!")
         bodyChoice.append("Smile or Cry, don't let those feelings pass by!")
         bodyChoice.append("You're level \(self.level.getCurrentLevel()), keep at it and see yourself increase!")
-        
-        
+        bodyChoice.append("Make sure you keep putting in entries if you want a streak!")
+
         let title = "MyMoods"
         let body = bodyChoice.randomElement()
         
