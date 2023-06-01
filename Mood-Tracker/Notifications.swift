@@ -11,6 +11,12 @@ import UserNotifications
 
 public class NotificationHandler {
     
+    var level: Level
+    
+    init(initLevel: Level) {
+        self.level = initLevel
+    }
+    
     func checkForPermission() {
         let notificationCenter = UNUserNotificationCenter.current()
         notificationCenter.getNotificationSettings { settings in
@@ -34,14 +40,21 @@ public class NotificationHandler {
     
     func sendNotification() {
         let uuidString = UUID().uuidString
-        let title = "Happy to see you here!"
-        let body = "Feel free to write down anything you're feeling!"
+        
+        var bodyChoice: [String] = []
+        bodyChoice.append("Feel free to come back anytime and write how you're feeling!")
+        bodyChoice.append("Smile or Cry, don't let those feelings pass by!")
+        bodyChoice.append("You're level \(self.level.getCurrentLevel()), keep at it and see yourself increase!")
+        
+        
+        let title = "MyMoods"
+        let body = bodyChoice.randomElement()
         
         let notificationCenter = UNUserNotificationCenter.current()
         
         let content = UNMutableNotificationContent()
         content.title = title
-        content.body = body
+        content.body = body!
         content.sound = .default
         
         let date = Date().addingTimeInterval(10)

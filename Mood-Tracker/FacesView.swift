@@ -10,6 +10,7 @@ import SwiftUI
 // background color gradient
 let backgroundGradient = LinearGradient(colors: [Color.blue, Color.green, Color.yellow, Color.red], startPoint: .top, endPoint: .bottom)
 var userLevel = Level()
+let notifications = NotificationHandler(initLevel: userLevel)
 var userStreak = Streaks()
 let moodDB = MoodDatabase()
 
