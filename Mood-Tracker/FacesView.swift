@@ -69,15 +69,10 @@ struct FacesView: View {
                         }
                     }
                     HStack() {
-                        NavigationLink ("History"){
-                            EverythingView()
-                        }
                         
                         
                         
-                        NavigationLink ("Analytics") {
-                            Progress(value: Float(userLevel.getCurrentXp()))
-                        }
+
                     }
                    Spacer()
                         .frame(height:80)
