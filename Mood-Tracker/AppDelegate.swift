@@ -7,12 +7,13 @@ import SwiftUI
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-
+    let notifications = NotificationHandler()
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         window = UIWindow(frame: UIScreen.main.bounds)
         window?.rootViewController = UIHostingController(rootView: FacesView())
         window?.makeKeyAndVisible()
+        notifications.checkForPermission()
         // Override point for customization after application launch.
         return true
     }
