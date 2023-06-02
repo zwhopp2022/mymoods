@@ -62,6 +62,7 @@ struct NavBar: View {
                     )
                 }
                 Spacer()
+                    .frame(height: 20)
                 .padding()
                 ZStack {
                     Color.clear
@@ -98,6 +99,9 @@ struct NavBar: View {
                     )
                 }
             }
+        Spacer()
+            .frame(height: 3)
+        .padding()
         ZStack {
             Color.clear
                 .ignoresSafeArea()
@@ -134,6 +138,8 @@ struct NavBar: View {
                     }
                 }
             }
+            Spacer()
+                .frame(height: 5)
         }
     }
 }

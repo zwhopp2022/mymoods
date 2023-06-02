@@ -58,10 +58,9 @@ struct AngryDisplay: View {
                 }.padding(.all)
                 VStack {
                     Spacer()
-                        .frame(height: 675)
-                    HStack() {
+                        .frame(height: 630)
+                    
                         NavBar()
-                    }
                 }
             }
         }
