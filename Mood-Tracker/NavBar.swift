@@ -47,12 +47,6 @@ struct NavBar: View {
                             .resizable()
                             .frame(width: 75, height: 75)
                     }
-                }
-            }
-            ZStack {
-                Color.clear
-                    .ignoresSafeArea()
-                HStack {
                     NavigationLink {
                         SadDisplay()
                             .onAppear {
@@ -63,6 +57,12 @@ struct NavBar: View {
                             .resizable()
                             .frame(width: 75, height: 75)
                     }
+                }
+            }
+            ZStack {
+                Color.clear
+                    .ignoresSafeArea()
+                HStack {
                     NavigationLink {
                         NeutralDisplay()
                             .onAppear {
@@ -83,12 +83,6 @@ struct NavBar: View {
                             .resizable()
                             .frame(width: 75, height: 75)
                     }
-                }
-            }
-            ZStack {
-                Color.clear
-                    .ignoresSafeArea()
-                HStack {
                     NavigationLink {
                         EverythingView()
                             .onAppear {
