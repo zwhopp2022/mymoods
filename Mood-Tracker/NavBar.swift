@@ -12,6 +12,71 @@ struct NavBar: View {
     @Environment(\.colorScheme) var colorScheme
     @State private var showNavigationBar = false
     var body: some View {
+        if showNavigationBar {
+            ZStack {
+                Color.clear
+                    .ignoresSafeArea()
+                HStack {
+                    NavigationLink {
+                        HappiestDisplay()
+                    } label: {
+                        Image("Happiest")
+                            .resizable()
+                            .frame(width: 75, height: 75)
+                    }
+                    NavigationLink {
+                        SaddestDisplay()
+                    } label: {
+                        Image("Saddest")
+                            .resizable()
+                            .frame(width: 75, height: 75)
+                    }
+                    NavigationLink {
+                        HappyDisplay()
+                    } label: {
+                        Image("Happy")
+                            .resizable()
+                            .frame(width: 75, height: 75)
+                    }
+                }
+            }
+            ZStack {
+                Color.clear
+                    .ignoresSafeArea()
+                HStack {
+                    NavigationLink {
+                        SadDisplay()
+                    } label: {
+                        Image("Sad")
+                            .resizable()
+                            .frame(width: 75, height: 75)
+                    }
+                    NavigationLink {
+                        NeutralDisplay()
+                    } label: {
+                        Image("neutral")
+                            .resizable()
+                            .frame(width: 75, height: 75)
+                    }
+                    NavigationLink {
+                        AngryDisplay()
+                    } label: {
+                        Image("Angriest")
+                            .resizable()
+                            .frame(width: 75, height: 75)
+                    }
+                }
+            }
+            ZStack {
+                Color.clear
+                    .ignoresSafeArea()
+                HStack {
+                    NavigationLink {
+                        EverythingView()
+                    } label: { Image(colorScheme == .light ? "book" : "bookWhite")}
+                }
+            }
+        }
         ZStack {
             Color.clear
                 .ignoresSafeArea()
@@ -36,57 +101,6 @@ struct NavBar: View {
                         self.showNavigationBar.toggle()
                     }) {
                         Image(colorScheme == .light ? "book" : "bookWhite")
-                    }
-                }
-            }
-            NavigationStack {
-                if showNavigationBar {
-                    ZStack {
-                        HStack {
-                            NavigationLink {
-                                HappiestDisplay()
-                            } label: {
-                                Image("Happiest")
-                                    .resizable()
-                                    .frame(width: 75, height: 75)
-                            }
-                            NavigationLink {
-                                SaddestDisplay()
-                            } label: {
-                                Image("Saddest")
-                                    .resizable()
-                                    .frame(width: 75, height: 75)
-                            }
-                            NavigationLink {
-                                HappyDisplay()
-                            } label: {
-                                Image("Happy")
-                                    .resizable()
-                                    .frame(width: 75, height: 75)
-                            }
-                            NavigationLink {
-                                SadDisplay()
-                            } label: {
-                                Image("Sad")
-                                    .resizable()
-                                    .frame(width: 75, height: 75)
-                            }
-                            NavigationLink {
-                                NeutralDisplay()
-                            } label: {
-                                Image("neutral")
-                                    .resizable()
-                                    .frame(width: 75, height: 75)
-                            }
-                            NavigationLink {
-                                AngryDisplay()
-                            } label: {
-                                Image("Angriest")
-                                    .resizable()
-                                    .frame(width: 75, height: 75)
-                            }
-                        }
-                        Spacer()
                     }
                 }
             }
@@ -119,3 +133,8 @@ struct NavBar_Previews: PreviewProvider {
 //        FacesView()
 //    } label: { Image(colorScheme == .light ? "smile" : "smileWhite")}
 //}
+
+//.resizable()
+//.scaledToFill()
+//.aspectRatio(contentMode: .fit)
+//.frame(width: 75, height: 75)
