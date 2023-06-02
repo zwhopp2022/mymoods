@@ -19,6 +19,9 @@ struct NavBar: View {
                 HStack {
                     NavigationLink {
                         HappiestDisplay()
+                            .onAppear {
+                                showNavigationBar = false
+                            }
                     } label: {
                         Image("Happiest")
                             .resizable()
@@ -26,6 +29,9 @@ struct NavBar: View {
                     }
                     NavigationLink {
                         SaddestDisplay()
+                            .onAppear {
+                                showNavigationBar = false
+                            }
                     } label: {
                         Image("Saddest")
                             .resizable()
@@ -33,6 +39,9 @@ struct NavBar: View {
                     }
                     NavigationLink {
                         HappyDisplay()
+                            .onAppear {
+                                showNavigationBar = false
+                            }
                     } label: {
                         Image("Happy")
                             .resizable()
@@ -46,6 +55,9 @@ struct NavBar: View {
                 HStack {
                     NavigationLink {
                         SadDisplay()
+                            .onAppear {
+                                showNavigationBar = false
+                            }
                     } label: {
                         Image("Sad")
                             .resizable()
@@ -53,6 +65,9 @@ struct NavBar: View {
                     }
                     NavigationLink {
                         NeutralDisplay()
+                            .onAppear {
+                                showNavigationBar = false
+                            }
                     } label: {
                         Image("neutral")
                             .resizable()
@@ -60,6 +75,9 @@ struct NavBar: View {
                     }
                     NavigationLink {
                         AngryDisplay()
+                            .onAppear {
+                                showNavigationBar = false
+                            }
                     } label: {
                         Image("Angriest")
                             .resizable()
@@ -73,6 +91,9 @@ struct NavBar: View {
                 HStack {
                     NavigationLink {
                         EverythingView()
+                            .onAppear {
+                                showNavigationBar = false
+                            }
                     } label: { Image(colorScheme == .light ? "book" : "bookWhite")}
                 }
             }
@@ -84,16 +105,25 @@ struct NavBar: View {
                 HStack {
                     NavigationLink {
                         FacesView()
+                            .onAppear {
+                                showNavigationBar = false
+                            }
                     } label: { Image(colorScheme == .light ? "smile" : "smileWhite")}
                     Spacer()
                         .frame(width: 50)
                     NavigationLink {
                         StreaksView()
+                            .onAppear {
+                                showNavigationBar = false
+                            }
                     } label: { Image(colorScheme == .light ? "medal" : "medalWhite") }
                     Spacer()
                         .frame(width: 50)
                     NavigationLink {
                         AnalyticsView()
+                            .onAppear {
+                                showNavigationBar = false
+                            }
                     } label: { Image(colorScheme == .light ? "pie" : "pieWhite") }
                     Spacer()
                         .frame(width: 50)
