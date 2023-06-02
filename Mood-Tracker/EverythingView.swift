@@ -60,9 +60,9 @@ struct EverythingView: View {
             VStack {
                 Spacer()
                     .frame(height: 675)
-                HStack() {
+                
                     NavBar()
-                }
+                
             }
         }
         .navigationBarHidden(true)
