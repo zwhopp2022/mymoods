@@ -61,7 +61,7 @@ struct SaddestDisplay: View {
                 }.padding(.all)
                 VStack {
                     Spacer()
-                        .frame(height: 675)
+                        .frame(height: 630)
                     
                         NavBar()
                 }
